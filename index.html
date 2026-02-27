@@ -1,70 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Graphene Lab - Digital Sovereignty & Security</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Roboto+Mono:wght@300;400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://cdn.jsdelivr.net/gh/VincentGarreau/particles.js/particles.min.js"></script>
     <script>
-    // Lingue supportate e mapping file
-    const langMap = {
-        'it': 'index-it.html',
-        'fr': 'index-fr.html',
-        'es': 'index-es.html',
-        'de': 'index-de.html',
-        'ru': 'index-ru.html'
-    };
-    const userLang = (navigator.language || navigator.userLanguage || '').slice(0,2).toLowerCase();
-    if (langMap[userLang] && !window.location.pathname.endsWith(langMap[userLang])) {
-        window.location.replace(langMap[userLang]);
-    }
+        // Lingue supportate e mapping file
+        const langMap = {
+            'it': 'index-it.html',
+            'fr': 'index-fr.html',
+            'es': 'index-es.html',
+            'de': 'index-de.html',
+            'ru': 'index-ru.html'
+        };
+        const userLang = (navigator.language || navigator.userLanguage || '').slice(0, 2).toLowerCase();
+        if (langMap[userLang] && !window.location.pathname.endsWith(langMap[userLang]) && !window.location.search.includes('noredirect')) {
+            window.location.replace(langMap[userLang]);
+        }
     </script>
 </head>
+
 <body>
     <header id="hero">
-        <nav>
+        <nav id="main-nav">
             <div class="logo">Graphene Lab</div>
             <ul class="nav-links">
+                <li><a href="#messenger">Messenger</a></li>
+                <li><a href="#cloud">Cloud Space</a></li>
+                <li><a href="#hardware">Hardened Hardware</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#philosophy">Philosophy</a></li>
-                <li><a href="#cloud">Cloud</a></li>
-                <li><a href="#objectives">Objectives</a></li>
             </ul>
         </nav>
         <div id="particles-js"></div>
         <div class="hero-content">
-            <h1>Digital Sovereignty &amp; Operational Security for a Resilient Europe</h1>
-            <p>Military‑grade privacy solutions built on hardened foundations.</p>
+            <div class="badge">SECURE. SOVEREIGN. RESILIENT.</div>
+            <h1>Digital Sovereignty & Operational Security</h1>
+            <p>Military‑grade privacy solutions built on hardened foundations for high-risk organizations.</p>
+            <div class="hero-btns">
+                <a href="#messenger" class="btn primary">Explore Solutions</a>
+                <a href="#about" class="btn secondary">Our Philosophy</a>
+            </div>
         </div>
+        <div class="graphene-separator" data-accent="#00fff2" aria-hidden="true"></div>
     </header>
 
     <main>
-        <section id="about" class="section dark">
-            <h2>Who we are</h2>
-            <p>In a digital landscape where cyber threats manifest in ever more insidious forms, from mass surveillance to state-sponsored spyware like Pegasus, Predator, or Reign, encrypting communications alone is no longer sufficient to guarantee privacy and operational safety. It is from this awareness that Graphene Lab was founded: a foundation dedicated to redefining cybersecurity standards for organizations operating in high-risk environments. Our mission is to provide military-grade enterprise solutions for privacy protection and communication security, meeting the most stringent requirements of embassies, governmental bodies, NGOs, and journalists in critical scenarios.</p>
+
+        <!-- Graphene Messenger Section -->
+        <section id="messenger" class="section product-section">
+            <div class="container grid">
+                <div class="content fade-in">
+                    <div class="product-badge">COMMUNICATIONS</div>
+                    <h2>Graphene Messenger</h2>
+                    <p class="tagline">Zero telemetry messaging for high-risk communication environments.</p>
+                    <p class="description">Graphene Messenger is our GrapheneOS-first secure messaging platform,
+                        designed for users who need stronger privacy guarantees than standard mobile stacks can provide.
+                        It combines hardened client behavior, reduced metadata exposure, and fully transparent
+                        open-source development.</p>
+
+                    <ul class="feature-list">
+                        <li>GrapheneOS-oriented security architecture</li>
+                        <li>Zero telemetry posture by default</li>
+                        <li>Local encrypted message storage</li>
+                        <li>VPN and Tor/Socks operational compatibility</li>
+                        <li>No dependency on Google Play Services</li>
+                    </ul>
+
+                    <div class="cta-group">
+                        <a href="https://messenger.graphenelab.io" class="btn-product primary-messenger">Explore Graphene Messenger</a>
+                        <a href="#" class="link">View Source Code</a>
+                        <a href="#" class="link">Download Releases</a>
+                    </div>
+                    <p class="trust-note">Open-source and independently auditable. Built for privacy-critical users and
+                        organizations.</p>
+                </div>
+                <div class="image-wrapper">
+                    <img src="img/messenger.png" alt="Graphene Messenger Interface" class="product-img messenger-img blend-screen">
+                </div>
+            </div>
+            <div class="graphene-separator" data-accent="#3b82f6" aria-hidden="true"></div>
         </section>
 
-        <section id="philosophy" class="section light">
-            <h2>Philosophy</h2>
-            <p>The core of our philosophy rests on the conviction that a compromised device renders any effort to protect data in transit futile. Therefore, our solutions are built upon GrapheneOS, a hardened mobile operating system that currently represents the state of the art in device-level security and privacy. We go beyond merely encrypting calls or messages by making the device itself inaccessible to even the most feared spyware, thanks to rigorous kernel hardening and compiler-based mitigations. This holistic approach ensures that personnel on critical missions can operate with the certainty that their audio and video conversations, along with their sensitive data, are secure from both digital and physical interception or compromise.</p>
+        <!-- Cloud Space Section -->
+        <section id="cloud" class="section product-section alt">
+            <div class="container grid inverse">
+                <div class="image-wrapper">
+                    <img src="img/cloud.png" alt="Cloud Space Dashboard" class="product-img blend-screen">
+                </div>
+                <div class="content fade-in">
+                    <div class="product-badge">STORAGE</div>
+                    <h2>Cloud Space</h2>
+                    <p class="tagline">Provider-blind cloud storage built on zero-trust architecture.</p>
+                    <p class="description">Cloud Space is Graphene Lab’s privacy-first storage platform for users and
+                        teams that need strong data protection by default. Files are encrypted on-device before upload,
+                        keys stay with users, and infrastructure is designed as transport and storage only, not a
+                        trusted party.</p>
+
+                    <ul class="feature-list">
+                        <li>Client-side encryption before upload</li>
+                        <li>No provider key access (we never store or recover keys)</li>
+                        <li>Zero-trust architecture across the stack</li>
+                        <li>Metadata minimization and obfuscation</li>
+                        <li>Tamper-evident, Merkle-based audit logs</li>
+                        <li>Cross-platform apps: desktop, mobile, and web</li>
+                        <li>Optional private home cloud path for self-hosted deployments</li>
+                    </ul>
+
+                    <div class="cta-group">
+                        <a href="https://cloud.graphenelab.io" class="btn-product primary-cloud">Explore Cloud Space</a>
+                        <a href="#" class="link">Review Security Architecture</a>
+                        <a href="#" class="btn-early">Start Free (100 GB Early Access)</a>
+                    </div>
+                    <p class="trust-note">Privacy-first by design: encrypted locally, zero provider key access, and
+                        auditable security principles.</p>
+                </div>
+            </div>
+            <div class="graphene-separator" data-accent="#a855f7" aria-hidden="true"></div>
         </section>
 
-        <section id="cloud" class="section dark">
-            <h2>Cloud Infrastructure</h2>
-            <p>In the realm of cloud infrastructure, Graphene Lab develops cutting-edge solutions based on Zero-Knowledge Proofs. This means our clients' data, while stored in the cloud, remains a secret accessible only to them, excluding everyone else, including our own platform. This level of security aligns perfectly with European data protection directives and the pursuit of digital sovereignty, offering unprecedented transparency and control for enterprises and institutions that must manage classified or highly sensitive information.</p>
+        <!-- Hardened Hardware Section -->
+        <section id="hardware" class="section product-section">
+            <div class="container grid">
+                <div class="content fade-in">
+                    <div class="product-badge">HARDWARE</div>
+                    <h2>Ultimate Privacy Hardware</h2>
+                    <p class="tagline">GrapheneOS-powered devices for professional field operations.</p>
+                    <p class="description">For the ultimate level of privacy and security, we provide pre-hardened
+                        smartphones with GrapheneOS. These devices come pre-installed with Graphene Messenger and Cloud
+                        Space, ensuring an end-to-end secure ecosystem out of the box.</p>
+
+                    <ul class="feature-list">
+                        <li>Factory-new Google Pixel hardware (Titan M2 Security Chip)</li>
+                        <li>Clean GrapheneOS installation with verified boot</li>
+                        <li>Physical tamper-evident packaging</li>
+                        <li>Zero Google connections enabled</li>
+                        <li>Messenger & Cloud Space pre-configured</li>
+                    </ul>
+
+                    <div class="cta-group">
+                        <a href="#" class="btn-product highlight">View Device Bundles</a>
+                        <a href="#about" class="link">Learn about GrapheneOS</a>
+                    </div>
+                </div>
+                <div class="image-wrapper">
+                    <img src="img/hardware.png" alt="GrapheneOS Hardened Phone"
+                        class="product-img hardware-img blend-screen">
+                </div>
+            </div>
+            <div class="graphene-separator" data-accent="#00e5a0" aria-hidden="true"></div>
         </section>
 
-        <section id="objectives" class="section light">
-            <h2>Objectives &amp; Impact</h2>
-            <p>Graphene Lab's objectives are in perfect synergy with the European Union's strategy for resilience. We actively contribute to building a more secure and sovereign digital ecosystem by providing the tools to protect critical infrastructures, counter hybrid threats, and safeguard democratic processes. Through our research and development of advanced encryption and device protection technologies, we stand as a bastion for privacy and an enabler of free and secure communication, fundamental pillars for the security and strategic autonomy of Europe and its partners.</p>
+        <!-- About / Context Section -->
+        <section id="about" class="section simple-bg">
+            <div class="container narrow">
+                <h2>Who we are</h2>
+                <p>In a digital landscape where cyber threats manifest in ever more insidious forms, from mass
+                    surveillance to state-sponsored spyware, Graphene Lab was founded to redefine cybersecurity
+                    standards. Our mission is to provide military‑grade enterprise solutions for privacy protection,
+                    meeting the most stringent requirements of governmental bodies, NGOs, and journalists in critical
+                    scenarios.</p>
+
+                <div class="philosophy-grid">
+                    <div class="phi-card">
+                        <h3>Our Philosophy</h3>
+                        <p>A compromised device renders any effort to protect data in transit futile. Therefore, our
+                            solutions are built upon GrapheneOS, making the device itself inaccessible to even the most
+                            feared spyware through rigorous kernel hardening and compiler-based mitigations.</p>
+                    </div>
+                    <div class="phi-card">
+                        <h3>Digital Sovereignty</h3>
+                        <p>We actively contribute to building a more secure and sovereign digital ecosystem by providing
+                            tools to protect critical infrastructures, counter hybrid threats, and safeguard democratic
+                            processes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="graphene-separator" data-accent="#f97316" aria-hidden="true"></div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Graphene Lab Foundation. All rights reserved.</p>
+        <div class="container footer-content">
+            <div class="footer-logo">Graphene Lab</div>
+            <p>&copy; 2026 Graphene Lab Foundation. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Security Audit</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
     </footer>
 
     <script src="js/main.js"></script>
 </body>
+
 </html>
