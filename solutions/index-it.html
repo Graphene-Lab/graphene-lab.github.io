@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Graphene Lab - Sovranità Digitale & Sicurezza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Roboto+Mono:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/gh/VincentGarreau/particles.js/particles.min.js"></script>
+</head>
+
+<body>
+    <header id="hero">
+        <nav id="main-nav">
+            <div class="logo">Graphene Lab</div>
+            <ul class="nav-links">
+                <li><a href="#messenger">Messenger</a></li>
+                <li><a href="#cloud">Cloud Space</a></li>
+                <li><a href="#hardware">Hardened Hardware</a></li>
+                <li><a href="#about">Chi siamo</a></li>
+            </ul>
+        </nav>
+        <div id="particles-js"></div>
+        <div class="hero-content">
+            <div class="badge">SICURO. SOVRANO. RESILIENTE.</div>
+            <h1>Sovranità Digitale & Sicurezza Operativa</h1>
+            <p>Soluzioni per la privacy di livello militare costruite su fondamenta rafforzate per organizzazioni ad alto rischio.</p>
+            <div class="hero-btns">
+                <a href="#messenger" class="btn primary">Esplora soluzioni</a>
+                <a href="#about" class="btn secondary">La nostra filosofia</a>
+            </div>
+        </div>
+        <div class="graphene-separator" data-accent="#00fff2" aria-hidden="true"></div>
+    </header>
+
+    <main>
+
+        <!-- Graphene Messenger Section -->
+        <section id="messenger" class="section product-section">
+            <div class="container grid">
+                <div class="content fade-in">
+                    <div class="product-badge">COMUNICAZIONI</div>
+                    <h2>Graphene Messenger</h2>
+                    <p class="tagline">Messaggistica a telemetria zero per ambienti comunicativi ad alto rischio.</p>
+                    <p class="description">Graphene Messenger è la nostra piattaforma di messaggistica sicura progettata per GrapheneOS,
+                        pensata per utenti e organizzazioni che necessitano di garanzie di privacy più stringenti rispetto agli stack mobili standard.
+                        Offre comportamento client rinforzato, esposizione minima dei metadati e uno sviluppo open‑source trasparente.</p>
+
+                    <ul class="feature-list">
+                        <li>Architettura orientata a GrapheneOS</li>
+                        <li>Postura a telemetria zero di default</li>
+                        <li>Archiviazione locale dei messaggi cifrata</li>
+                        <li>Compatibile con VPN e Tor/Socks</li>
+                        <li>Nessuna dipendenza da Google Play Services</li>
+                    </ul>
+
+                    <div class="cta-group">
+                        <a href="https://messenger.graphenelab.io" class="btn-product primary-messenger">Esplora Graphene Messenger</a>
+                        <a href="#" class="link">Visualizza codice sorgente</a>
+                        <a href="#" class="link">Scarica release</a>
+                    </div>
+                    <p class="trust-note">Open‑source e verificabile indipendentemente. Costruito per utenti e organizzazioni critiche per la privacy.</p>
+                </div>
+                <div class="image-wrapper">
+                    <img src="img/messenger.png" alt="Interfaccia Graphene Messenger" class="product-img messenger-img blend-screen">
+                </div>
+            </div>
+            <div class="graphene-separator" data-accent="#3b82f6" aria-hidden="true"></div>
+        </section>
+
+        <!-- Cloud Space Section -->
+        <section id="cloud" class="section product-section alt">
+            <div class="container grid inverse">
+                <div class="image-wrapper">
+                    <img src="img/cloud.png" alt="Dashboard Cloud Space" class="product-img blend-screen">
+                </div>
+                <div class="content fade-in">
+                    <div class="product-badge">ARCHIVIAZIONE</div>
+                    <h2>Cloud Space</h2>
+                    <p class="tagline">Archiviazione cloud provider‑blind basata su architettura zero‑trust.</p>
+                    <p class="description">Cloud Space è la piattaforma di archiviazione privacy‑first di Graphene Lab per utenti e team che richiedono protezione forte dei dati di default. I file sono cifrati sul dispositivo prima dell'upload,
+                        le chiavi restano agli utenti e l'infrastruttura funge solo da trasporto e storage, non come parte fidata.</p>
+
+                    <ul class="feature-list">
+                        <li>Crittografia lato client prima dell'upload</li>
+                        <li>Nessun accesso alle chiavi da parte del provider</li>
+                        <li>Architettura zero‑trust su tutto lo stack</li>
+                        <li>Minimizzazione e offuscamento dei metadati</li>
+                        <li>Log di audit tamper‑evident basati su Merkle</li>
+                        <li>App cross‑platform: desktop, mobile e web</li>
+                        <li>Opzione private home cloud per deployment self‑hosted</li>
+                    </ul>
+
+                    <div class="cta-group">
+                        <a href="https://cloud.graphenelab.io" class="btn-product primary-cloud">Esplora Cloud Space</a>
+                        <a href="#" class="link">Revisiona l'architettura di sicurezza</a>
+                        <a href="#" class="btn-early">Inizia gratis (100 GB Early Access)</a>
+                    </div>
+                    <p class="trust-note">Privacy‑first per progettazione: cifratura locale, zero accesso provider alle chiavi e principi di sicurezza verificabili.</p>
+                </div>
+            </div>
+            <div class="graphene-separator" data-accent="#a855f7" aria-hidden="true"></div>
+        </section>
+
+        <!-- Hardened Hardware Section -->
+        <section id="hardware" class="section product-section">
+            <div class="container grid">
+                <div class="content fade-in">
+                    <div class="product-badge">HARDWARE</div>
+                    <h2>Hardware per la Privacy Definitiva</h2>
+                    <p class="tagline">Dispositivi potenziati da GrapheneOS per operazioni professionali sul campo.</p>
+                    <p class="description">Per il massimo livello di privacy e sicurezza forniamo smartphone pre‑hardened con GrapheneOS. I dispositivi vengono forniti con Graphene Messenger e Cloud Space preinstallati, garantendo un ecosistema sicuro end‑to‑end fin da subito.</p>
+
+                    <ul class="feature-list">
+                        <li>Google Pixel nuovo di fabbrica (Titan M2 Security Chip)</li>
+                        <li>Installazione pulita di GrapheneOS con verified boot</li>
+                        <li>Confezione fisica tamper‑evident</li>
+                        <li>Nessuna connessione Google abilitata</li>
+                        <li>Messenger & Cloud Space preconfigurati</li>
+                    </ul>
+
+                    <div class="cta-group">
+                        <a href="#" class="btn-product highlight">Visualizza bundle dispositivi</a>
+                        <a href="#about" class="link">Scopri GrapheneOS</a>
+                    </div>
+                </div>
+                <div class="image-wrapper">
+                    <img src="img/hardware.png" alt="Telefono rinforzato con GrapheneOS"
+                        class="product-img hardware-img blend-screen">
+                </div>
+            </div>
+            <div class="graphene-separator" data-accent="#00e5a0" aria-hidden="true"></div>
+        </section>
+
+        <!-- About / Context Section -->
+        <section id="about" class="section simple-bg">
+            <div class="container narrow">
+                <h2>Chi siamo</h2>
+                <p>In un panorama digitale dove le minacce informatiche si manifestano in forme sempre più insidiose, dalla sorveglianza di massa agli spyware sponsorizzati dallo stato, Graphene Lab è stata fondata per ridefinire gli standard della cybersecurity. La nostra missione è offrire soluzioni enterprise di livello militare per la protezione della privacy e la sicurezza delle comunicazioni in scenari critici.</p>
+
+                <div class="philosophy-grid">
+                    <div class="phi-card">
+                        <h3>La nostra filosofia</h3>
+                        <p>Un dispositivo compromesso rende vano ogni tentativo di proteggere i dati in transito. Per questo le nostre soluzioni si basano su GrapheneOS, rendendo il dispositivo stesso inaccessibile anche ai malware più temuti grazie a un rigoroso hardening del kernel e mitigazioni del compilatore.</p>
+                    </div>
+                    <div class="phi-card">
+                        <h3>Sovranità digitale</h3>
+                        <p>Contribuiamo attivamente a costruire un ecosistema digitale più sicuro e sovrano, fornendo strumenti per proteggere infrastrutture critiche, contrastare minacce ibride e salvaguardare processi democratici.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="graphene-separator" data-accent="#f97316" aria-hidden="true"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">Graphene Lab</div>
+            <p>&copy; 2026 Fondazione Graphene Lab. Tutti i diritti riservati.</p>
+            <div class="footer-links">
+                <a href="#">Informativa sulla privacy</a>
+                <a href="#">Audit di sicurezza</a>
+                <a href="#">Contatti</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
