@@ -1,0 +1,4287 @@
+﻿
+
+    <header class="navbar">
+      <div class="container nav-content">
+        <a class="brand" href="#top" aria-label="{{ include.t.nav.home_aria }}">
+          
+    <svg class="logo-icon" viewBox="-23 0 302 302" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+      <g>
+        <polygon
+          fill="var(--text)"
+          points="127.887881 0 149.918982 12.8925604 138.445 19.694 150.244736 12.7281189 150.244736 38.7619992 44.1101241 101.236835 44.11 200.453 44.2140031 200.392417 127.388908 248.744114 211.928 199.872 211.928 127.467 127.926729 176.989734 127.926 176.781 106.190511 163.840135 106.19 138.187 105.737673 137.907714 233.399134 62.9463331 255.938 75.424 255.982403 75.3981378 255.982 75.449 256.002991 75.4600773 255.982 75.472 255.982403 226.328463 128.655 301.503 128.655883 301.914784 128.308 301.708 127.926729 301.933302 127.926 301.481 0 225.554451 0 74.9801912 5.623 78.297 0.226418999 74.9613808"
+        />
+        <polygon
+          fill="var(--text)"
+          points="150.244736 12.7281189 150.244736 38.7619992 44.1101241 101.236835 44.1101241 200.617032 22.1890619 213.255525 22.1890619 88.3329587"
+        />
+        <polygon
+          fill="var(--accent-dark)"
+          points="149.918982 12.8925604 127.887881 0 0.226418999 74.9613808 22.2593366 88.579704"
+        />
+        <polygon
+          fill="var(--accent-dark)"
+          points="254.807015 200.392417 233.017452 187.681898 127.388908 248.744114 44.2140031 200.392417 22.1088056 213.310102 105.355991 262.643279 127.388908 276.261602"
+        />
+        <polygon
+          fill="var(--accent-dark)"
+          points="256.002991 75.4600773 233.399134 62.9463331 105.737673 137.907714 127.77059 151.526037"
+        />
+        <polygon
+          fill="var(--muted)"
+          points="0 74.9801912 22.3120967 88.1414558 22.3120967 213.210083 128.655883 275.502611 128.655883 301.914784 0 225.554451"
+        />
+        <polyline
+          fill="var(--muted)"
+          points="211.928183 101.824951 211.928183 200.197322 234.266221 212.833348 234.266221 106.582399 211.928183 101.824951"
+        />
+        <polygon
+          fill="var(--text)"
+          points="255.982403 75.3981378 255.982403 101.432018 149.847791 164.50641 149.847791 262.912135 255.982403 200.341706 255.982403 226.257488 127.926729 301.933302 127.926729 151.002977"
+          transform="translate(191.954566, 188.665720) rotate(-180.000000) translate(-191.954566, -188.665720)"
+        />
+        <polygon
+          fill="var(--muted)"
+          points="106.190511 137.695104 106.190511 163.840135 128.041757 176.849732 128.041757 150.967194"
+        />
+      </g>
+    </svg>
+  
+          <span>Graphene Cloud</span>
+        </a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="#security">{{ include.t.nav.security }}</a>
+          <a href="#platforms">{{ include.t.nav.platforms }}</a>
+          <a href="#comparison">{{ include.t.nav.comparison }}</a>
+          <a href="#faq">{{ include.t.nav.faq }}</a>
+          <a href="#products">{{ include.t.nav.products }}</a>
+        </nav>
+        <a class="button button-outline" href="#free-plan">{{ include.t.nav.try_free }}</a>
+      </div>
+    </header>
+  
+<main>
+  
+    <section id="top" class="section hero">
+      <div class="hero-blob" aria-hidden="true"></div>
+      <div class="hero-blob hero-blob-alt" aria-hidden="true"></div>
+
+      <div class="container hero-content">
+        <div class="hero-copy">
+          <span class="eyebrow">{{ include.t.hero.eyebrow }}</span>
+
+          <h1>{{ include.t.hero.title_primary }} <br /> <span class="text-gradient">{{ include.t.hero.title_accent }}</span></h1>
+
+          <p class="lead">
+            {{ include.t.hero.lead_paragraph_1 }}
+            <br> <br> {{ include.t.hero.lead_paragraph_2 }}
+          </p>
+
+          <div class="hero-actions">
+            <a class="button" href="#free-plan">
+              {{ include.t.hero.start_free }}
+            </a>
+            <a class="button button-outline glass" href="#security">
+              {{ include.t.hero.security_features }}
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <strong>{{ include.t.hero.stat_free }}</strong>
+              <span>{{ include.t.hero.stat_no_card }}</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <strong>{{ include.t.hero.stat_early_access }}</strong>
+              <span>{{ include.t.hero.stat_offer_terms }}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="visual-container glass">
+            <!-- Removed card c1 as requested (moving animation inside monitor) -->
+            <!-- Removed card c2 as requested (no provider key card) -->
+            <div class="hero-flow-visual" aria-hidden="true">
+              <div class="hero-flow-node hero-flow-node-device">
+                <span class="hero-flow-node-icon">
+                  
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="4" width="18" height="12" rx="2" fill="rgba(255,255,255,0.03)"></rect>
+      <line x1="9" y1="20" x2="15" y2="20"></line>
+      <line x1="12" y1="16" x2="12" y2="20"></line>
+      <!-- Animation of file getting encrypted inside monitor -->
+      <g transform="translate(8.4, 6.2) scale(0.3)">
+        <g class="hero-device-file-anim">
+          <path d="M14.2 1.4H5.4A2.4 2.4 0 0 0 3 3.8v16.4a2.4 2.4 0 0 0 2.4 2.4h13.2a2.4 2.4 0 0 0 2.4-2.4V9z" fill="rgba(255, 255, 255, 0.08)" stroke="#f5f7ff" stroke-width="1.8"></path>
+          <polyline points="14.2 1.4 14.2 9 21 9" stroke="#f5f7ff" stroke-width="1.8"></polyline>
+          
+          <!-- Document "writing" lines -->
+          <line x1="7" y1="12" x2="15.5" y2="12" stroke="#f5f7ff" stroke-width="1.8" stroke-linecap="round"></line>
+          <line x1="7" y1="15.5" x2="15.5" y2="15.5" stroke="#f5f7ff" stroke-width="1.8" stroke-linecap="round"></line>
+          <line x1="7" y1="19" x2="10.5" y2="19" stroke="#f5f7ff" stroke-width="1.8" stroke-linecap="round"></line>
+
+          <g class="hero-device-lock-anim">
+            <g transform="translate(15, 12.5) scale(1.15)">
+              <path d="M1.3 5.4V3.95a1.9 1.9 0 0 1 3.8 0v1.45" fill="none" stroke="#0b1121" stroke-width="1.9" stroke-linecap="round"></path>
+              <path d="M1.3 5.4V3.95a1.9 1.9 0 0 1 3.8 0v1.45" fill="none" stroke="#a9b4c9" stroke-width="1.5" stroke-linecap="round"></path>
+              <rect x="0" y="5.4" width="6.4" height="5.2" rx="1.2" fill="#a9b4c9" stroke="#0b1121" stroke-width="0.2"></rect>
+              <circle cx="3.2" cy="8.05" r="0.85" fill="#0b0f1a" stroke="none"></circle>
+            </g>
+          </g>
+        </g>
+      </g>
+    </svg>
+  
+                </span>
+                <span class="hero-flow-node-label">{{ include.t.hero.your_device }}</span>
+              </div>
+
+              <div class="hero-flow-track">
+                <span class="hero-flow-packet hero-flow-packet-pdf">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#f5f7ff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <g>
+        <path d="M14.2 1.4H5.4A2.4 2.4 0 0 0 3 3.8v16.4a2.4 2.4 0 0 0 2.4 2.4h13.2a2.4 2.4 0 0 0 2.4-2.4V9z"></path>
+        <polyline points="14.2 1.4 14.2 9 21 9"></polyline>
+        <text
+          x="12"
+          y="17"
+          text-anchor="middle"
+          fill="#f5f7ff"
+          stroke="none"
+          font-size="4.9"
+          font-weight="900"
+          letter-spacing="0.18"
+          font-family="Manrope, sans-serif"
+        >
+          PDF
+        </text>
+        
+    <g transform="translate(15.8 13.3) scale(0.95)">
+      <path d="M1.3 5.4V3.95a1.9 1.9 0 0 1 3.8 0v1.45" fill="none" stroke="#0b1121" stroke-width="1.9" stroke-linecap="round"></path>
+      <path d="M1.3 5.4V3.95a1.9 1.9 0 0 1 3.8 0v1.45" fill="none" stroke="#a9b4c9" stroke-width="1.5" stroke-linecap="round"></path>
+      <rect x="0" y="5.4" width="6.4" height="5.2" rx="1.2" fill="#a9b4c9" stroke="#0b1121" stroke-width="0.2"></rect>
+      <circle cx="3.2" cy="8.05" r="0.85" fill="#111629" stroke="none"></circle>
+    </g>
+  
+      </g>
+    </svg>
+  </span>
+                <span class="hero-flow-packet hero-flow-packet-photo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#f5f7ff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <g>
+        <rect x="3" y="3" width="18" height="18" rx="2.3" fill="rgba(255,255,255,0.08)"></rect>
+        <circle cx="8.3" cy="8.3" r="1.7" fill="#f5f7ff" stroke="none"></circle>
+        <polyline points="20.5 15.2 15.5 10.2 5.2 20.5"></polyline>
+        
+    <g transform="translate(17.3 11.5) scale(0.95)">
+      <path d="M1.3 5.4V3.95a1.9 1.9 0 0 1 3.8 0v1.45" fill="none" stroke="#0b1121" stroke-width="1.9" stroke-linecap="round"></path>
+      <path d="M1.3 5.4V3.95a1.9 1.9 0 0 1 3.8 0v1.45" fill="none" stroke="#a9b4c9" stroke-width="1.5" stroke-linecap="round"></path>
+      <rect x="0" y="5.4" width="6.4" height="5.2" rx="1.2" fill="#a9b4c9" stroke="#0b1121" stroke-width="0.2"></rect>
+      <circle cx="3.2" cy="8.05" r="0.85" fill="#111629" stroke="none"></circle>
+    </g>
+  
+      </g>
+    </svg>
+  </span>
+                <span class="hero-flow-packet hero-flow-packet-doc">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#f5f7ff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <g>
+        <path d="M14.2 1.4H5.4A2.4 2.4 0 0 0 3 3.8v16.4a2.4 2.4 0 0 0 2.4 2.4h13.2a2.4 2.4 0 0 0 2.4-2.4V9z"></path>
+        <polyline points="14.2 1.4 14.2 9 21 9"></polyline>
+        <text
+          x="12"
+          y="17"
+          text-anchor="middle"
+          fill="#f5f7ff"
+          stroke="none"
+          font-size="4.9"
+          font-weight="900"
+          letter-spacing="0.18"
+          font-family="Manrope, sans-serif"
+        >
+          DOC
+        </text>
+        
+    <g transform="translate(15.8 13.3) scale(0.95)">
+      <path d="M1.3 5.4V3.95a1.9 1.9 0 0 1 3.8 0v1.45" fill="none" stroke="#0b1121" stroke-width="1.9" stroke-linecap="round"></path>
+      <path d="M1.3 5.4V3.95a1.9 1.9 0 0 1 3.8 0v1.45" fill="none" stroke="#a9b4c9" stroke-width="1.5" stroke-linecap="round"></path>
+      <rect x="0" y="5.4" width="6.4" height="5.2" rx="1.2" fill="#a9b4c9" stroke="#0b1121" stroke-width="0.2"></rect>
+      <circle cx="3.2" cy="8.05" r="0.85" fill="#111629" stroke="none"></circle>
+    </g>
+  
+      </g>
+    </svg>
+  </span>
+                <span class="hero-flow-packet hero-flow-packet-folder">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#f5f7ff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <g>
+        <path d="M22 18.5a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5.5a2 2 0 0 1 2-2h5l2 2.8h9a2 2 0 0 1 2 2z" fill="rgba(255,255,255,0.08)"></path>
+        
+    <g transform="translate(17.3 11.1) scale(0.95)">
+      <path d="M1.3 5.4V3.95a1.9 1.9 0 0 1 3.8 0v1.45" fill="none" stroke="#0b1121" stroke-width="1.9" stroke-linecap="round"></path>
+      <path d="M1.3 5.4V3.95a1.9 1.9 0 0 1 3.8 0v1.45" fill="none" stroke="#a9b4c9" stroke-width="1.5" stroke-linecap="round"></path>
+      <rect x="0" y="5.4" width="6.4" height="5.2" rx="1.2" fill="#a9b4c9" stroke="#0b1121" stroke-width="0.2"></rect>
+      <circle cx="3.2" cy="8.05" r="0.85" fill="#111629" stroke="none"></circle>
+    </g>
+  
+      </g>
+    </svg>
+  </span>
+                <span class="hero-flow-packet hero-flow-packet-txt">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#f5f7ff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <g>
+        <path d="M14.2 1.4H5.4A2.4 2.4 0 0 0 3 3.8v16.4a2.4 2.4 0 0 0 2.4 2.4h13.2a2.4 2.4 0 0 0 2.4-2.4V9z"></path>
+        <polyline points="14.2 1.4 14.2 9 21 9"></polyline>
+        <text
+          x="12"
+          y="17"
+          text-anchor="middle"
+          fill="#f5f7ff"
+          stroke="none"
+          font-size="4.9"
+          font-weight="900"
+          letter-spacing="0.18"
+          font-family="Manrope, sans-serif"
+        >
+          TXT
+        </text>
+        
+    <g transform="translate(15.8 13.3) scale(0.95)">
+      <path d="M1.3 5.4V3.95a1.9 1.9 0 0 1 3.8 0v1.45" fill="none" stroke="#0b1121" stroke-width="1.9" stroke-linecap="round"></path>
+      <path d="M1.3 5.4V3.95a1.9 1.9 0 0 1 3.8 0v1.45" fill="none" stroke="#a9b4c9" stroke-width="1.5" stroke-linecap="round"></path>
+      <rect x="0" y="5.4" width="6.4" height="5.2" rx="1.2" fill="#a9b4c9" stroke="#0b1121" stroke-width="0.2"></rect>
+      <circle cx="3.2" cy="8.05" r="0.85" fill="#111629" stroke="none"></circle>
+    </g>
+  
+      </g>
+    </svg>
+  </span>
+              </div>
+
+              <div class="hero-flow-node hero-flow-node-cloud">
+                <span class="hero-flow-node-icon">
+                  
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" fill="rgba(255,255,255,0.03)"></path>
+    </svg>
+  
+                </span>
+                <span class="hero-flow-node-label">Graphene Cloud</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+  
+    <section id="why-cloud" class="section why-cloud">
+      <div class="container">
+        <div class="section-heading" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1.5rem; text-align: left;">
+          <div>
+            <h2>{{ include.t.why.title }}</h2>
+            <p>{{ include.t.why.subtitle }}</p>
+            <p style="margin-top: 0.5rem; max-width: 680px;">
+              {{ include.t.why.philosophy }}
+            </p>
+          </div>
+          <a class="button button-outline" href="#" target="_blank" rel="noopener noreferrer" style="gap: 0.6rem; white-space: nowrap;">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path d="M12 2c5.523 0 10 4.477 10 10 0 4.4-2.841 8.136-6.789 9.473l-.226.074-2.904-7.55C13.15 13.95 14 13.054 14 12c0-1.105-.895-2-2-2s-2 .895-2 2c0 1.077.851 1.955 1.917 1.998l-2.903 7.549-.225-.074C4.84 20.136 2 16.4 2 12 2 6.477 6.477 2 12 2zm0 2c-4.418 0-8 3.582-8 8 0 2.92 1.564 5.475 3.901 6.872l1.48-3.849C8.534 14.29 8 13.207 8 12c0-2.21 1.79-4 4-4s4 1.79 4 4c0 1.207-.535 2.29-1.38 3.023.565 1.474 1.059 2.757 1.479 3.85C18.435 17.475 20 14.92 20 12c0-4.418-3.582-8-8-8z"/>
+            </svg>
+            {{ include.t.why.source_cta }}
+          </a>
+        </div>
+
+        <div class="bento-grid">
+          
+                <article
+                  class="bento-item large zero-trust"
+                  style="--bento-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%); --bento-color: #764ba2;"
+                >
+                  <div class="bento-bg-icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 2L4 5v6c0 5.5 3.8 10.7 8 12 4.2-1.3 8-6.5 8-12V5l-8-3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="currentColor" fill-opacity="0.15"></path>
+      <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+  </div>
+                  <div class="bento-content">
+                    <div class="bento-copy">
+                      <h3>{{ include.t.why.card_zero_title }}</h3>
+                      
+                            <p>
+                              {{ include.t.why.card_zero_intro }}
+                              <button
+                                class="bento-read-more bento-read-more-inline"
+                                type="button"
+                                data-reason-id="zero-trust"
+                                aria-controls="reason-details-zero-trust"
+                                aria-expanded="false"
+                              >
+                                {{ include.t.why.read_more }}
+                              </button>
+                            </p>
+                            <div class="bento-extra-copy" id="reason-details-zero-trust" hidden>
+                              <p>{{ include.t.why.card_zero_detail_1 }}</p>
+                              <p>{{ include.t.why.card_zero_detail_2 }}</p>
+                              <p>{{ include.t.why.card_zero_detail_3 }}</p>
+                                    <p>
+                                      {{ include.t.why.card_zero_detail_4 }}
+                                      <button
+                                        class="bento-read-more bento-read-more-inline bento-read-less-inline"
+                                        type="button"
+                                        data-reason-id="zero-trust"
+                                        aria-controls="reason-details-zero-trust"
+                                        aria-expanded="false"
+                                      >
+                                        {{ include.t.why.read_less }}
+                                      </button>
+                                    </p>
+                                  
+                            </div>
+                          
+                    </div>
+                  </div>
+                  <div class="bento-blur" aria-hidden="true"></div>
+                </article>
+              
+                <article
+                  class="bento-item small fast-performance"
+                  style="--bento-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); --bento-color: #f5576c;"
+                >
+                  <div class="bento-bg-icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="currentColor" fill-opacity="0.15"></path>
+    </svg>
+  </div>
+                  <div class="bento-content">
+                    <div class="bento-copy">
+                      <h3>{{ include.t.why.card_fast_title }}</h3>
+                      
+                            <p>{{ include.t.why.card_fast_desc }}</p>
+                            
+                          
+                    </div>
+                  </div>
+                  <div class="bento-blur" aria-hidden="true"></div>
+                </article>
+              
+                <article
+                  class="bento-item small linux-support"
+                  style="--bento-gradient: linear-gradient(135deg, #fa709a 0%, #fee140 100%); --bento-color: #fa709a;"
+                >
+                  <div class="bento-bg-icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g transform="translate(0 -1.5)">
+        <ellipse cx="12" cy="13" rx="5.5" ry="7" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.15"></ellipse>
+        <ellipse cx="12" cy="14" rx="3.5" ry="4.5" fill="currentColor" fill-opacity="0.1"></ellipse>
+        <circle cx="10" cy="10" r="1.2" fill="currentColor"></circle>
+        <circle cx="14" cy="10" r="1.2" fill="currentColor"></circle>
+        <circle cx="10.3" cy="9.7" r="0.4" fill="white"></circle>
+        <circle cx="14.3" cy="9.7" r="0.4" fill="white"></circle>
+        <ellipse cx="12" cy="12" rx="1.5" ry="0.8" fill="currentColor"></ellipse>
+        <path d="M9 19c-.5.8-1 1.5-1.5 2M10 19.5c-.3.5-.5 1-.7 1.5M15 19c.5.8 1 1.5 1.5 2M14 19.5c.3.5.5 1 .7 1.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+        <path d="M6.5 13c-.5-.3-1-.5-1.5-.5M17.5 13c.5-.3 1-.5 1.5-.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+      </g>
+    </svg>
+  </div>
+                  <div class="bento-content">
+                    <div class="bento-copy">
+                      <h3>{{ include.t.why.card_linux_title }}</h3>
+                      
+                            <p>{{ include.t.why.card_linux_desc }}</p>
+                            
+                          
+                    </div>
+                  </div>
+                  <div class="bento-blur" aria-hidden="true"></div>
+                </article>
+              
+                <article
+                  class="bento-item large free-100gb"
+                  style="--bento-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); --bento-color: #00f2fe;"
+                >
+                  <div class="bento-bg-icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="5" y="11.5" width="14" height="9.5" rx="1.8" fill="currentColor" fill-opacity="0.14"></rect>
+      <rect x="3" y="8.5" width="18" height="4" rx="1.2" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.1"></rect>
+      <path d="M5 12.5v6.7a1.8 1.8 0 0 0 1.8 1.8h10.4a1.8 1.8 0 0 0 1.8-1.8v-6.7" stroke="currentColor" stroke-width="2"></path>
+      <path d="M12 8.5V21" stroke="currentColor" stroke-width="2"></path>
+      <path d="M3 12.5h18" stroke="currentColor" stroke-width="2"></path>
+      <path d="M12 8.5h-2.8c-1.4 0-2.2-.7-2.2-1.8 0-1 .8-1.7 1.9-1.7 1.9 0 3.1 3.5 3.1 3.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+      <path d="M12 8.5h2.8c1.4 0 2.2-.7 2.2-1.8 0-1-.8-1.7-1.9-1.7-1.9 0-3.1 3.5-3.1 3.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+      <circle cx="12" cy="8.5" r="0.7" fill="currentColor"></circle>
+    </svg>
+  </div>
+                  <div class="bento-content">
+                    <div class="bento-copy">
+                      <h3>{{ include.t.why.card_free_title }}</h3>
+                      
+                            <p>{{ include.t.why.card_free_desc }}</p>
+                            
+                          
+                    </div>
+                  </div>
+                  <div class="bento-blur" aria-hidden="true"></div>
+                </article>
+              
+        </div>
+      </div>
+    </section>
+  
+  
+    <section id="security" class="section security dark-bg">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">{{ include.t.security.eyebrow }}</span>
+          <h2>{{ include.t.security.title }}</h2>
+          <p>
+            {{ include.t.security.subtitle }}
+          </p>
+        </div>
+
+        <div class="security-showcase">
+          <div class="security-snake" aria-hidden="true">
+            <svg class="security-snake-path" viewBox="0 0 200 700" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="snakeGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="var(--accent)" stop-opacity="0"></stop>
+                  <stop offset="5%" stop-color="var(--accent)" stop-opacity="0.6"></stop>
+                  <stop offset="95%" stop-color="var(--accent)" stop-opacity="0.6"></stop>
+                  <stop offset="100%" stop-color="var(--accent)" stop-opacity="0"></stop>
+                </linearGradient>
+                <linearGradient id="flowGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="var(--accent)" stop-opacity="0"></stop>
+                  <stop offset="50%" stop-color="var(--accent)" stop-opacity="1"></stop>
+                  <stop offset="100%" stop-color="var(--accent)" stop-opacity="0"></stop>
+                </linearGradient>
+              </defs>
+              <path
+                class="snake-base-path"
+                d="M 100 0 C 100 40, 85 60, 85 100 S 115 140, 115 200 S 85 260, 85 300 S 115 340, 115 400 S 85 460, 85 500 S 115 540, 115 600 S 100 660, 100 700"
+                stroke="url(#snakeGradient)"
+                stroke-width="3"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                class="snake-flow-path"
+                d="M 100 0 C 100 40, 85 60, 85 100 S 115 140, 115 200 S 85 260, 85 300 S 115 340, 115 400 S 85 460, 85 500 S 115 540, 115 600 S 100 660, 100 700"
+                stroke="url(#flowGradient)"
+                stroke-width="2"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-dasharray="10 20"
+              ></path>
+            </svg>
+            <svg class="security-snake-particles" viewBox="0 0 200 700" preserveAspectRatio="none">
+              
+        <g class="flow-particle" style="animation: particle-fade 2s ease-in-out infinite 0s;">
+          <animateMotion dur="18s" repeatCount="indefinite" begin="0s" path="M 100 0 C 100 40, 85 60, 85 100 S 115 140, 115 200 S 85 260, 85 300 S 115 340, 115 400 S 85 460, 85 500 S 115 540, 115 600 S 100 660, 100 700" />
+          <g style="transform: scale(calc(var(--snake-y-scale, 2.2) * 0.75), 0.75);">
+            <g transform="translate(-12 -12)" style="color: rgba(255, 255, 255, 0.95);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                
+    <g>
+      <rect x="3" y="3" width="18" height="18" rx="2.3" fill="rgba(255,255,255,0.08)"></rect>
+      <circle cx="8.3" cy="8.3" r="1.7" fill="rgba(255,255,255,0.85)" stroke="none"></circle>
+      <polyline points="20.5 15.2 15.5 10.2 5.2 20.5"></polyline>
+      
+    <g transform="translate(17.3 11.5) scale(0.95)">
+      <path d="M1.3 5.4V3.95a1.9 1.9 0 0 1 3.8 0v1.45" fill="none" stroke="#0b1121" stroke-width="1.9" stroke-linecap="round"></path>
+      <path d="M1.3 5.4V3.95a1.9 1.9 0 0 1 3.8 0v1.45" fill="none" stroke="#a9b4c9" stroke-width="1.5" stroke-linecap="round"></path>
+      <rect x="0" y="5.4" width="6.4" height="5.2" rx="1.2" fill="#a9b4c9" stroke="#0b1121" stroke-width="0.2"></rect>
+      <circle cx="3.2" cy="8.05" r="0.85" fill="#0b0f1a" stroke="none"></circle>
+    </g>
+  
+    </g>
+  
+              </svg>
+            </g>
+          </g>
+        </g>
+      
+        <g class="flow-particle" style="animation: particle-fade 2s ease-in-out infinite 0.25s;">
+          <animateMotion dur="18s" repeatCount="indefinite" begin="-3.6s" path="M 100 0 C 100 40, 85 60, 85 100 S 115 140, 115 200 S 85 260, 85 300 S 115 340, 115 400 S 85 460, 85 500 S 115 540, 115 600 S 100 660, 100 700" />
+          <g style="transform: scale(calc(var(--snake-y-scale, 2.2) * 0.75), 0.75);">
+            <g transform="translate(-12 -12)" style="color: rgba(255, 255, 255, 0.95);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                
+    <g>
+      <path d="M14.2 1.4H5.4A2.4 2.4 0 0 0 3 3.8v16.4a2.4 2.4 0 0 0 2.4 2.4h13.2a2.4 2.4 0 0 0 2.4-2.4V9z"></path>
+      <polyline points="14.2 1.4 14.2 9 21 9"></polyline>
+      <text
+        x="12"
+        y="17"
+        text-anchor="middle"
+        fill="#ffffff"
+        stroke="none"
+        font-size="4.9"
+        font-weight="900"
+        letter-spacing="0.18"
+        font-family="Manrope, sans-serif"
+      >
+        PDF
+      </text>
+      
+    <g transform="translate(15.8 13.3) scale(0.95)">
+      <path d="M1.3 5.4V3.95a1.9 1.9 0 0 1 3.8 0v1.45" fill="none" stroke="#0b1121" stroke-width="1.9" stroke-linecap="round"></path>
+      <path d="M1.3 5.4V3.95a1.9 1.9 0 0 1 3.8 0v1.45" fill="none" stroke="#a9b4c9" stroke-width="1.5" stroke-linecap="round"></path>
+      <rect x="0" y="5.4" width="6.4" height="5.2" rx="1.2" fill="#a9b4c9" stroke="#0b1121" stroke-width="0.2"></rect>
+      <circle cx="3.2" cy="8.05" r="0.85" fill="#0b0f1a" stroke="none"></circle>
+    </g>
+  
+    </g>
+  
+              </svg>
+            </g>
+          </g>
+        </g>
+      
+        <g class="flow-particle" style="animation: particle-fade 2s ease-in-out infinite 0.5s;">
+          <animateMotion dur="18s" repeatCount="indefinite" begin="-7.2s" path="M 100 0 C 100 40, 85 60, 85 100 S 115 140, 115 200 S 85 260, 85 300 S 115 340, 115 400 S 85 460, 85 500 S 115 540, 115 600 S 100 660, 100 700" />
+          <g style="transform: scale(calc(var(--snake-y-scale, 2.2) * 0.75), 0.75);">
+            <g transform="translate(-12 -12)" style="color: rgba(255, 255, 255, 0.95);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                
+    <g>
+      <path d="M22 18.5a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5.5a2 2 0 0 1 2-2h5l2 2.8h9a2 2 0 0 1 2 2z" fill="rgba(255,255,255,0.08)"></path>
+      
+    <g transform="translate(17.3 11.1) scale(0.95)">
+      <path d="M1.3 5.4V3.95a1.9 1.9 0 0 1 3.8 0v1.45" fill="none" stroke="#0b1121" stroke-width="1.9" stroke-linecap="round"></path>
+      <path d="M1.3 5.4V3.95a1.9 1.9 0 0 1 3.8 0v1.45" fill="none" stroke="#a9b4c9" stroke-width="1.5" stroke-linecap="round"></path>
+      <rect x="0" y="5.4" width="6.4" height="5.2" rx="1.2" fill="#a9b4c9" stroke="#0b1121" stroke-width="0.2"></rect>
+      <circle cx="3.2" cy="8.05" r="0.85" fill="#0b0f1a" stroke="none"></circle>
+    </g>
+  
+    </g>
+  
+              </svg>
+            </g>
+          </g>
+        </g>
+      
+        <g class="flow-particle" style="animation: particle-fade 2s ease-in-out infinite 0.75s;">
+          <animateMotion dur="18s" repeatCount="indefinite" begin="-10.8s" path="M 100 0 C 100 40, 85 60, 85 100 S 115 140, 115 200 S 85 260, 85 300 S 115 340, 115 400 S 85 460, 85 500 S 115 540, 115 600 S 100 660, 100 700" />
+          <g style="transform: scale(calc(var(--snake-y-scale, 2.2) * 0.75), 0.75);">
+            <g transform="translate(-12 -12)" style="color: rgba(255, 255, 255, 0.95);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                
+    <g>
+      <path d="M14.2 1.4H5.4A2.4 2.4 0 0 0 3 3.8v16.4a2.4 2.4 0 0 0 2.4 2.4h13.2a2.4 2.4 0 0 0 2.4-2.4V9z"></path>
+      <polyline points="14.2 1.4 14.2 9 21 9"></polyline>
+      <text
+        x="12"
+        y="17"
+        text-anchor="middle"
+        fill="#ffffff"
+        stroke="none"
+        font-size="4.9"
+        font-weight="900"
+        letter-spacing="0.18"
+        font-family="Manrope, sans-serif"
+      >
+        DOC
+      </text>
+      
+    <g transform="translate(15.8 13.3) scale(0.95)">
+      <path d="M1.3 5.4V3.95a1.9 1.9 0 0 1 3.8 0v1.45" fill="none" stroke="#0b1121" stroke-width="1.9" stroke-linecap="round"></path>
+      <path d="M1.3 5.4V3.95a1.9 1.9 0 0 1 3.8 0v1.45" fill="none" stroke="#a9b4c9" stroke-width="1.5" stroke-linecap="round"></path>
+      <rect x="0" y="5.4" width="6.4" height="5.2" rx="1.2" fill="#a9b4c9" stroke="#0b1121" stroke-width="0.2"></rect>
+      <circle cx="3.2" cy="8.05" r="0.85" fill="#0b0f1a" stroke="none"></circle>
+    </g>
+  
+    </g>
+  
+              </svg>
+            </g>
+          </g>
+        </g>
+      
+        <g class="flow-particle" style="animation: particle-fade 2s ease-in-out infinite 1s;">
+          <animateMotion dur="18s" repeatCount="indefinite" begin="-14.4s" path="M 100 0 C 100 40, 85 60, 85 100 S 115 140, 115 200 S 85 260, 85 300 S 115 340, 115 400 S 85 460, 85 500 S 115 540, 115 600 S 100 660, 100 700" />
+          <g style="transform: scale(calc(var(--snake-y-scale, 2.2) * 0.75), 0.75);">
+            <g transform="translate(-12 -12)" style="color: rgba(255, 255, 255, 0.95);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                
+    <g>
+      <path d="M14.2 1.4H5.4A2.4 2.4 0 0 0 3 3.8v16.4a2.4 2.4 0 0 0 2.4 2.4h13.2a2.4 2.4 0 0 0 2.4-2.4V9z"></path>
+      <polyline points="14.2 1.4 14.2 9 21 9"></polyline>
+      <text
+        x="12"
+        y="17"
+        text-anchor="middle"
+        fill="#ffffff"
+        stroke="none"
+        font-size="4.9"
+        font-weight="900"
+        letter-spacing="0.18"
+        font-family="Manrope, sans-serif"
+      >
+        TXT
+      </text>
+      
+    <g transform="translate(15.8 13.3) scale(0.95)">
+      <path d="M1.3 5.4V3.95a1.9 1.9 0 0 1 3.8 0v1.45" fill="none" stroke="#0b1121" stroke-width="1.9" stroke-linecap="round"></path>
+      <path d="M1.3 5.4V3.95a1.9 1.9 0 0 1 3.8 0v1.45" fill="none" stroke="#a9b4c9" stroke-width="1.5" stroke-linecap="round"></path>
+      <rect x="0" y="5.4" width="6.4" height="5.2" rx="1.2" fill="#a9b4c9" stroke="#0b1121" stroke-width="0.2"></rect>
+      <circle cx="3.2" cy="8.05" r="0.85" fill="#0b0f1a" stroke="none"></circle>
+    </g>
+  
+    </g>
+  
+              </svg>
+            </g>
+          </g>
+        </g>
+      
+            </svg>
+            <div class="snake-dots">
+              
+                    <span
+                      class="snake-dot"
+                      data-dot-index="0"
+                      style="--dot-color: #764ba2; left: 42.5%; top: 14.285714285714285%;"
+                    ></span>
+                  
+                    <span
+                      class="snake-dot"
+                      data-dot-index="1"
+                      style="--dot-color: #00f2fe; left: 57.49999999999999%; top: 28.57142857142857%;"
+                    ></span>
+                  
+                    <span
+                      class="snake-dot"
+                      data-dot-index="2"
+                      style="--dot-color: #d57eeb; left: 42.5%; top: 42.857142857142854%;"
+                    ></span>
+                  
+                    <span
+                      class="snake-dot"
+                      data-dot-index="3"
+                      style="--dot-color: #f5576c; left: 57.49999999999999%; top: 57.14285714285714%;"
+                    ></span>
+                  
+                    <span
+                      class="snake-dot"
+                      data-dot-index="4"
+                      style="--dot-color: #a78bfa; left: 42.5%; top: 71.42857142857143%;"
+                    ></span>
+                  
+                    <span
+                      class="snake-dot"
+                      data-dot-index="5"
+                      style="--dot-color: #fa709a; left: 57.49999999999999%; top: 85.71428571428571%;"
+                    ></span>
+                  
+                    <span
+                      class="snake-dot"
+                      data-dot-index="6"
+                      style="--dot-color: #34d399; left: 50%; top: 100%;"
+                    ></span>
+                  
+                    <span
+                      class="snake-dot"
+                      data-dot-index="7"
+                      style="--dot-color: #a1c4fd; left: 50%; top: 97.14285714285714%;"
+                    ></span>
+                  
+            </div>
+          </div>
+
+          
+            <article
+              class="security-card-premium left"
+              data-feature-index="0"
+              style="--accent-color: #764ba2; --card-index: '01'; --delay: 0s;"
+            >
+              <div class="security-card-content">
+                <div class="security-visual">
+                  <div class="security-icon-outer" style="--icon-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    <div class="security-icon-inner">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+    </svg>
+  </div>
+                  </div>
+                  <div class="security-number-badge">01</div>
+                </div>
+                <div class="security-text">
+                  <h3>{{ include.t.security.card_1_title }}</h3>
+                  <p data-feature-id="client-side-encryption">
+                    <span class="security-description-text">{{ include.t.security.card_1_desc }}</span>
+                  </p>
+                </div>
+              </div>
+            </article>
+          
+            <article
+              class="security-card-premium right"
+              data-feature-index="1"
+              style="--accent-color: #00f2fe; --card-index: '02'; --delay: 0.1s;"
+            >
+              <div class="security-card-content">
+                <div class="security-visual">
+                  <div class="security-icon-outer" style="--icon-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                    <div class="security-icon-inner">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="8" cy="12" r="4"></circle>
+      <path d="M12 12h9"></path>
+      <path d="M18 12v3"></path>
+      <path d="M15 12v2"></path>
+    </svg>
+  </div>
+                  </div>
+                  <div class="security-number-badge">02</div>
+                </div>
+                <div class="security-text">
+                  <h3>{{ include.t.security.card_2_title }}</h3>
+                  <p data-feature-id="no-provider-key-access">
+                    <span class="security-description-text">{{ include.t.security.card_2_desc }}</span>
+                  </p>
+                </div>
+              </div>
+            </article>
+          
+            <article
+              class="security-card-premium left"
+              data-feature-index="2"
+              style="--accent-color: #d57eeb; --card-index: '03'; --delay: 0.2s;"
+            >
+              <div class="security-card-content">
+                <div class="security-visual">
+                  <div class="security-icon-outer" style="--icon-gradient: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                    <div class="security-icon-inner">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+      <circle cx="12" cy="12" r="3"></circle>
+    </svg>
+  </div>
+                  </div>
+                  <div class="security-number-badge">03</div>
+                </div>
+                <div class="security-text">
+                  <h3>{{ include.t.security.card_3_title }}</h3>
+                  <p data-feature-id="metadata-obfuscation">
+                    <span class="security-description-text">{{ include.t.security.card_3_desc }}</span>
+                  </p>
+                </div>
+              </div>
+            </article>
+          
+            <article
+              class="security-card-premium right"
+              data-feature-index="3"
+              style="--accent-color: #f5576c; --card-index: '04'; --delay: 0.30000000000000004s;"
+            >
+              <div class="security-card-content">
+                <div class="security-visual">
+                  <div class="security-icon-outer" style="--icon-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    <div class="security-icon-inner">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+    </svg>
+  </div>
+                  </div>
+                  <div class="security-number-badge">04</div>
+                </div>
+                <div class="security-text">
+                  <h3>{{ include.t.security.card_4_title }}</h3>
+                  <p data-feature-id="zero-trust-architecture">
+                    <span class="security-description-text">{{ include.t.security.card_4_desc }}</span>
+                  </p>
+                </div>
+              </div>
+            </article>
+          
+            <article
+              class="security-card-premium left"
+              data-feature-index="4"
+              style="--accent-color: #a78bfa; --card-index: '05'; --delay: 0.4s;"
+            >
+              <div class="security-card-content">
+                <div class="security-visual">
+                  <div class="security-icon-outer" style="--icon-gradient: linear-gradient(135deg, #c4b5fd 0%, #8b5cf6 100%);">
+                    <div class="security-icon-inner">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="2.2"></circle>
+      <ellipse cx="12" cy="12" rx="8.5" ry="3.3"></ellipse>
+      <ellipse cx="12" cy="12" rx="8.5" ry="3.3" transform="rotate(60 12 12)"></ellipse>
+      <ellipse cx="12" cy="12" rx="8.5" ry="3.3" transform="rotate(-60 12 12)"></ellipse>
+    </svg>
+  </div>
+                  </div>
+                  <div class="security-number-badge">05</div>
+                </div>
+                <div class="security-text">
+                  <h3>{{ include.t.security.card_5_title }}</h3>
+                  <p data-feature-id="quantum-resistant">
+                    <span class="security-description-text">{{ include.t.security.card_5_desc }}</span>
+                  </p>
+                </div>
+              </div>
+            </article>
+          
+            <article
+              class="security-card-premium right"
+              data-feature-index="5"
+              style="--accent-color: #fa709a; --card-index: '06'; --delay: 0.5s;"
+            >
+              <div class="security-card-content">
+                <div class="security-visual">
+                  <div class="security-icon-outer" style="--icon-gradient: linear-gradient(135deg, #fccb90 0%, #d57eeb 100%);">
+                    <div class="security-icon-inner">
+    <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M22.7399 6.32717C24.3781 8.48282 24.2132 11.571 22.2453 13.5389L20.3007 15.4835C20.0078 15.7764 19.533 15.7764 19.2401 15.4835L12.5226 8.76595C12.2297 8.47306 12.2297 7.99818 12.5226 7.70529L14.4671 5.76075C16.4352 3.79268 19.5237 3.62792 21.6793 5.26646L24.7238 2.22166C25.0167 1.92875 25.4916 1.92873 25.7845 2.22161C26.0774 2.51449 26.0774 2.98936 25.7845 3.28227L22.7399 6.32717ZM19.7704 13.8925L21.1846 12.4783C22.7467 10.9162 22.7467 8.3835 21.1846 6.82141C19.6225 5.25931 17.0899 5.25931 15.5278 6.82141L14.1135 8.23562L19.7704 13.8925Z"
+        fill="currentColor"
+        stroke="currentColor"
+        stroke-width="0.45"
+        stroke-linejoin="round"
+      ></path>
+      <path
+        d="M12.7778 11.215C13.0707 11.5079 13.0707 11.9828 12.7778 12.2757L10.6514 14.402L13.5982 17.3489L15.7238 15.2234C16.0167 14.9305 16.4916 14.9305 16.7844 15.2234C17.0773 15.5163 17.0773 15.9912 16.7844 16.284L14.6589 18.4095L15.4858 19.2364C15.7787 19.5293 15.7787 20.0042 15.4858 20.2971L13.5412 22.2416C11.5732 24.2096 8.48484 24.3745 6.32918 22.7361L3.28475 25.7808C2.99187 26.0737 2.517 26.0737 2.22409 25.7808C1.93118 25.488 1.93116 25.0131 2.22404 24.7202L5.26853 21.6754C3.63025 19.5197 3.79509 16.4314 5.76306 14.4635L7.7076 12.5189C8.0005 12.226 8.47537 12.226 8.76826 12.5189L9.59072 13.3414L11.7172 11.215C12.0101 10.9221 12.485 10.9221 12.7778 11.215ZM6.83028 21.1875C8.3929 22.7431 10.9207 22.7409 12.4806 21.181L13.8948 19.7668L8.23793 14.1099L6.82372 15.5241C5.26383 17.084 5.26163 19.6117 6.81709 21.1743L6.82366 21.1808L6.83028 21.1875Z"
+        fill="currentColor"
+        stroke="currentColor"
+        stroke-width="0.45"
+        stroke-linejoin="round"
+      ></path>
+    </svg>
+  </div>
+                  </div>
+                  <div class="security-number-badge">06</div>
+                </div>
+                <div class="security-text">
+                  <h3>{{ include.t.security.card_6_title }}</h3>
+                  <p data-feature-id="air-gapped-cold-storage">
+                    <span class="security-description-text">{{ include.t.security.card_6_desc }}</span>
+                  </p>
+                </div>
+              </div>
+            </article>
+          
+            <article
+              class="security-card-premium left"
+              data-feature-index="6"
+              style="--accent-color: #34d399; --card-index: '07'; --delay: 0.6000000000000001s;"
+            >
+              <div class="security-card-content">
+                <div class="security-visual">
+                  <div class="security-icon-outer" style="--icon-gradient: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);">
+                    <div class="security-icon-inner">
+    <svg viewBox="0 0 297 297" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M293.925 279.079L254.668 239.822C261.193 214.83 281.569 121.457 235.819 75.706C185.789 25.678 19.07 1.128 11.997 0.107C8.716 -0.361 5.414 0.734 3.074 3.074C0.734 5.414 -0.365 8.72 0.107 11.996C1.128 19.069 25.677 185.788 75.705 235.818C94.958 255.071 124.612 264.832 163.842 264.832C196.701 264.832 227.158 257.946 239.815 254.662L279.079 293.926C281.129 295.975 283.815 297 286.502 297C289.189 297 291.875 295.975 293.925 293.926C298.025 289.825 298.025 283.178 293.925 279.079ZM163.843 243.837C130.384 243.837 105.724 236.144 90.552 220.971C72.233 202.652 54.403 160.481 38.989 99.018C31.252 68.168 25.945 39.523 23.165 23.164C39.524 25.944 68.168 31.251 99.019 38.989C160.483 54.403 202.654 72.233 220.974 90.552C253.359 122.936 243.98 190.343 237.174 222.327L173.524 158.678V119.448C173.524 113.651 168.824 108.951 163.027 108.951C157.23 108.951 152.53 113.651 152.53 119.448V137.683L105.08 90.234C100.979 86.136 94.334 86.136 90.234 90.234C86.134 94.334 86.134 100.98 90.234 105.08L101.366 116.212H83.129C77.332 116.212 72.632 120.912 72.632 126.709C72.632 132.506 77.332 137.206 83.129 137.206H122.361L174 188.845L155.762 188.845C149.965 188.845 145.265 193.545 145.265 199.342C145.265 205.139 149.964 209.839 155.762 209.839L194.995 209.84L222.344 237.188C207.942 240.258 186.331 243.837 163.843 243.837Z"
+        fill="currentColor"
+      ></path>
+    </svg>
+  </div>
+                  </div>
+                  <div class="security-number-badge">07</div>
+                </div>
+                <div class="security-text">
+                  <h3>{{ include.t.security.card_7_title }}</h3>
+                  <p data-feature-id="energy-efficient-infrastructure">
+                    <span class="security-description-text">{{ include.t.security.card_7_desc }}</span>
+                  </p>
+                </div>
+              </div>
+            </article>
+          
+            <article
+              class="security-card-premium right"
+              data-feature-index="7"
+              style="--accent-color: #a1c4fd; --card-index: '08'; --delay: 0.7000000000000001s;"
+            >
+              <div class="security-card-content">
+                <div class="security-visual">
+                  <div class="security-icon-outer" style="--icon-gradient: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);">
+                    <div class="security-icon-inner">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8"></circle>
+      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    </svg>
+  </div>
+                  </div>
+                  <div class="security-number-badge">08</div>
+                </div>
+                <div class="security-text">
+                  <h3>{{ include.t.security.card_8_title }}</h3>
+                  <p data-feature-id="surveillance-resistant-design">
+                    <span class="security-description-text">{{ include.t.security.card_8_desc }}</span>
+                  </p>
+                </div>
+              </div>
+            </article>
+          
+        </div>
+      </div>
+    </section>
+  
+  
+    <section id="free-plan" class="section free-plan">
+      <div class="container">
+        <div class="free-plan-card glass">
+          <div class="free-plan-content">
+            <span class="offer-badge">{{ include.t.free_plan.badge }}</span>
+            <h2>{{ include.t.free_plan.title }}</h2>
+            <p>
+              {{ include.t.free_plan.description }}
+            </p>
+            <div class="free-plan-actions">
+              <a class="button" href="#top">{{ include.t.free_plan.create_account }}</a>
+              <a class="button button-outline" href="#platforms" data-download-clients-cta>{{ include.t.free_plan.download_clients }}</a>
+              <span>{{ include.t.free_plan.no_card }}</span>
+            </div>
+          </div>
+
+          <div class="free-plan-visual-container" style="display: flex; justify-content: center; align-items: center; width: 100%; padding: 1.5rem;">
+            
+    <svg class="free-plan-logo graphene-3d-logo graphene-logo-animated" viewBox="-23 0 302 302" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+      <g>
+        <polygon
+          fill="var(--text)"
+          points="127.887881 0 149.918982 12.8925604 138.445 19.694 150.244736 12.7281189 150.244736 38.7619992 44.1101241 101.236835 44.11 200.453 44.2140031 200.392417 127.388908 248.744114 211.928 199.872 211.928 127.467 127.926729 176.989734 127.926 176.781 106.190511 163.840135 106.19 138.187 105.737673 137.907714 233.399134 62.9463331 255.938 75.424 255.982403 75.3981378 255.982 75.449 256.002991 75.4600773 255.982 75.472 255.982403 226.328463 128.655 301.503 128.655883 301.914784 128.308 301.708 127.926729 301.933302 127.926 301.481 0 225.554451 0 74.9801912 5.623 78.297 0.226418999 74.9613808"
+        />
+        <polygon
+          fill="var(--text)"
+          points="150.244736 12.7281189 150.244736 38.7619992 44.1101241 101.236835 44.1101241 200.617032 22.1890619 213.255525 22.1890619 88.3329587"
+        />
+        <polygon
+          fill="var(--accent-dark)"
+          points="149.918982 12.8925604 127.887881 0 0.226418999 74.9613808 22.2593366 88.579704"
+        />
+        <polygon
+          fill="var(--accent-dark)"
+          points="254.807015 200.392417 233.017452 187.681898 127.388908 248.744114 44.2140031 200.392417 22.1088056 213.310102 105.355991 262.643279 127.388908 276.261602"
+        />
+        <polygon
+          fill="var(--accent-dark)"
+          points="256.002991 75.4600773 233.399134 62.9463331 105.737673 137.907714 127.77059 151.526037"
+        />
+        <polygon
+          fill="var(--muted)"
+          points="0 74.9801912 22.3120967 88.1414558 22.3120967 213.210083 128.655883 275.502611 128.655883 301.914784 0 225.554451"
+        />
+        <polyline
+          fill="var(--muted)"
+          points="211.928183 101.824951 211.928183 200.197322 234.266221 212.833348 234.266221 106.582399 211.928183 101.824951"
+        />
+        <polygon
+          fill="var(--text)"
+          points="255.982403 75.3981378 255.982403 101.432018 149.847791 164.50641 149.847791 262.912135 255.982403 200.341706 255.982403 226.257488 127.926729 301.933302 127.926729 151.002977"
+          transform="translate(191.954566, 188.665720) rotate(-180.000000) translate(-191.954566, -188.665720)"
+        />
+        <polygon
+          fill="var(--muted)"
+          points="106.190511 137.695104 106.190511 163.840135 128.041757 176.849732 128.041757 150.967194"
+        />
+      </g>
+    </svg>
+  
+          </div>
+        </div>
+
+        <div class="disclaimer-chip">
+          <span>i</span>
+          <p>
+            {{ include.t.free_plan.disclaimer }}
+          </p>
+        </div>
+      </div>
+    </section>
+  
+  
+    <section id="platforms" class="section apps-platforms">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">{{ include.t.platforms.eyebrow }}</span>
+          <h2>{{ include.t.platforms.title }}</h2>
+          <p>{{ include.t.platforms.subtitle }}</p>
+        </div>
+
+        <div class="platforms-showcase">
+          
+                <article
+                  class="platform-card"
+                  style="--platform-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%); --platform-color: #764ba2; --delay: 0s;"
+                >
+                  <div class="platform-header">
+                    <div class="platform-icon-wrapper">
+                      <span class="platform-icon">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="2" y="3" width="20" height="13" rx="1.5" stroke="currentColor" stroke-width="1.5"></rect>
+      <rect x="3" y="4" width="18" height="10" rx="0.5" fill="currentColor" fill-opacity="0.1"></rect>
+      <path d="M2 14h20" stroke="currentColor" stroke-width="1.5"></path>
+      <rect x="8" y="19" width="8" height="2" rx="0.5" fill="currentColor"></rect>
+      <path d="M12 16v3" stroke="currentColor" stroke-width="1.5"></path>
+      <circle cx="12" cy="14.5" r="0.7" fill="currentColor"></circle>
+    </svg>
+  </span>
+                    </div>
+                    <div class="platform-info">
+                      <h3>{{ include.t.platforms.desktop_title }}</h3>
+                      <p class="platform-desc">{{ include.t.platforms.desktop_desc }}</p>
+                    </div>
+                  </div>
+
+                  
+                  <div class="platform-feature-sections">
+                    
+                      <div class="platform-feature-section">
+                        <span class="platform-feature-section-title">{{ include.t.platforms.feature_client }}</span>
+                        <div class="platform-features">
+                          
+                            <span class="feature-tag">
+                              <span class="check-icon">&#10003;</span>
+                              {{ include.t.platforms.feature_first_linux_provider }}
+                            </span>
+                          
+                            <span class="feature-tag">
+                              <span class="check-icon">&#10003;</span>
+                              {{ include.t.platforms.feature_fast_sync }}
+                            </span>
+                          
+                            <span class="feature-tag">
+                              <span class="check-icon">&#10003;</span>
+                              {{ include.t.platforms.feature_background_updates }}
+                            </span>
+                          
+                            <span class="feature-tag">
+                              <span class="check-icon">&#10003;</span>
+                              {{ include.t.platforms.feature_offline_access }}
+                            </span>
+                          
+                        </div>
+                        
+                      </div>
+                    
+                  </div>
+                
+
+                  
+                    <div class="platform-downloads" aria-label="{{ include.t.common.download_label }} links">
+                      <div class="platform-download-head">
+                        <span class="platform-download-label">{{ include.t.common.download_label }}</span>
+                      </div>
+                      
+                      <div class="platform-download-list">
+                        
+                        <a class="platform-download-link" href="/download/windows">
+                          <span class="download-link-content">
+                            <span class="download-icon download-icon-windows" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2 4.2 10.4 3v8.2H2V4.2zM12.2 2.8 22 1.4v9.8h-9.8V2.8zM2 12.8h8.4V21L2 19.8v-7zM12.2 12.8H22v9.8l-9.8-1.4v-8.4z"></path>
+    </svg>
+  </span>
+                            <span class="download-link-text">{{ include.t.common.windows }}</span>
+                          </span>
+                        </a>
+                      
+                        <a class="platform-download-link" href="/download/macos">
+                          <span class="download-link-content">
+                            <span class="download-icon download-icon-macos" aria-hidden="true">
+    <svg viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M31,0H1A1,1,0,0,0,0,1V31a1,1,0,0,0,1,1H31a1,1,0,0,0,1-1V1A1,1,0,0,0,31,0ZM2,2H14.36C11.89,7.34,11,15.52,11,15.9a1,1,0,0,0,.25.77A1,1,0,0,0,12,17h4.89a29.9,29.9,0,0,0,.25,7c-.37,0-.75.05-1.14.05A14.07,14.07,0,0,1,5.78,19.38a1,1,0,0,0-1.4-.16,1,1,0,0,0-.16,1.41A15.87,15.87,0,0,0,16,26c.53,0,1.05,0,1.55-.08A18.35,18.35,0,0,0,19.07,30H2ZM30,30H21.39a15.57,15.57,0,0,1-1.86-4.42,15.91,15.91,0,0,0,8.25-4.95,1,1,0,1,0-1.56-1.25,14.13,14.13,0,0,1-7.09,4.24A27.91,27.91,0,0,1,19,16.15,1,1,0,0,0,18,15H13.13c.34-2.59,1.36-9.12,3.46-13H30Z"></path>
+      <path d="M8,13a1,1,0,0,0,1-1V9A1,1,0,0,0,7,9v3A1,1,0,0,0,8,13Z"></path>
+      <path d="M24,13a1,1,0,0,0,1-1V9a1,1,0,0,0-2,0v3A1,1,0,0,0,24,13Z"></path>
+    </svg>
+  </span>
+                            <span class="download-link-text">{{ include.t.common.macos }}</span>
+                          </span>
+                        </a>
+                      
+                        <a class="platform-download-link" href="/download/linux">
+                          <span class="download-link-content">
+                            <span class="download-icon download-icon-linux" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+      <rect x="2.5" y="4" width="19" height="16" rx="2.2"></rect>
+      <path d="m6.8 10 2.6 2.3-2.6 2.3"></path>
+      <path d="M11.5 14.8h4.8"></path>
+    </svg>
+  </span>
+                            <span class="download-link-text">{{ include.t.common.linux }}</span>
+                          </span>
+                        </a>
+                      
+                      </div>
+                    
+                    </div>
+                  
+                </article>
+              
+                <article
+                  class="platform-card"
+                  style="--platform-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); --platform-color: #f5576c; --delay: 0.1s;"
+                >
+                  <div class="platform-header">
+                    <div class="platform-icon-wrapper">
+                      <span class="platform-icon">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="6" y="2" width="12" height="20" rx="2" stroke="currentColor" stroke-width="1.5"></rect>
+      <rect x="7" y="4" width="10" height="14" rx="0.5" fill="currentColor" fill-opacity="0.1"></rect>
+      <path d="M9 19.5h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+      <circle cx="12" cy="3.5" r="0.7" fill="currentColor"></circle>
+      <path d="M10 3h4" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"></path>
+    </svg>
+  </span>
+                    </div>
+                    <div class="platform-info">
+                      <h3>{{ include.t.platforms.mobile_title }}</h3>
+                      <p class="platform-desc">{{ include.t.platforms.mobile_desc }}</p>
+                    </div>
+                  </div>
+
+                  
+                  <div class="platform-feature-sections">
+                    
+                      <div class="platform-feature-section">
+                        <span class="platform-feature-section-title">{{ include.t.platforms.feature_explorer }}</span>
+                        <div class="platform-features">
+                          
+                            <span class="feature-tag">
+                              <span class="check-icon">&#10003;</span>
+                              {{ include.t.platforms.feature_secure_explorer }}
+                            </span>
+                          
+                            <span class="feature-tag">
+                              <span class="check-icon">&#10003;</span>
+                              {{ include.t.platforms.feature_on_the_go_access }}
+                            </span>
+                          
+                        </div>
+                        
+                          <div class="platform-feature-downloads">
+                            <div class="platform-download-head">
+                              <span class="platform-download-label">{{ include.t.common.download_label }}</span>
+                            </div>
+                            <div class="platform-download-list">
+                              
+                                <a class="platform-download-link" href="/download/ios/explorer">
+                                  <span class="download-link-content">
+                                    <span class="download-icon download-icon-apple" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16.9 12.9c0-2.1 1.7-3.1 1.8-3.2-1-1.5-2.6-1.7-3.2-1.7-1.4-.2-2.7.8-3.3.8s-1.9-.8-3.1-.8c-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7 1.2 9.2.8 1.1 1.7 2.3 2.9 2.3 1.2 0 1.6-.7 3.1-.7 1.5 0 1.9.7 3.1.7 1.3 0 2.1-1.1 2.9-2.2.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.8-1.1-2.8-4.1z"></path>
+      <path d="M14.8 6.5c.6-.7 1.1-1.8 1-2.8-.9.1-2 .6-2.7 1.3-.6.7-1.1 1.8-1 2.8 1 .1 2.1-.5 2.7-1.3z"></path>
+    </svg>
+  </span>
+                                    <span class="download-link-text">{{ include.t.common.app_store }}</span>
+                                  </span>
+                                </a>
+                              
+                                <a class="platform-download-link" href="/download/android/explorer">
+                                  <span class="download-link-content">
+                                    <span class="download-icon download-icon-play" aria-hidden="true">
+    <svg viewBox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <title>ionicons-v5_logos</title>
+      <path d="M48,59.49v393a4.33,4.33,0,0,0,7.37,3.07L260,256,55.37,56.42A4.33,4.33,0,0,0,48,59.49Z"></path>
+      <path d="M345.8,174,89.22,32.64l-.16-.09c-4.42-2.4-8.62,3.58-5,7.06L285.19,231.93Z"></path>
+      <path d="M84.08,472.39c-3.64,3.48.56,9.46,5,7.06l.16-.09L345.8,338l-60.61-57.95Z"></path>
+      <path d="M449.38,231l-71.65-39.46L310.36,256l67.37,64.43L449.38,281C468.87,270.23,468.87,241.77,449.38,231Z"></path>
+    </svg>
+  </span>
+                                    <span class="download-link-text">{{ include.t.common.google_play }}</span>
+                                  </span>
+                                </a>
+                              
+                            </div>
+                          </div>
+                        
+                      </div>
+                    
+                      <div class="platform-feature-section">
+                        <span class="platform-feature-section-title">{{ include.t.platforms.feature_photo_sync }}</span>
+                        <div class="platform-features">
+                          
+                            <span class="feature-tag">
+                              <span class="check-icon">&#10003;</span>
+                              {{ include.t.platforms.feature_secure_gallery_sync }}
+                            </span>
+                          
+                        </div>
+                        
+                          <div class="platform-feature-downloads">
+                            <div class="platform-download-head">
+                              <span class="platform-download-label">{{ include.t.common.download_label }}</span>
+                            </div>
+                            <div class="platform-download-list">
+                              
+                                <a class="platform-download-link" href="/download/ios/gallery-sync">
+                                  <span class="download-link-content">
+                                    <span class="download-icon download-icon-apple" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16.9 12.9c0-2.1 1.7-3.1 1.8-3.2-1-1.5-2.6-1.7-3.2-1.7-1.4-.2-2.7.8-3.3.8s-1.9-.8-3.1-.8c-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7 1.2 9.2.8 1.1 1.7 2.3 2.9 2.3 1.2 0 1.6-.7 3.1-.7 1.5 0 1.9.7 3.1.7 1.3 0 2.1-1.1 2.9-2.2.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.8-1.1-2.8-4.1z"></path>
+      <path d="M14.8 6.5c.6-.7 1.1-1.8 1-2.8-.9.1-2 .6-2.7 1.3-.6.7-1.1 1.8-1 2.8 1 .1 2.1-.5 2.7-1.3z"></path>
+    </svg>
+  </span>
+                                    <span class="download-link-text">{{ include.t.common.app_store }}</span>
+                                  </span>
+                                </a>
+                              
+                                <a class="platform-download-link" href="/download/android/gallery-sync">
+                                  <span class="download-link-content">
+                                    <span class="download-icon download-icon-play" aria-hidden="true">
+    <svg viewBox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <title>ionicons-v5_logos</title>
+      <path d="M48,59.49v393a4.33,4.33,0,0,0,7.37,3.07L260,256,55.37,56.42A4.33,4.33,0,0,0,48,59.49Z"></path>
+      <path d="M345.8,174,89.22,32.64l-.16-.09c-4.42-2.4-8.62,3.58-5,7.06L285.19,231.93Z"></path>
+      <path d="M84.08,472.39c-3.64,3.48.56,9.46,5,7.06l.16-.09L345.8,338l-60.61-57.95Z"></path>
+      <path d="M449.38,231l-71.65-39.46L310.36,256l67.37,64.43L449.38,281C468.87,270.23,468.87,241.77,449.38,231Z"></path>
+    </svg>
+  </span>
+                                    <span class="download-link-text">{{ include.t.common.google_play }}</span>
+                                  </span>
+                                </a>
+                              
+                            </div>
+                          </div>
+                        
+                      </div>
+                    
+                  </div>
+                
+
+                  
+                </article>
+              
+                <article
+                  class="platform-card"
+                  style="--platform-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); --platform-color: #00f2fe; --delay: 0.2s;"
+                >
+                  <div class="platform-header">
+                    <div class="platform-icon-wrapper">
+                      <span class="platform-icon">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"></circle>
+      <ellipse cx="12" cy="12" rx="4" ry="9" stroke="currentColor" stroke-width="1.5"></ellipse>
+      <path d="M3 12h18" stroke="currentColor" stroke-width="1.5"></path>
+      <path d="M12 3c1.5 2 2.5 5.5 2.5 9s-1 7-2.5 9" stroke="currentColor" stroke-width="1.5"></path>
+      <path d="M12 3c-1.5 2-2.5 5.5-2.5 9s1 7 2.5 9" stroke="currentColor" stroke-width="1.5"></path>
+      <circle cx="12" cy="12" r="2" fill="currentColor" fill-opacity="0.25"></circle>
+    </svg>
+  </span>
+                    </div>
+                    <div class="platform-info">
+                      <h3>{{ include.t.platforms.web_title }}</h3>
+                      <p class="platform-desc">{{ include.t.platforms.web_desc }}</p>
+                    </div>
+                  </div>
+
+                  
+                  <div class="platform-feature-sections">
+                    
+                      <div class="platform-feature-section">
+                        <span class="platform-feature-section-title">{{ include.t.platforms.feature_client }}</span>
+                        <div class="platform-features">
+                          
+                            <span class="feature-tag">
+                              <span class="check-icon">&#10003;</span>
+                              {{ include.t.platforms.feature_static_client }}
+                            </span>
+                          
+                            <span class="feature-tag">
+                              <span class="check-icon">&#10003;</span>
+                              {{ include.t.platforms.feature_in_browser_encryption }}
+                            </span>
+                          
+                            <span class="feature-tag">
+                              <span class="check-icon">&#10003;</span>
+                              {{ include.t.platforms.feature_drag_drop }}
+                            </span>
+                          
+                        </div>
+                        
+                      </div>
+                    
+                  </div>
+                
+
+                  
+                    <div class="platform-downloads" aria-label="{{ include.t.common.download_label }} links">
+                      <div class="platform-download-head">
+                        <span class="platform-download-label">{{ include.t.common.download_label }}</span>
+                      </div>
+                      
+                      <div class="platform-download-list is-single">
+                        
+                        <a class="platform-download-link" href="/app">
+                          <span class="download-link-content">
+                            <span class="download-icon download-icon-web" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="9"></circle>
+      <path d="M3 12h18"></path>
+      <path d="M12 3a14.5 14.5 0 0 1 0 18"></path>
+      <path d="M12 3a14.5 14.5 0 0 0 0 18"></path>
+    </svg>
+  </span>
+                            <span class="download-link-text">{{ include.t.common.web_client }}</span>
+                          </span>
+                        </a>
+                      
+                      </div>
+                    
+                    </div>
+                  
+                </article>
+              
+        </div>
+      </div>
+    </section>
+  
+  
+    <section id="comparison" class="section comparison">
+      <div class="container">
+        <div class="section-heading">
+          <h2>{{ include.t.comparison.title }}</h2>
+          <p>{{ include.t.comparison.subtitle }}</p>
+        </div>
+        <div class="comparison-grid">
+          
+                <article
+                  class="compare-card"
+                  style="--compare-accent: #1e69ff; --compare-gradient: linear-gradient(135deg, #4c8dff 0%, #1e4dd8 100%); --compare-score: 100%; --score-fill-color: #57e9a7; --score-fill-glow: rgba(87, 233, 167, 0.34);"
+                  data-provider-index="0"
+                  data-array-index="0"
+                >
+                  <div class="compare-header">
+                    <div class="compare-logo">
+    <svg viewBox="-23 0 302 302" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+      <g>
+        <polygon
+          fill="var(--text)"
+          points="127.887881 0 149.918982 12.8925604 138.445 19.694 150.244736 12.7281189 150.244736 38.7619992 44.1101241 101.236835 44.11 200.453 44.2140031 200.392417 127.388908 248.744114 211.928 199.872 211.928 127.467 127.926729 176.989734 127.926 176.781 106.190511 163.840135 106.19 138.187 105.737673 137.907714 233.399134 62.9463331 255.938 75.424 255.982403 75.3981378 255.982 75.449 256.002991 75.4600773 255.982 75.472 255.982403 226.328463 128.655 301.503 128.655883 301.914784 128.308 301.708 127.926729 301.933302 127.926 301.481 0 225.554451 0 74.9801912 5.623 78.297 0.226418999 74.9613808"
+        />
+        <polygon
+          fill="var(--text)"
+          points="150.244736 12.7281189 150.244736 38.7619992 44.1101241 101.236835 44.1101241 200.617032 22.1890619 213.255525 22.1890619 88.3329587"
+        />
+        <polygon
+          fill="var(--accent-dark)"
+          points="149.918982 12.8925604 127.887881 0 0.226418999 74.9613808 22.2593366 88.579704"
+        />
+        <polygon
+          fill="var(--accent-dark)"
+          points="254.807015 200.392417 233.017452 187.681898 127.388908 248.744114 44.2140031 200.392417 22.1088056 213.310102 105.355991 262.643279 127.388908 276.261602"
+        />
+        <polygon
+          fill="var(--accent-dark)"
+          points="256.002991 75.4600773 233.399134 62.9463331 105.737673 137.907714 127.77059 151.526037"
+        />
+        <polygon
+          fill="var(--muted)"
+          points="0 74.9801912 22.3120967 88.1414558 22.3120967 213.210083 128.655883 275.502611 128.655883 301.914784 0 225.554451"
+        />
+        <polyline
+          fill="var(--muted)"
+          points="211.928183 101.824951 211.928183 200.197322 234.266221 212.833348 234.266221 106.582399 211.928183 101.824951"
+        />
+        <polygon
+          fill="var(--text)"
+          points="255.982403 75.3981378 255.982403 101.432018 149.847791 164.50641 149.847791 262.912135 255.982403 200.341706 255.982403 226.257488 127.926729 301.933302 127.926729 151.002977"
+          transform="translate(191.954566, 188.665720) rotate(-180.000000) translate(-191.954566, -188.665720)"
+        />
+        <polygon
+          fill="var(--muted)"
+          points="106.190511 137.695104 106.190511 163.840135 128.041757 176.849732 128.041757 150.967194"
+        />
+      </g>
+    </svg>
+  </div>
+                    <div>
+                      <h3>{{ include.t.comparison.provider_our_storage }}</h3>
+                      <div class="compare-score">
+                        <span class="score-number">100</span>
+                        <span class="score-label">{{ include.t.comparison.score_label }}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="score-bar"
+                    role="progressbar"
+                    aria-label="{{ include.t.comparison.provider_our_storage }} score"
+                    aria-valuenow="100"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <span class="score-fill"></span>
+                  </div>
+                  <ul class="compare-list" id="compare-cloudspace-0">
+                    
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.common.client_side_encryption }}
+            <span class="compare-points">
+              +10 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--yes" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="M3.2 8.1 6.5 11.3 12.8 4.9" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.common.client_side_encryption }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_provider_access_to_keys }}
+            <span class="compare-points">
+              +10 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--yes" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="M3.2 8.1 6.5 11.3 12.8 4.9" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.common.no_provider_key_access }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_metadata_visibility }}
+            <span class="compare-points">
+              +5 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--yes" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="M3.2 8.1 6.5 11.3 12.8 4.9" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_metadata_obfuscated }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.common.zero_trust_architecture }}
+            <span class="compare-points">
+              +5 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--yes" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="M3.2 8.1 6.5 11.3 12.8 4.9" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.common.zero_trust_architecture }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_free_storage }}
+            <span class="compare-points">
+              +20 pts
+            </span>
+          </span>
+          <span class="compare-value compare-value--storage">{{ include.t.comparison.value_storage_100gb_early }}</span>
+        </li>
+      
+                  </ul>
+                  <button
+                    class="compare-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="compare-cloudspace-0"
+                  >
+                    {{ include.t.comparison.show_all_features }}
+                  </button>
+                </article>
+              
+                <article
+                  class="compare-card"
+                  style="--compare-accent: #34A853; --compare-gradient: linear-gradient(135deg, #43c17d 0%, #1fa85a 100%); --compare-score: 33%; --score-fill-color: #ff7d90; --score-fill-glow: rgba(255, 125, 144, 0.34);"
+                  data-provider-index="1"
+                  data-array-index="1"
+                >
+                  <div class="compare-header">
+                    <div class="compare-logo">
+    <svg viewBox="0 0 207.027 207.027" fill="none" aria-hidden="true">
+      <path d="M69.866 15.557 0 138.919l28.732 52.552 143.288-.029 35.008-59.588L136.39 15.735 69.866 15.557zM17.166 139.046 74.268 38.205 91.21 67.783 33.24 168.447 17.166 139.046zM99.841 82.851l23.805 41.558-47.732-.006 23.927-41.552zM163.434 176.443l-117.332.024 21.53-37.065 64.606.008.067.119 52.865-.085-21.736 36.999zM140.932 124.411 90.157 35.767l-2.966-5.178 40.751.121 57.003 93.706-44.013-.005z" fill="currentColor"></path>
+    </svg>
+  </div>
+                    <div>
+                      <h3>Google Drive</h3>
+                      <div class="compare-score">
+                        <span class="score-number">33</span>
+                        <span class="score-label">{{ include.t.comparison.score_label }}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="score-bar"
+                    role="progressbar"
+                    aria-label="Google Drive score"
+                    aria-valuenow="33"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <span class="score-fill"></span>
+                  </div>
+                  <ul class="compare-list" id="compare-gdrive-1">
+                    
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.common.client_side_encryption }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_provider_managed_keys }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_provider_access_to_keys }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_provider_managed_keys }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_metadata_visibility }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_metadata_visible }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.common.zero_trust_architecture }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_centralized_trust }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_free_storage }}
+            <span class="compare-points">
+              +3 pts
+            </span>
+          </span>
+          <span class="compare-value compare-value--storage">15 GB</span>
+        </li>
+      
+                  </ul>
+                  <button
+                    class="compare-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="compare-gdrive-1"
+                  >
+                    {{ include.t.comparison.show_all_features }}
+                  </button>
+                </article>
+              
+                <article
+                  class="compare-card"
+                  style="--compare-accent: #0A64D6; --compare-gradient: linear-gradient(135deg, #3f8cff 0%, #0a64d6 100%); --compare-score: 31%; --score-fill-color: #ff7d90; --score-fill-glow: rgba(255, 125, 144, 0.34);"
+                  data-provider-index="2"
+                  data-array-index="2"
+                >
+                  <div class="compare-header">
+                    <div class="compare-logo">
+    <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+      <path d="M7.83017 26.0001C5.37824 26.0001 3.18957 24.8966 1.75391 23.1691L18.0429 16.3335L30.7089 23.4647C29.5926 24.9211 27.9066 26.0001 26.0004 25.9915C23.1254 26.0001 12.0629 26.0001 7.83017 26.0001Z" fill="currentColor" opacity="0.95"></path>
+      <path d="M25.5785 13.3149L18.043 16.3334L30.709 23.4647C31.5199 22.4065 32.0004 21.0916 32.0004 19.6669C32.0004 16.1857 29.1321 13.3605 25.5833 13.3337C25.5817 13.3274 25.5801 13.3212 25.5785 13.3149Z" fill="currentColor" opacity="0.84"></path>
+      <path d="M7.06445 10.7028L18.0423 16.3333L25.5779 13.3148C24.5051 9.11261 20.6237 6 15.9997 6C12.4141 6 9.27508 7.87166 7.54586 10.6716C7.3841 10.6773 7.22358 10.6877 7.06445 10.7028Z" fill="currentColor" opacity="0.74"></path>
+      <path d="M1.7535 23.1687L18.0425 16.3331L7.06471 10.7026C3.09947 11.0792 0 14.3517 0 18.3331C0 20.1665 0.657197 21.8495 1.7535 23.1687Z" fill="currentColor" opacity="0.64"></path>
+    </svg>
+  </div>
+                    <div>
+                      <h3>OneDrive</h3>
+                      <div class="compare-score">
+                        <span class="score-number">31</span>
+                        <span class="score-label">{{ include.t.comparison.score_label }}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="score-bar"
+                    role="progressbar"
+                    aria-label="OneDrive score"
+                    aria-valuenow="31"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <span class="score-fill"></span>
+                  </div>
+                  <ul class="compare-list" id="compare-onedrive-2">
+                    
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.common.client_side_encryption }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_provider_managed_keys }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_provider_access_to_keys }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_provider_managed_keys }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_metadata_visibility }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_metadata_visible }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.common.zero_trust_architecture }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_centralized_trust }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_free_storage }}
+            <span class="compare-points">
+              +1 pts
+            </span>
+          </span>
+          <span class="compare-value compare-value--storage">5 GB</span>
+        </li>
+      
+                  </ul>
+                  <button
+                    class="compare-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="compare-onedrive-2"
+                  >
+                    {{ include.t.comparison.show_all_features }}
+                  </button>
+                </article>
+              
+                <article
+                  class="compare-card"
+                  style="--compare-accent: #0061FF; --compare-gradient: linear-gradient(135deg, #2b7bff 0%, #0052d6 100%); --compare-score: 30%; --score-fill-color: #ff7d90; --score-fill-glow: rgba(255, 125, 144, 0.34);"
+                  data-provider-index="3"
+                  data-array-index="3"
+                >
+                  <div class="compare-header">
+                    <div class="compare-logo">
+    <svg viewBox="0 0 20 19" fill="none" aria-hidden="true">
+      <path d="M10.012 11.74707 5.825 15.24637 4 14.0687V15.38937L10 19l6-3.61063V14.0687l-1.813 1.17767-4.175-3.4993zM20 3.92318 14.117 0 10 3.50952l5.932 3.74137L20 3.92318zM10 10.99226l4.117 3.50951L20 10.57859 15.932 7.25089 10 10.99226zM0 10.57859l5.883 3.50951L10 10.99226 4.068 7.25089 0 10.57859zM10 3.50952 4.068 7.25089 0 3.92318 5.883 0 10 3.50952z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+    </svg>
+  </div>
+                    <div>
+                      <h3>Dropbox</h3>
+                      <div class="compare-score">
+                        <span class="score-number">30</span>
+                        <span class="score-label">{{ include.t.comparison.score_label }}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="score-bar"
+                    role="progressbar"
+                    aria-label="Dropbox score"
+                    aria-valuenow="30"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <span class="score-fill"></span>
+                  </div>
+                  <ul class="compare-list" id="compare-dropbox-3">
+                    
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.common.client_side_encryption }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_provider_managed_keys }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_provider_access_to_keys }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_provider_managed_keys }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_metadata_visibility }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_metadata_visible }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.common.zero_trust_architecture }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_centralized_trust }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_free_storage }}
+            <span class="compare-points">
+              +0.4 pts
+            </span>
+          </span>
+          <span class="compare-value compare-value--storage">2 GB</span>
+        </li>
+      
+                  </ul>
+                  <button
+                    class="compare-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="compare-dropbox-3"
+                  >
+                    {{ include.t.comparison.show_all_features }}
+                  </button>
+                </article>
+              
+                <article
+                  class="compare-card"
+                  style="--compare-accent: #E53935; --compare-gradient: linear-gradient(135deg, #ff6b6b 0%, #d32f2f 100%); --compare-score: 47%; --score-fill-color: #ffca67; --score-fill-glow: rgba(255, 202, 103, 0.34);"
+                  data-provider-index="4"
+                  data-array-index="4"
+                >
+                  <div class="compare-header">
+                    <div class="compare-logo">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"></circle>
+      <path d="M6.8 15.4v-6l5.2 4.9 5.2-4.9v6" stroke="currentColor" stroke-width="1.95" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+  </div>
+                    <div>
+                      <h3>MEGA</h3>
+                      <div class="compare-score">
+                        <span class="score-number">47</span>
+                        <span class="score-label">{{ include.t.comparison.score_label }}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="score-bar"
+                    role="progressbar"
+                    aria-label="MEGA score"
+                    aria-valuenow="47"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <span class="score-fill"></span>
+                  </div>
+                  <ul class="compare-list" id="compare-mega-4">
+                    
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.common.client_side_encryption }}
+            <span class="compare-points">
+              +10 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--yes" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="M3.2 8.1 6.5 11.3 12.8 4.9" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.common.client_side_encryption }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_provider_access_to_keys }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          <span class="compare-value">{{ include.t.comparison.value_not_stated }}</span>
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_metadata_visibility }}
+            <span class="compare-points">
+              +2.5 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+    <span class="compare-icon compare-icon--warn" aria-hidden="true">
+      <svg viewBox="0 0 16 16" fill="none">
+        <path d="M8 3.2v6" stroke="currentColor"></path>
+        <circle cx="8" cy="11.7" r="0.9" fill="currentColor" stroke="none"></circle>
+      </svg>
+    </span>
+  
+        <span>{{ include.t.comparison.value_provider_visible_metadata }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.common.zero_trust_architecture }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_no_zero_trust_architecture }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_free_storage }}
+            <span class="compare-points">
+              +4 pts
+            </span>
+          </span>
+          <span class="compare-value compare-value--storage">20 GB</span>
+        </li>
+      
+                  </ul>
+                  <button
+                    class="compare-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="compare-mega-4"
+                  >
+                    {{ include.t.comparison.show_all_features }}
+                  </button>
+                </article>
+              
+                <article
+                  class="compare-card"
+                  style="--compare-accent: #6B5BFF; --compare-gradient: linear-gradient(135deg, #9b7bff 0%, #5a4dff 100%); --compare-score: 54%; --score-fill-color: #ffca67; --score-fill-glow: rgba(255, 202, 103, 0.34);"
+                  data-provider-index="5"
+                  data-array-index="5"
+                >
+                  <div class="compare-header">
+                    <div class="compare-logo">
+    <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+      <path
+        d="M4.5 36.1034V11.8966A4.0345 4.0345 0 0 1 8.5345 7.8621h7.5662a3.5863 3.5863 0 0 1 2.1224.6954l2.5323 1.8592a3.5867 3.5867 0 0 0 2.1223.6954H39.4655A4.0345 4.0345 0 0 1 43.5 15.1466V36.1034a4.0345 4.0345 0 0 1-4.0345 4.0345H8.5345A4.0345 4.0345 0 0 1 4.5 36.1034Z"
+        stroke="currentColor"
+        stroke-width="2.15"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></path>
+      <path
+        d="M35.2069 40.1379V19.0871a3.138 3.138 0 0 0-3.156-3.1379l-15.2761.088a3.1382 3.1382 0 0 1-1.8366-.58l-3.4018-2.4192a3.1381 3.1381 0 0 0-1.8186-.5807H4.5"
+        stroke="currentColor"
+        stroke-width="2.15"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></path>
+    </svg>
+  </div>
+                    <div>
+                      <h3>Proton Drive</h3>
+                      <div class="compare-score">
+                        <span class="score-number">54</span>
+                        <span class="score-label">{{ include.t.comparison.score_label }}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="score-bar"
+                    role="progressbar"
+                    aria-label="Proton Drive score"
+                    aria-valuenow="54"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <span class="score-fill"></span>
+                  </div>
+                  <ul class="compare-list" id="compare-proton-5">
+                    
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.common.client_side_encryption }}
+            <span class="compare-points">
+              +10 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--yes" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="M3.2 8.1 6.5 11.3 12.8 4.9" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.common.client_side_encryption }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_provider_access_to_keys }}
+            <span class="compare-points">
+              +10 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--yes" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="M3.2 8.1 6.5 11.3 12.8 4.9" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.common.no_provider_key_access }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_metadata_visibility }}
+            <span class="compare-points">
+              +2.5 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+    <span class="compare-icon compare-icon--warn" aria-hidden="true">
+      <svg viewBox="0 0 16 16" fill="none">
+        <path d="M8 3.2v6" stroke="currentColor"></path>
+        <circle cx="8" cy="11.7" r="0.9" fill="currentColor" stroke="none"></circle>
+      </svg>
+    </span>
+  
+        <span>{{ include.t.comparison.value_partial_metadata_visibility }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.common.zero_trust_architecture }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_no_zero_trust_architecture }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_free_storage }}
+            <span class="compare-points">
+              +1 pts
+            </span>
+          </span>
+          <span class="compare-value compare-value--storage">5 GB</span>
+        </li>
+      
+                  </ul>
+                  <button
+                    class="compare-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="compare-proton-5"
+                  >
+                    {{ include.t.comparison.show_all_features }}
+                  </button>
+                </article>
+              
+                <article
+                  class="compare-card"
+                  style="--compare-accent: #1e69ff; --compare-gradient: linear-gradient(135deg, #4c8dff 0%, #1e4dd8 100%); --compare-score: 100%; --score-fill-color: #57e9a7; --score-fill-glow: rgba(87, 233, 167, 0.34);"
+                  data-provider-index="0"
+                  data-array-index="6"
+                >
+                  <div class="compare-header">
+                    <div class="compare-logo">
+    <svg viewBox="-23 0 302 302" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+      <g>
+        <polygon
+          fill="var(--text)"
+          points="127.887881 0 149.918982 12.8925604 138.445 19.694 150.244736 12.7281189 150.244736 38.7619992 44.1101241 101.236835 44.11 200.453 44.2140031 200.392417 127.388908 248.744114 211.928 199.872 211.928 127.467 127.926729 176.989734 127.926 176.781 106.190511 163.840135 106.19 138.187 105.737673 137.907714 233.399134 62.9463331 255.938 75.424 255.982403 75.3981378 255.982 75.449 256.002991 75.4600773 255.982 75.472 255.982403 226.328463 128.655 301.503 128.655883 301.914784 128.308 301.708 127.926729 301.933302 127.926 301.481 0 225.554451 0 74.9801912 5.623 78.297 0.226418999 74.9613808"
+        />
+        <polygon
+          fill="var(--text)"
+          points="150.244736 12.7281189 150.244736 38.7619992 44.1101241 101.236835 44.1101241 200.617032 22.1890619 213.255525 22.1890619 88.3329587"
+        />
+        <polygon
+          fill="var(--accent-dark)"
+          points="149.918982 12.8925604 127.887881 0 0.226418999 74.9613808 22.2593366 88.579704"
+        />
+        <polygon
+          fill="var(--accent-dark)"
+          points="254.807015 200.392417 233.017452 187.681898 127.388908 248.744114 44.2140031 200.392417 22.1088056 213.310102 105.355991 262.643279 127.388908 276.261602"
+        />
+        <polygon
+          fill="var(--accent-dark)"
+          points="256.002991 75.4600773 233.399134 62.9463331 105.737673 137.907714 127.77059 151.526037"
+        />
+        <polygon
+          fill="var(--muted)"
+          points="0 74.9801912 22.3120967 88.1414558 22.3120967 213.210083 128.655883 275.502611 128.655883 301.914784 0 225.554451"
+        />
+        <polyline
+          fill="var(--muted)"
+          points="211.928183 101.824951 211.928183 200.197322 234.266221 212.833348 234.266221 106.582399 211.928183 101.824951"
+        />
+        <polygon
+          fill="var(--text)"
+          points="255.982403 75.3981378 255.982403 101.432018 149.847791 164.50641 149.847791 262.912135 255.982403 200.341706 255.982403 226.257488 127.926729 301.933302 127.926729 151.002977"
+          transform="translate(191.954566, 188.665720) rotate(-180.000000) translate(-191.954566, -188.665720)"
+        />
+        <polygon
+          fill="var(--muted)"
+          points="106.190511 137.695104 106.190511 163.840135 128.041757 176.849732 128.041757 150.967194"
+        />
+      </g>
+    </svg>
+  </div>
+                    <div>
+                      <h3>{{ include.t.comparison.provider_our_storage }}</h3>
+                      <div class="compare-score">
+                        <span class="score-number">100</span>
+                        <span class="score-label">{{ include.t.comparison.score_label }}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="score-bar"
+                    role="progressbar"
+                    aria-label="{{ include.t.comparison.provider_our_storage }} score"
+                    aria-valuenow="100"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <span class="score-fill"></span>
+                  </div>
+                  <ul class="compare-list" id="compare-cloudspace-6">
+                    
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.common.client_side_encryption }}
+            <span class="compare-points">
+              +10 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--yes" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="M3.2 8.1 6.5 11.3 12.8 4.9" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.common.client_side_encryption }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_provider_access_to_keys }}
+            <span class="compare-points">
+              +10 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--yes" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="M3.2 8.1 6.5 11.3 12.8 4.9" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.common.no_provider_key_access }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_metadata_visibility }}
+            <span class="compare-points">
+              +5 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--yes" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="M3.2 8.1 6.5 11.3 12.8 4.9" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_metadata_obfuscated }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.common.zero_trust_architecture }}
+            <span class="compare-points">
+              +5 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--yes" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="M3.2 8.1 6.5 11.3 12.8 4.9" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.common.zero_trust_architecture }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_free_storage }}
+            <span class="compare-points">
+              +20 pts
+            </span>
+          </span>
+          <span class="compare-value compare-value--storage">{{ include.t.comparison.value_storage_100gb_early }}</span>
+        </li>
+      
+                  </ul>
+                  <button
+                    class="compare-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="compare-cloudspace-6"
+                  >
+                    {{ include.t.comparison.show_all_features }}
+                  </button>
+                </article>
+              
+                <article
+                  class="compare-card"
+                  style="--compare-accent: #34A853; --compare-gradient: linear-gradient(135deg, #43c17d 0%, #1fa85a 100%); --compare-score: 33%; --score-fill-color: #ff7d90; --score-fill-glow: rgba(255, 125, 144, 0.34);"
+                  data-provider-index="1"
+                  data-array-index="7"
+                >
+                  <div class="compare-header">
+                    <div class="compare-logo">
+    <svg viewBox="0 0 207.027 207.027" fill="none" aria-hidden="true">
+      <path d="M69.866 15.557 0 138.919l28.732 52.552 143.288-.029 35.008-59.588L136.39 15.735 69.866 15.557zM17.166 139.046 74.268 38.205 91.21 67.783 33.24 168.447 17.166 139.046zM99.841 82.851l23.805 41.558-47.732-.006 23.927-41.552zM163.434 176.443l-117.332.024 21.53-37.065 64.606.008.067.119 52.865-.085-21.736 36.999zM140.932 124.411 90.157 35.767l-2.966-5.178 40.751.121 57.003 93.706-44.013-.005z" fill="currentColor"></path>
+    </svg>
+  </div>
+                    <div>
+                      <h3>Google Drive</h3>
+                      <div class="compare-score">
+                        <span class="score-number">33</span>
+                        <span class="score-label">{{ include.t.comparison.score_label }}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="score-bar"
+                    role="progressbar"
+                    aria-label="Google Drive score"
+                    aria-valuenow="33"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <span class="score-fill"></span>
+                  </div>
+                  <ul class="compare-list" id="compare-gdrive-7">
+                    
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.common.client_side_encryption }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_provider_managed_keys }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_provider_access_to_keys }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_provider_managed_keys }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_metadata_visibility }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_metadata_visible }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.common.zero_trust_architecture }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_centralized_trust }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_free_storage }}
+            <span class="compare-points">
+              +3 pts
+            </span>
+          </span>
+          <span class="compare-value compare-value--storage">15 GB</span>
+        </li>
+      
+                  </ul>
+                  <button
+                    class="compare-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="compare-gdrive-7"
+                  >
+                    {{ include.t.comparison.show_all_features }}
+                  </button>
+                </article>
+              
+                <article
+                  class="compare-card"
+                  style="--compare-accent: #0A64D6; --compare-gradient: linear-gradient(135deg, #3f8cff 0%, #0a64d6 100%); --compare-score: 31%; --score-fill-color: #ff7d90; --score-fill-glow: rgba(255, 125, 144, 0.34);"
+                  data-provider-index="2"
+                  data-array-index="8"
+                >
+                  <div class="compare-header">
+                    <div class="compare-logo">
+    <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+      <path d="M7.83017 26.0001C5.37824 26.0001 3.18957 24.8966 1.75391 23.1691L18.0429 16.3335L30.7089 23.4647C29.5926 24.9211 27.9066 26.0001 26.0004 25.9915C23.1254 26.0001 12.0629 26.0001 7.83017 26.0001Z" fill="currentColor" opacity="0.95"></path>
+      <path d="M25.5785 13.3149L18.043 16.3334L30.709 23.4647C31.5199 22.4065 32.0004 21.0916 32.0004 19.6669C32.0004 16.1857 29.1321 13.3605 25.5833 13.3337C25.5817 13.3274 25.5801 13.3212 25.5785 13.3149Z" fill="currentColor" opacity="0.84"></path>
+      <path d="M7.06445 10.7028L18.0423 16.3333L25.5779 13.3148C24.5051 9.11261 20.6237 6 15.9997 6C12.4141 6 9.27508 7.87166 7.54586 10.6716C7.3841 10.6773 7.22358 10.6877 7.06445 10.7028Z" fill="currentColor" opacity="0.74"></path>
+      <path d="M1.7535 23.1687L18.0425 16.3331L7.06471 10.7026C3.09947 11.0792 0 14.3517 0 18.3331C0 20.1665 0.657197 21.8495 1.7535 23.1687Z" fill="currentColor" opacity="0.64"></path>
+    </svg>
+  </div>
+                    <div>
+                      <h3>OneDrive</h3>
+                      <div class="compare-score">
+                        <span class="score-number">31</span>
+                        <span class="score-label">{{ include.t.comparison.score_label }}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="score-bar"
+                    role="progressbar"
+                    aria-label="OneDrive score"
+                    aria-valuenow="31"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <span class="score-fill"></span>
+                  </div>
+                  <ul class="compare-list" id="compare-onedrive-8">
+                    
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.common.client_side_encryption }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_provider_managed_keys }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_provider_access_to_keys }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_provider_managed_keys }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_metadata_visibility }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_metadata_visible }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.common.zero_trust_architecture }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_centralized_trust }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_free_storage }}
+            <span class="compare-points">
+              +1 pts
+            </span>
+          </span>
+          <span class="compare-value compare-value--storage">5 GB</span>
+        </li>
+      
+                  </ul>
+                  <button
+                    class="compare-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="compare-onedrive-8"
+                  >
+                    {{ include.t.comparison.show_all_features }}
+                  </button>
+                </article>
+              
+                <article
+                  class="compare-card"
+                  style="--compare-accent: #0061FF; --compare-gradient: linear-gradient(135deg, #2b7bff 0%, #0052d6 100%); --compare-score: 30%; --score-fill-color: #ff7d90; --score-fill-glow: rgba(255, 125, 144, 0.34);"
+                  data-provider-index="3"
+                  data-array-index="9"
+                >
+                  <div class="compare-header">
+                    <div class="compare-logo">
+    <svg viewBox="0 0 20 19" fill="none" aria-hidden="true">
+      <path d="M10.012 11.74707 5.825 15.24637 4 14.0687V15.38937L10 19l6-3.61063V14.0687l-1.813 1.17767-4.175-3.4993zM20 3.92318 14.117 0 10 3.50952l5.932 3.74137L20 3.92318zM10 10.99226l4.117 3.50951L20 10.57859 15.932 7.25089 10 10.99226zM0 10.57859l5.883 3.50951L10 10.99226 4.068 7.25089 0 10.57859zM10 3.50952 4.068 7.25089 0 3.92318 5.883 0 10 3.50952z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+    </svg>
+  </div>
+                    <div>
+                      <h3>Dropbox</h3>
+                      <div class="compare-score">
+                        <span class="score-number">30</span>
+                        <span class="score-label">{{ include.t.comparison.score_label }}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="score-bar"
+                    role="progressbar"
+                    aria-label="Dropbox score"
+                    aria-valuenow="30"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <span class="score-fill"></span>
+                  </div>
+                  <ul class="compare-list" id="compare-dropbox-9">
+                    
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.common.client_side_encryption }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_provider_managed_keys }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_provider_access_to_keys }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_provider_managed_keys }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_metadata_visibility }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_metadata_visible }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.common.zero_trust_architecture }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_centralized_trust }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_free_storage }}
+            <span class="compare-points">
+              +0.4 pts
+            </span>
+          </span>
+          <span class="compare-value compare-value--storage">2 GB</span>
+        </li>
+      
+                  </ul>
+                  <button
+                    class="compare-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="compare-dropbox-9"
+                  >
+                    {{ include.t.comparison.show_all_features }}
+                  </button>
+                </article>
+              
+                <article
+                  class="compare-card"
+                  style="--compare-accent: #E53935; --compare-gradient: linear-gradient(135deg, #ff6b6b 0%, #d32f2f 100%); --compare-score: 47%; --score-fill-color: #ffca67; --score-fill-glow: rgba(255, 202, 103, 0.34);"
+                  data-provider-index="4"
+                  data-array-index="10"
+                >
+                  <div class="compare-header">
+                    <div class="compare-logo">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"></circle>
+      <path d="M6.8 15.4v-6l5.2 4.9 5.2-4.9v6" stroke="currentColor" stroke-width="1.95" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+  </div>
+                    <div>
+                      <h3>MEGA</h3>
+                      <div class="compare-score">
+                        <span class="score-number">47</span>
+                        <span class="score-label">{{ include.t.comparison.score_label }}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="score-bar"
+                    role="progressbar"
+                    aria-label="MEGA score"
+                    aria-valuenow="47"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <span class="score-fill"></span>
+                  </div>
+                  <ul class="compare-list" id="compare-mega-10">
+                    
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.common.client_side_encryption }}
+            <span class="compare-points">
+              +10 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--yes" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="M3.2 8.1 6.5 11.3 12.8 4.9" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.common.client_side_encryption }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_provider_access_to_keys }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          <span class="compare-value">{{ include.t.comparison.value_not_stated }}</span>
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_metadata_visibility }}
+            <span class="compare-points">
+              +2.5 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+    <span class="compare-icon compare-icon--warn" aria-hidden="true">
+      <svg viewBox="0 0 16 16" fill="none">
+        <path d="M8 3.2v6" stroke="currentColor"></path>
+        <circle cx="8" cy="11.7" r="0.9" fill="currentColor" stroke="none"></circle>
+      </svg>
+    </span>
+  
+        <span>{{ include.t.comparison.value_provider_visible_metadata }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.common.zero_trust_architecture }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_no_zero_trust_architecture }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_free_storage }}
+            <span class="compare-points">
+              +4 pts
+            </span>
+          </span>
+          <span class="compare-value compare-value--storage">20 GB</span>
+        </li>
+      
+                  </ul>
+                  <button
+                    class="compare-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="compare-mega-10"
+                  >
+                    {{ include.t.comparison.show_all_features }}
+                  </button>
+                </article>
+              
+                <article
+                  class="compare-card"
+                  style="--compare-accent: #6B5BFF; --compare-gradient: linear-gradient(135deg, #9b7bff 0%, #5a4dff 100%); --compare-score: 54%; --score-fill-color: #ffca67; --score-fill-glow: rgba(255, 202, 103, 0.34);"
+                  data-provider-index="5"
+                  data-array-index="11"
+                >
+                  <div class="compare-header">
+                    <div class="compare-logo">
+    <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+      <path
+        d="M4.5 36.1034V11.8966A4.0345 4.0345 0 0 1 8.5345 7.8621h7.5662a3.5863 3.5863 0 0 1 2.1224.6954l2.5323 1.8592a3.5867 3.5867 0 0 0 2.1223.6954H39.4655A4.0345 4.0345 0 0 1 43.5 15.1466V36.1034a4.0345 4.0345 0 0 1-4.0345 4.0345H8.5345A4.0345 4.0345 0 0 1 4.5 36.1034Z"
+        stroke="currentColor"
+        stroke-width="2.15"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></path>
+      <path
+        d="M35.2069 40.1379V19.0871a3.138 3.138 0 0 0-3.156-3.1379l-15.2761.088a3.1382 3.1382 0 0 1-1.8366-.58l-3.4018-2.4192a3.1381 3.1381 0 0 0-1.8186-.5807H4.5"
+        stroke="currentColor"
+        stroke-width="2.15"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></path>
+    </svg>
+  </div>
+                    <div>
+                      <h3>Proton Drive</h3>
+                      <div class="compare-score">
+                        <span class="score-number">54</span>
+                        <span class="score-label">{{ include.t.comparison.score_label }}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="score-bar"
+                    role="progressbar"
+                    aria-label="Proton Drive score"
+                    aria-valuenow="54"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <span class="score-fill"></span>
+                  </div>
+                  <ul class="compare-list" id="compare-proton-11">
+                    
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.common.client_side_encryption }}
+            <span class="compare-points">
+              +10 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--yes" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="M3.2 8.1 6.5 11.3 12.8 4.9" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.common.client_side_encryption }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_provider_access_to_keys }}
+            <span class="compare-points">
+              +10 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--yes" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="M3.2 8.1 6.5 11.3 12.8 4.9" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.common.no_provider_key_access }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_metadata_visibility }}
+            <span class="compare-points">
+              +2.5 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+    <span class="compare-icon compare-icon--warn" aria-hidden="true">
+      <svg viewBox="0 0 16 16" fill="none">
+        <path d="M8 3.2v6" stroke="currentColor"></path>
+        <circle cx="8" cy="11.7" r="0.9" fill="currentColor" stroke="none"></circle>
+      </svg>
+    </span>
+  
+        <span>{{ include.t.comparison.value_partial_metadata_visibility }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.common.zero_trust_architecture }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_no_zero_trust_architecture }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_free_storage }}
+            <span class="compare-points">
+              +1 pts
+            </span>
+          </span>
+          <span class="compare-value compare-value--storage">5 GB</span>
+        </li>
+      
+                  </ul>
+                  <button
+                    class="compare-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="compare-proton-11"
+                  >
+                    {{ include.t.comparison.show_all_features }}
+                  </button>
+                </article>
+              
+                <article
+                  class="compare-card"
+                  style="--compare-accent: #1e69ff; --compare-gradient: linear-gradient(135deg, #4c8dff 0%, #1e4dd8 100%); --compare-score: 100%; --score-fill-color: #57e9a7; --score-fill-glow: rgba(87, 233, 167, 0.34);"
+                  data-provider-index="0"
+                  data-array-index="12"
+                >
+                  <div class="compare-header">
+                    <div class="compare-logo">
+    <svg viewBox="-23 0 302 302" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+      <g>
+        <polygon
+          fill="var(--text)"
+          points="127.887881 0 149.918982 12.8925604 138.445 19.694 150.244736 12.7281189 150.244736 38.7619992 44.1101241 101.236835 44.11 200.453 44.2140031 200.392417 127.388908 248.744114 211.928 199.872 211.928 127.467 127.926729 176.989734 127.926 176.781 106.190511 163.840135 106.19 138.187 105.737673 137.907714 233.399134 62.9463331 255.938 75.424 255.982403 75.3981378 255.982 75.449 256.002991 75.4600773 255.982 75.472 255.982403 226.328463 128.655 301.503 128.655883 301.914784 128.308 301.708 127.926729 301.933302 127.926 301.481 0 225.554451 0 74.9801912 5.623 78.297 0.226418999 74.9613808"
+        />
+        <polygon
+          fill="var(--text)"
+          points="150.244736 12.7281189 150.244736 38.7619992 44.1101241 101.236835 44.1101241 200.617032 22.1890619 213.255525 22.1890619 88.3329587"
+        />
+        <polygon
+          fill="var(--accent-dark)"
+          points="149.918982 12.8925604 127.887881 0 0.226418999 74.9613808 22.2593366 88.579704"
+        />
+        <polygon
+          fill="var(--accent-dark)"
+          points="254.807015 200.392417 233.017452 187.681898 127.388908 248.744114 44.2140031 200.392417 22.1088056 213.310102 105.355991 262.643279 127.388908 276.261602"
+        />
+        <polygon
+          fill="var(--accent-dark)"
+          points="256.002991 75.4600773 233.399134 62.9463331 105.737673 137.907714 127.77059 151.526037"
+        />
+        <polygon
+          fill="var(--muted)"
+          points="0 74.9801912 22.3120967 88.1414558 22.3120967 213.210083 128.655883 275.502611 128.655883 301.914784 0 225.554451"
+        />
+        <polyline
+          fill="var(--muted)"
+          points="211.928183 101.824951 211.928183 200.197322 234.266221 212.833348 234.266221 106.582399 211.928183 101.824951"
+        />
+        <polygon
+          fill="var(--text)"
+          points="255.982403 75.3981378 255.982403 101.432018 149.847791 164.50641 149.847791 262.912135 255.982403 200.341706 255.982403 226.257488 127.926729 301.933302 127.926729 151.002977"
+          transform="translate(191.954566, 188.665720) rotate(-180.000000) translate(-191.954566, -188.665720)"
+        />
+        <polygon
+          fill="var(--muted)"
+          points="106.190511 137.695104 106.190511 163.840135 128.041757 176.849732 128.041757 150.967194"
+        />
+      </g>
+    </svg>
+  </div>
+                    <div>
+                      <h3>{{ include.t.comparison.provider_our_storage }}</h3>
+                      <div class="compare-score">
+                        <span class="score-number">100</span>
+                        <span class="score-label">{{ include.t.comparison.score_label }}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="score-bar"
+                    role="progressbar"
+                    aria-label="{{ include.t.comparison.provider_our_storage }} score"
+                    aria-valuenow="100"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <span class="score-fill"></span>
+                  </div>
+                  <ul class="compare-list" id="compare-cloudspace-12">
+                    
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.common.client_side_encryption }}
+            <span class="compare-points">
+              +10 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--yes" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="M3.2 8.1 6.5 11.3 12.8 4.9" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.common.client_side_encryption }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_provider_access_to_keys }}
+            <span class="compare-points">
+              +10 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--yes" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="M3.2 8.1 6.5 11.3 12.8 4.9" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.common.no_provider_key_access }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_metadata_visibility }}
+            <span class="compare-points">
+              +5 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--yes" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="M3.2 8.1 6.5 11.3 12.8 4.9" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_metadata_obfuscated }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.common.zero_trust_architecture }}
+            <span class="compare-points">
+              +5 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--yes" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="M3.2 8.1 6.5 11.3 12.8 4.9" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.common.zero_trust_architecture }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_free_storage }}
+            <span class="compare-points">
+              +20 pts
+            </span>
+          </span>
+          <span class="compare-value compare-value--storage">{{ include.t.comparison.value_storage_100gb_early }}</span>
+        </li>
+      
+                  </ul>
+                  <button
+                    class="compare-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="compare-cloudspace-12"
+                  >
+                    {{ include.t.comparison.show_all_features }}
+                  </button>
+                </article>
+              
+                <article
+                  class="compare-card"
+                  style="--compare-accent: #34A853; --compare-gradient: linear-gradient(135deg, #43c17d 0%, #1fa85a 100%); --compare-score: 33%; --score-fill-color: #ff7d90; --score-fill-glow: rgba(255, 125, 144, 0.34);"
+                  data-provider-index="1"
+                  data-array-index="13"
+                >
+                  <div class="compare-header">
+                    <div class="compare-logo">
+    <svg viewBox="0 0 207.027 207.027" fill="none" aria-hidden="true">
+      <path d="M69.866 15.557 0 138.919l28.732 52.552 143.288-.029 35.008-59.588L136.39 15.735 69.866 15.557zM17.166 139.046 74.268 38.205 91.21 67.783 33.24 168.447 17.166 139.046zM99.841 82.851l23.805 41.558-47.732-.006 23.927-41.552zM163.434 176.443l-117.332.024 21.53-37.065 64.606.008.067.119 52.865-.085-21.736 36.999zM140.932 124.411 90.157 35.767l-2.966-5.178 40.751.121 57.003 93.706-44.013-.005z" fill="currentColor"></path>
+    </svg>
+  </div>
+                    <div>
+                      <h3>Google Drive</h3>
+                      <div class="compare-score">
+                        <span class="score-number">33</span>
+                        <span class="score-label">{{ include.t.comparison.score_label }}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="score-bar"
+                    role="progressbar"
+                    aria-label="Google Drive score"
+                    aria-valuenow="33"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <span class="score-fill"></span>
+                  </div>
+                  <ul class="compare-list" id="compare-gdrive-13">
+                    
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.common.client_side_encryption }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_provider_managed_keys }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_provider_access_to_keys }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_provider_managed_keys }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_metadata_visibility }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_metadata_visible }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.common.zero_trust_architecture }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_centralized_trust }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_free_storage }}
+            <span class="compare-points">
+              +3 pts
+            </span>
+          </span>
+          <span class="compare-value compare-value--storage">15 GB</span>
+        </li>
+      
+                  </ul>
+                  <button
+                    class="compare-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="compare-gdrive-13"
+                  >
+                    {{ include.t.comparison.show_all_features }}
+                  </button>
+                </article>
+              
+                <article
+                  class="compare-card"
+                  style="--compare-accent: #0A64D6; --compare-gradient: linear-gradient(135deg, #3f8cff 0%, #0a64d6 100%); --compare-score: 31%; --score-fill-color: #ff7d90; --score-fill-glow: rgba(255, 125, 144, 0.34);"
+                  data-provider-index="2"
+                  data-array-index="14"
+                >
+                  <div class="compare-header">
+                    <div class="compare-logo">
+    <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+      <path d="M7.83017 26.0001C5.37824 26.0001 3.18957 24.8966 1.75391 23.1691L18.0429 16.3335L30.7089 23.4647C29.5926 24.9211 27.9066 26.0001 26.0004 25.9915C23.1254 26.0001 12.0629 26.0001 7.83017 26.0001Z" fill="currentColor" opacity="0.95"></path>
+      <path d="M25.5785 13.3149L18.043 16.3334L30.709 23.4647C31.5199 22.4065 32.0004 21.0916 32.0004 19.6669C32.0004 16.1857 29.1321 13.3605 25.5833 13.3337C25.5817 13.3274 25.5801 13.3212 25.5785 13.3149Z" fill="currentColor" opacity="0.84"></path>
+      <path d="M7.06445 10.7028L18.0423 16.3333L25.5779 13.3148C24.5051 9.11261 20.6237 6 15.9997 6C12.4141 6 9.27508 7.87166 7.54586 10.6716C7.3841 10.6773 7.22358 10.6877 7.06445 10.7028Z" fill="currentColor" opacity="0.74"></path>
+      <path d="M1.7535 23.1687L18.0425 16.3331L7.06471 10.7026C3.09947 11.0792 0 14.3517 0 18.3331C0 20.1665 0.657197 21.8495 1.7535 23.1687Z" fill="currentColor" opacity="0.64"></path>
+    </svg>
+  </div>
+                    <div>
+                      <h3>OneDrive</h3>
+                      <div class="compare-score">
+                        <span class="score-number">31</span>
+                        <span class="score-label">{{ include.t.comparison.score_label }}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="score-bar"
+                    role="progressbar"
+                    aria-label="OneDrive score"
+                    aria-valuenow="31"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <span class="score-fill"></span>
+                  </div>
+                  <ul class="compare-list" id="compare-onedrive-14">
+                    
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.common.client_side_encryption }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_provider_managed_keys }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_provider_access_to_keys }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_provider_managed_keys }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_metadata_visibility }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_metadata_visible }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.common.zero_trust_architecture }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_centralized_trust }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_free_storage }}
+            <span class="compare-points">
+              +1 pts
+            </span>
+          </span>
+          <span class="compare-value compare-value--storage">5 GB</span>
+        </li>
+      
+                  </ul>
+                  <button
+                    class="compare-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="compare-onedrive-14"
+                  >
+                    {{ include.t.comparison.show_all_features }}
+                  </button>
+                </article>
+              
+                <article
+                  class="compare-card"
+                  style="--compare-accent: #0061FF; --compare-gradient: linear-gradient(135deg, #2b7bff 0%, #0052d6 100%); --compare-score: 30%; --score-fill-color: #ff7d90; --score-fill-glow: rgba(255, 125, 144, 0.34);"
+                  data-provider-index="3"
+                  data-array-index="15"
+                >
+                  <div class="compare-header">
+                    <div class="compare-logo">
+    <svg viewBox="0 0 20 19" fill="none" aria-hidden="true">
+      <path d="M10.012 11.74707 5.825 15.24637 4 14.0687V15.38937L10 19l6-3.61063V14.0687l-1.813 1.17767-4.175-3.4993zM20 3.92318 14.117 0 10 3.50952l5.932 3.74137L20 3.92318zM10 10.99226l4.117 3.50951L20 10.57859 15.932 7.25089 10 10.99226zM0 10.57859l5.883 3.50951L10 10.99226 4.068 7.25089 0 10.57859zM10 3.50952 4.068 7.25089 0 3.92318 5.883 0 10 3.50952z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+    </svg>
+  </div>
+                    <div>
+                      <h3>Dropbox</h3>
+                      <div class="compare-score">
+                        <span class="score-number">30</span>
+                        <span class="score-label">{{ include.t.comparison.score_label }}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="score-bar"
+                    role="progressbar"
+                    aria-label="Dropbox score"
+                    aria-valuenow="30"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <span class="score-fill"></span>
+                  </div>
+                  <ul class="compare-list" id="compare-dropbox-15">
+                    
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.common.client_side_encryption }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_provider_managed_keys }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_provider_access_to_keys }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_provider_managed_keys }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_metadata_visibility }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_metadata_visible }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.common.zero_trust_architecture }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_centralized_trust }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_free_storage }}
+            <span class="compare-points">
+              +0.4 pts
+            </span>
+          </span>
+          <span class="compare-value compare-value--storage">2 GB</span>
+        </li>
+      
+                  </ul>
+                  <button
+                    class="compare-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="compare-dropbox-15"
+                  >
+                    {{ include.t.comparison.show_all_features }}
+                  </button>
+                </article>
+              
+                <article
+                  class="compare-card"
+                  style="--compare-accent: #E53935; --compare-gradient: linear-gradient(135deg, #ff6b6b 0%, #d32f2f 100%); --compare-score: 47%; --score-fill-color: #ffca67; --score-fill-glow: rgba(255, 202, 103, 0.34);"
+                  data-provider-index="4"
+                  data-array-index="16"
+                >
+                  <div class="compare-header">
+                    <div class="compare-logo">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"></circle>
+      <path d="M6.8 15.4v-6l5.2 4.9 5.2-4.9v6" stroke="currentColor" stroke-width="1.95" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+  </div>
+                    <div>
+                      <h3>MEGA</h3>
+                      <div class="compare-score">
+                        <span class="score-number">47</span>
+                        <span class="score-label">{{ include.t.comparison.score_label }}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="score-bar"
+                    role="progressbar"
+                    aria-label="MEGA score"
+                    aria-valuenow="47"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <span class="score-fill"></span>
+                  </div>
+                  <ul class="compare-list" id="compare-mega-16">
+                    
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.common.client_side_encryption }}
+            <span class="compare-points">
+              +10 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--yes" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="M3.2 8.1 6.5 11.3 12.8 4.9" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.common.client_side_encryption }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_provider_access_to_keys }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          <span class="compare-value">{{ include.t.comparison.value_not_stated }}</span>
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_metadata_visibility }}
+            <span class="compare-points">
+              +2.5 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+    <span class="compare-icon compare-icon--warn" aria-hidden="true">
+      <svg viewBox="0 0 16 16" fill="none">
+        <path d="M8 3.2v6" stroke="currentColor"></path>
+        <circle cx="8" cy="11.7" r="0.9" fill="currentColor" stroke="none"></circle>
+      </svg>
+    </span>
+  
+        <span>{{ include.t.comparison.value_provider_visible_metadata }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.common.zero_trust_architecture }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_no_zero_trust_architecture }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_free_storage }}
+            <span class="compare-points">
+              +4 pts
+            </span>
+          </span>
+          <span class="compare-value compare-value--storage">20 GB</span>
+        </li>
+      
+                  </ul>
+                  <button
+                    class="compare-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="compare-mega-16"
+                  >
+                    {{ include.t.comparison.show_all_features }}
+                  </button>
+                </article>
+              
+                <article
+                  class="compare-card"
+                  style="--compare-accent: #6B5BFF; --compare-gradient: linear-gradient(135deg, #9b7bff 0%, #5a4dff 100%); --compare-score: 54%; --score-fill-color: #ffca67; --score-fill-glow: rgba(255, 202, 103, 0.34);"
+                  data-provider-index="5"
+                  data-array-index="17"
+                >
+                  <div class="compare-header">
+                    <div class="compare-logo">
+    <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+      <path
+        d="M4.5 36.1034V11.8966A4.0345 4.0345 0 0 1 8.5345 7.8621h7.5662a3.5863 3.5863 0 0 1 2.1224.6954l2.5323 1.8592a3.5867 3.5867 0 0 0 2.1223.6954H39.4655A4.0345 4.0345 0 0 1 43.5 15.1466V36.1034a4.0345 4.0345 0 0 1-4.0345 4.0345H8.5345A4.0345 4.0345 0 0 1 4.5 36.1034Z"
+        stroke="currentColor"
+        stroke-width="2.15"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></path>
+      <path
+        d="M35.2069 40.1379V19.0871a3.138 3.138 0 0 0-3.156-3.1379l-15.2761.088a3.1382 3.1382 0 0 1-1.8366-.58l-3.4018-2.4192a3.1381 3.1381 0 0 0-1.8186-.5807H4.5"
+        stroke="currentColor"
+        stroke-width="2.15"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></path>
+    </svg>
+  </div>
+                    <div>
+                      <h3>Proton Drive</h3>
+                      <div class="compare-score">
+                        <span class="score-number">54</span>
+                        <span class="score-label">{{ include.t.comparison.score_label }}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="score-bar"
+                    role="progressbar"
+                    aria-label="Proton Drive score"
+                    aria-valuenow="54"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <span class="score-fill"></span>
+                  </div>
+                  <ul class="compare-list" id="compare-proton-17">
+                    
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.common.client_side_encryption }}
+            <span class="compare-points">
+              +10 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--yes" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="M3.2 8.1 6.5 11.3 12.8 4.9" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.common.client_side_encryption }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_provider_access_to_keys }}
+            <span class="compare-points">
+              +10 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--yes" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="M3.2 8.1 6.5 11.3 12.8 4.9" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.common.no_provider_key_access }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_metadata_visibility }}
+            <span class="compare-points">
+              +2.5 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+    <span class="compare-icon compare-icon--warn" aria-hidden="true">
+      <svg viewBox="0 0 16 16" fill="none">
+        <path d="M8 3.2v6" stroke="currentColor"></path>
+        <circle cx="8" cy="11.7" r="0.9" fill="currentColor" stroke="none"></circle>
+      </svg>
+    </span>
+  
+        <span>{{ include.t.comparison.value_partial_metadata_visibility }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.common.zero_trust_architecture }}
+            <span class="compare-points compare-points--zero">
+              +0 pts
+            </span>
+          </span>
+          
+      <span class="compare-value">
+        
+      <span class="compare-icon compare-icon--no" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none">
+          <path d="m4.4 4.4 7.2 7.2m0-7.2-7.2 7.2" stroke="currentColor"></path>
+        </svg>
+      </span>
+    
+        <span>{{ include.t.comparison.value_no_zero_trust_architecture }}</span>
+      </span>
+    
+        </li>
+      
+        <li class="compare-item">
+          <span class="compare-label">
+            {{ include.t.comparison.row_free_storage }}
+            <span class="compare-points">
+              +1 pts
+            </span>
+          </span>
+          <span class="compare-value compare-value--storage">5 GB</span>
+        </li>
+      
+                  </ul>
+                  <button
+                    class="compare-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="compare-proton-17"
+                  >
+                    {{ include.t.comparison.show_all_features }}
+                  </button>
+                </article>
+              
+        </div>
+        <div class="disclaimer-chip comparison-info">
+          <span>i</span>
+          <div class="comparison-info-copy">
+            <p class="comparison-info-summary">{{ include.t.comparison.score_summary }}</p>
+            <p class="comparison-info-text" data-comparison-info-text>
+              {{ include.t.comparison.formula_text }}
+            </p>
+            <button
+              class="comparison-info-toggle"
+              type="button"
+              data-comparison-info-toggle
+              aria-expanded="false"
+            >
+              {{ include.t.comparison.show_details }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+  
+    <section id="faq" class="section faq">
+      <div class="container">
+        <div class="section-heading">
+          <h2>{{ include.t.faq.title }}</h2>
+          <p>{{ include.t.faq.subtitle }}</p>
+        </div>
+        <div class="accordion">
+          
+                <div class="accordion-item">
+                  <button
+                    class="accordion-trigger"
+                    type="button"
+                    data-faq-index="0"
+                    aria-expanded="true"
+                  >
+                    <span>{{ include.t.faq.q1 }}</span>
+                    <span class="accordion-icon" aria-hidden="true">-</span>
+                  </button>
+                  <div class="accordion-panel open">
+                    <p>{{ include.t.faq.a1 }}</p>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <button
+                    class="accordion-trigger"
+                    type="button"
+                    data-faq-index="1"
+                    aria-expanded="false"
+                  >
+                    <span>{{ include.t.faq.q2 }}</span>
+                    <span class="accordion-icon" aria-hidden="true">+</span>
+                  </button>
+                  <div class="accordion-panel">
+                    <p>{{ include.t.faq.a2 }}</p>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <button
+                    class="accordion-trigger"
+                    type="button"
+                    data-faq-index="2"
+                    aria-expanded="false"
+                  >
+                    <span>{{ include.t.faq.q3 }}</span>
+                    <span class="accordion-icon" aria-hidden="true">+</span>
+                  </button>
+                  <div class="accordion-panel">
+                    <p>{{ include.t.faq.a3 }}</p>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <button
+                    class="accordion-trigger"
+                    type="button"
+                    data-faq-index="3"
+                    aria-expanded="false"
+                  >
+                    <span>{{ include.t.faq.q4 }}</span>
+                    <span class="accordion-icon" aria-hidden="true">+</span>
+                  </button>
+                  <div class="accordion-panel">
+                    <p>{{ include.t.faq.a4 }}</p>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <button
+                    class="accordion-trigger"
+                    type="button"
+                    data-faq-index="4"
+                    aria-expanded="false"
+                  >
+                    <span>{{ include.t.faq.q5 }}</span>
+                    <span class="accordion-icon" aria-hidden="true">+</span>
+                  </button>
+                  <div class="accordion-panel">
+                    <p>{{ include.t.faq.a5 }}</p>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <button
+                    class="accordion-trigger"
+                    type="button"
+                    data-faq-index="5"
+                    aria-expanded="false"
+                  >
+                    <span>{{ include.t.faq.q6 }}</span>
+                    <span class="accordion-icon" aria-hidden="true">+</span>
+                  </button>
+                  <div class="accordion-panel">
+                    <p>{{ include.t.faq.a6 }}</p>
+                  </div>
+                </div>
+              
+        </div>
+      </div>
+    </section>
+  
+  
+    <section id="products" class="section products">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">{{ include.t.products.eyebrow }}</span>
+          <h2>{{ include.t.products.title }}</h2>
+          <p>{{ include.t.products.subtitle }}</p>
+        </div>
+
+        <div class="modern-product-grid">
+          
+            <article
+              class="modern-product-card"
+              style="--product-accent: #25b89a; --product-gradient: linear-gradient(135deg, #4dd8a5 0%, #1fa2a6 100%);"
+            >
+              <div class="product-visual">
+                <span class="product-icon-large">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M3 12l9-9 9 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path d="M5 10v10a1 1 0 001 1h12a1 1 0 001-1V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      <rect x="9" y="15" width="6" height="6" rx="0.5" stroke="currentColor" stroke-width="2"></rect>
+      <path d="M9 7h6v3H9z" stroke="currentColor" stroke-width="2"></path>
+    </svg>
+  </span>
+              </div>
+              <div class="product-body">
+                <h3>{{ include.t.products.private_home_title }}</h3>
+                <p>{{ include.t.products.private_home_desc }}</p>
+                <a href="#contact" class="learn-more">
+                  {{ include.t.products.learn_more }} <span>?</span>
+                </a>
+              </div>
+            </article>
+          
+            <article
+              class="modern-product-card"
+              style="--product-accent: #6b5bff; --product-gradient: linear-gradient(135deg, #9b7bff 0%, #5a4dff 100%);"
+            >
+              <div class="product-visual">
+                <span class="product-icon-large">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"></circle>
+      <path d="M12 1v3M12 20v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M1 12h3M20 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+      <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2"></circle>
+    </svg>
+  </span>
+              </div>
+              <div class="product-body">
+                <h3>{{ include.t.products.whitelabel_title }}</h3>
+                <p>{{ include.t.products.whitelabel_desc }}</p>
+                <a href="#contact" class="learn-more">
+                  {{ include.t.products.learn_more }} <span>?</span>
+                </a>
+              </div>
+            </article>
+          
+            <article
+              class="modern-product-card"
+              style="--product-accent: #ff8f4f; --product-gradient: linear-gradient(135deg, #ffb86b 0%, #ff6b6b 100%);"
+            >
+              <div class="product-visual">
+                <span class="product-icon-large">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="4" y="3" width="16" height="18" rx="1" stroke="currentColor" stroke-width="2"></rect>
+      <path d="M4 21h16M9 21V17h6v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      <rect x="8" y="7" width="2" height="2" rx="0.5" fill="currentColor"></rect>
+      <rect x="14" y="7" width="2" height="2" rx="0.5" fill="currentColor"></rect>
+      <rect x="8" y="11" width="2" height="2" rx="0.5" fill="currentColor"></rect>
+      <rect x="14" y="11" width="2" height="2" rx="0.5" fill="currentColor"></rect>
+    </svg>
+  </span>
+              </div>
+              <div class="product-body">
+                <h3>{{ include.t.products.enterprise_title }}</h3>
+                <p>{{ include.t.products.enterprise_desc }}</p>
+                <a href="#contact" class="learn-more">
+                  {{ include.t.products.learn_more }} <span>?</span>
+                </a>
+              </div>
+            </article>
+          
+        </div>
+
+        <div class="product-origin glass">
+          <div class="product-origin-copy">
+            <span class="product-origin-label">{{ include.t.products.built_by }}</span>
+            <p>{{ include.t.products.origin_text }}</p>
+          </div>
+          <a
+            class="button button-outline"
+            href="https://graphenelab.it/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {{ include.t.products.visit_lab }}
+          </a>
+        </div>
+      </div>
+    </section>
+  
+  
+    <section class="section footer-cta">
+      <div class="container">
+        <div class="cta-card">
+          <div>
+            <span class="cta-badge">{{ include.t.cta.badge }}</span>
+            <h2>{{ include.t.cta.title }}</h2>
+            <p>
+              {{ include.t.cta.description }}
+            </p>
+            <div class="cta-points">
+              <span>{{ include.t.cta.no_card }}</span>
+              <span>{{ include.t.cta.lifetime_offer }}</span>
+            </div>
+            <div class="cta-app-links" aria-label="App downloads">
+              
+                <a class="cta-app-link" href="/download/windows">
+                  <span class="download-link-content">
+                    <span class="download-icon download-icon-windows" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2 4.2 10.4 3v8.2H2V4.2zM12.2 2.8 22 1.4v9.8h-9.8V2.8zM2 12.8h8.4V21L2 19.8v-7zM12.2 12.8H22v9.8l-9.8-1.4v-8.4z"></path>
+    </svg>
+  </span>
+                    <span class="download-link-text">{{ include.t.common.windows }}</span>
+                  </span>
+                </a>
+              
+                <a class="cta-app-link" href="/download/macos">
+                  <span class="download-link-content">
+                    <span class="download-icon download-icon-macos" aria-hidden="true">
+    <svg viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M31,0H1A1,1,0,0,0,0,1V31a1,1,0,0,0,1,1H31a1,1,0,0,0,1-1V1A1,1,0,0,0,31,0ZM2,2H14.36C11.89,7.34,11,15.52,11,15.9a1,1,0,0,0,.25.77A1,1,0,0,0,12,17h4.89a29.9,29.9,0,0,0,.25,7c-.37,0-.75.05-1.14.05A14.07,14.07,0,0,1,5.78,19.38a1,1,0,0,0-1.4-.16,1,1,0,0,0-.16,1.41A15.87,15.87,0,0,0,16,26c.53,0,1.05,0,1.55-.08A18.35,18.35,0,0,0,19.07,30H2ZM30,30H21.39a15.57,15.57,0,0,1-1.86-4.42,15.91,15.91,0,0,0,8.25-4.95,1,1,0,1,0-1.56-1.25,14.13,14.13,0,0,1-7.09,4.24A27.91,27.91,0,0,1,19,16.15,1,1,0,0,0,18,15H13.13c.34-2.59,1.36-9.12,3.46-13H30Z"></path>
+      <path d="M8,13a1,1,0,0,0,1-1V9A1,1,0,0,0,7,9v3A1,1,0,0,0,8,13Z"></path>
+      <path d="M24,13a1,1,0,0,0,1-1V9a1,1,0,0,0-2,0v3A1,1,0,0,0,24,13Z"></path>
+    </svg>
+  </span>
+                    <span class="download-link-text">{{ include.t.common.macos }}</span>
+                  </span>
+                </a>
+              
+                <a class="cta-app-link" href="/download/linux">
+                  <span class="download-link-content">
+                    <span class="download-icon download-icon-linux" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+      <rect x="2.5" y="4" width="19" height="16" rx="2.2"></rect>
+      <path d="m6.8 10 2.6 2.3-2.6 2.3"></path>
+      <path d="M11.5 14.8h4.8"></path>
+    </svg>
+  </span>
+                    <span class="download-link-text">{{ include.t.common.linux }}</span>
+                  </span>
+                </a>
+              
+                <a class="cta-app-link" href="/download/ios">
+                  <span class="download-link-content">
+                    <span class="download-icon download-icon-apple" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16.9 12.9c0-2.1 1.7-3.1 1.8-3.2-1-1.5-2.6-1.7-3.2-1.7-1.4-.2-2.7.8-3.3.8s-1.9-.8-3.1-.8c-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7 1.2 9.2.8 1.1 1.7 2.3 2.9 2.3 1.2 0 1.6-.7 3.1-.7 1.5 0 1.9.7 3.1.7 1.3 0 2.1-1.1 2.9-2.2.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.8-1.1-2.8-4.1z"></path>
+      <path d="M14.8 6.5c.6-.7 1.1-1.8 1-2.8-.9.1-2 .6-2.7 1.3-.6.7-1.1 1.8-1 2.8 1 .1 2.1-.5 2.7-1.3z"></path>
+    </svg>
+  </span>
+                    <span class="download-link-text">{{ include.t.common.ios }}</span>
+                  </span>
+                </a>
+              
+                <a class="cta-app-link" href="/download/android">
+                  <span class="download-link-content">
+                    <span class="download-icon download-icon-android" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8 7.6h8c1.1 0 2 .9 2 2V15c0 2.2-1.8 4-4 4h-.8v2h-1.8v-2h-1v2H8.6v-2H8c-2.2 0-4-1.8-4-4V9.6c0-1.1.9-2 2-2zm2.3-3.2L9 2.7l.8-.5 1.1 1.4c.7-.2 1.5-.3 2.2-.3.8 0 1.5.1 2.2.3l1.1-1.4.8.5-1.3 1.7c1.2.6 2 1.7 2.2 3.2H6.8c.2-1.5 1-2.6 2.2-3.2zM9.6 12.2a1 1 0 1 0 0 .001V12.2zm4.8 0a1 1 0 1 0 0 .001V12.2z"></path>
+    </svg>
+  </span>
+                    <span class="download-link-text">{{ include.t.common.android }}</span>
+                  </span>
+                </a>
+              
+                <a class="cta-app-link" href="/app">
+                  <span class="download-link-content">
+                    <span class="download-icon download-icon-web" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="9"></circle>
+      <path d="M3 12h18"></path>
+      <path d="M12 3a14.5 14.5 0 0 1 0 18"></path>
+      <path d="M12 3a14.5 14.5 0 0 0 0 18"></path>
+    </svg>
+  </span>
+                    <span class="download-link-text">{{ include.t.common.web_app }}</span>
+                  </span>
+                </a>
+              
+            </div>
+          </div>
+          <div class="cta-actions">
+            <a class="button" href="#free-plan">{{ include.t.cta.create_account }}</a>
+            <a class="button button-outline cta-outline" href="#contact">{{ include.t.cta.contact_us }}</a>
+          </div>
+        </div>
+        <footer class="footer">
+          <div class="footer-links">
+            <a href="#terms">{{ include.t.footer.terms }}</a>
+            <span class="footer-sep">&#8226;</span>
+            <a href="#privacy">{{ include.t.footer.privacy }}</a>
+            <span class="footer-sep">&#8226;</span>
+            <a href="#security">{{ include.t.footer.security }}</a>
+            <span class="footer-sep">&#8226;</span>
+            <a href="#contact">{{ include.t.footer.contact }}</a>
+          </div>
+          <span class="footer-meta">{{ include.t.footer.rights }}</span>
+        </footer>
+      </div>
+    </section>
+  
+</main>
+
+
+

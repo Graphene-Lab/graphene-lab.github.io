@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="{{ page.lang | default: 'en' }}">
+  {% assign t = site.data.cloud[page.lang] | default: site.data.cloud.en %}
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="{{ '/cloud/public/graphene-logo.svg' | relative_url }}" />
+    <link rel="stylesheet" href="{{ '/cloud/src/styles.css?v=20260403' | relative_url }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ t.meta.title | default: 'Graphene Cloud' }}</title>
+    {% if page.lang == 'en' %}
+    <script>
+      const cloudLangMap = {
+        de: 'index-de.html',
+        es: 'index-es.html',
+        fr: 'index-fr.html',
+        it: 'index-it.html',
+        ru: 'index-ru.html'
+      }
+      const browserLang = (navigator.language || navigator.userLanguage || '').slice(0, 2).toLowerCase()
+      const fileName = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase()
+      if (cloudLangMap[browserLang] && fileName === 'index.html' && !window.location.search.includes('noredirect')) {
+        window.location.replace(cloudLangMap[browserLang])
+      }
+    </script>
+    {% endif %}
+  </head>
+  <body>
+    {% include cloud/app-content.html t=t %}
+  </body>
+</html>
