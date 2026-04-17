@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="public/graphene-logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Deletion – Graphene Photos</title>
+    <meta name="description" content="Learn how to delete your data in Graphene Photos. Remove synced photos, clear local account data, or permanently delete your account." />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family: 'Manrope', system-ui, sans-serif;
+        --bg: #0b0f1a;
+        --surface: #111629;
+        --surface-alt: #0f1424;
+        --text: #f5f7ff;
+        --muted: #a9b4c9;
+        --accent: #f5f7ff;
+        --accent-soft: rgba(255, 255, 255, 0.08);
+        --border: rgba(255, 255, 255, 0.12);
+        --radius: 16px;
+        --radius-lg: 24px;
+        --max-width: 720px;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      body {
+        background:
+          radial-gradient(circle at 20% 0%, rgba(255, 255, 255, 0.06) 0%, transparent 45%),
+          radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.04) 0%, transparent 40%),
+          linear-gradient(180deg, #0b0f1a 0%, #0f1424 55%, #0b0f1a 100%);
+        background-color: var(--bg);
+        color: var(--text);
+        line-height: 1.7;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      a { color: inherit; }
+
+      /* ── Navbar ── */
+      .navbar {
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        z-index: 20;
+        background: rgba(11, 15, 26, 0.92);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .nav-inner {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 1.1rem 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .nav-inner svg {
+        width: 30px; height: 30px; flex-shrink: 0;
+      }
+
+      .nav-brand {
+        font-weight: 700;
+        font-size: 1.1rem;
+        letter-spacing: -0.01em;
+        text-decoration: none;
+      }
+
+      /* ── Main content ── */
+      .page {
+        flex: 1;
+        width: min(100% - 2rem, var(--max-width));
+        margin: 0 auto;
+        padding: 7.5rem 0 4rem;
+        animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+
+      @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+
+      .page h1 {
+        font-size: clamp(1.8rem, 4vw, 2.4rem);
+        font-weight: 700;
+        letter-spacing: -0.025em;
+        line-height: 1.2;
+        margin-bottom: 0.6rem;
+      }
+
+      .page .subtitle {
+        color: var(--muted);
+        font-size: 1.05rem;
+        margin-bottom: 2.5rem;
+      }
+
+      /* ── Cards ── */
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        padding: 2rem 2.25rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+        overflow: hidden;
+        transition: border-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .card::before {
+        content: '';
+        position: absolute;
+        inset: 0 auto 0 0;
+        width: 4px;
+        background: linear-gradient(180deg, var(--accent), rgba(255, 255, 255, 0.15));
+        opacity: 0.55;
+      }
+
+      .card:hover {
+        border-color: rgba(255, 255, 255, 0.28);
+        transform: translateY(-2px);
+      }
+
+      .card h2 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 0.2rem;
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+      }
+
+      .card h2 .icon {
+        width: 38px; height: 38px;
+        border-radius: 10px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--accent-soft);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        flex-shrink: 0;
+      }
+
+      .card h2 .icon svg { width: 20px; height: 20px; }
+
+      .card .badge {
+        display: inline-block;
+        margin-bottom: 1rem;
+        padding: 0.25rem 0.7rem;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        border-radius: 6px;
+        background: var(--accent-soft);
+        color: var(--muted);
+      }
+
+      .steps {
+        list-style: none;
+        counter-reset: step;
+        display: grid;
+        gap: 0.75rem;
+      }
+
+      .steps li {
+        counter-increment: step;
+        display: flex;
+        align-items: flex-start;
+        gap: 0.85rem;
+        color: var(--muted);
+        font-size: 0.98rem;
+        line-height: 1.6;
+      }
+
+      .steps li::before {
+        content: counter(step);
+        flex-shrink: 0;
+        width: 28px; height: 28px;
+        border-radius: 8px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.78rem;
+        font-weight: 700;
+        background: var(--accent-soft);
+        color: var(--text);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        margin-top: 1px;
+      }
+
+      .steps li strong { color: var(--text); font-weight: 600; }
+
+      .note {
+        margin-top: 1.25rem;
+        padding: 1rem 1.25rem;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        color: var(--muted);
+        font-size: 0.92rem;
+        line-height: 1.6;
+      }
+
+      .note strong { color: var(--text); }
+
+      /* ── Footer ── */
+      footer {
+        text-align: center;
+        padding: 2rem 1rem;
+        color: var(--muted);
+        font-size: 0.82rem;
+        border-top: 1px solid var(--border);
+      }
+
+      footer a { text-decoration: underline; text-underline-offset: 3px; }
+      footer a:hover { color: var(--text); }
+    </style>
+  </head>
+
+  <body>
+    <!-- Nav -->
+    <nav class="navbar">
+      <div class="nav-inner">
+        <a class="nav-brand" href="index.html">Graphene Cloud</a>
+      </div>
+    </nav>
+
+    <!-- Content -->
+    <main class="page">
+      <h1>Data Deletion</h1>
+      <p class="subtitle">How to remove your data from <strong style="color: var(--text);">Graphene Photos</strong> by Graphene Lab</p>
+
+      <!-- Option 1 – Out-of-app deletion -->
+      <div class="card" id="request-via-email">
+        <h2>
+          <span class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
+            </svg>
+          </span>
+          Request Deletion via Email
+        </h2>
+        <span class="badge">Out-of-App</span>
+        <p style="color: var(--muted); font-size: 0.98rem; margin-bottom: 1rem;">
+          If you no longer have access to the app, or have already logged out or uninstalled it, you can request account and data deletion by contacting us directly.
+        </p>
+        <p style="color: var(--muted); font-size: 0.98rem;">
+          Send an email to
+          <a href="mailto:privacy@graphene-lab.org" style="color: var(--text); font-weight: 700; text-decoration: underline; text-underline-offset: 3px;">privacy@graphene-lab.org</a>
+          with the subject <strong style="color: var(--text);">"Account Deletion Request"</strong> and include the email address associated with your account.
+        </p>
+        <div class="note">
+          We will process your request within <strong>30 days</strong>. The following data will be <strong>permanently deleted</strong>: account credentials, synced photos, encrypted metadata, and session tokens. <strong>No data is retained</strong> after deletion is complete.
+        </div>
+      </div>
+
+      <!-- Option 2 -->
+      <div class="card" id="logout">
+        <h2>
+          <span class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9"/>
+            </svg>
+          </span>
+          Logout
+        </h2>
+        <span class="badge">In-App</span>
+        <ol class="steps">
+          <li>Open <strong>Graphene Photos</strong> on your device.</li>
+          <li>Navigate to the <strong>Profile</strong> tab.</li>
+          <li>Tap <strong>"Logout"</strong>.</li>
+        </ol>
+        <div class="note">
+          <strong>Deleted from device:</strong> cached photos, session tokens, and local account data.<br/>
+          <strong>Retained on server:</strong> your account and synced photos remain intact until you delete your account.
+        </div>
+      </div>
+
+      <!-- Option 3 -->
+      <div class="card" id="delete-account">
+        <h2>
+          <span class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"/>
+            </svg>
+          </span>
+          Delete Account
+        </h2>
+        <span class="badge">Permanent</span>
+        <ol class="steps">
+          <li>Open <strong>Graphene Photos</strong> on your device.</li>
+          <li>Navigate to the <strong>Profile</strong> tab.</li>
+          <li>Tap <strong>"Delete Account"</strong>.</li>
+          <li>Confirm the permanent deletion when prompted.</li>
+        </ol>
+        <div class="note">
+          <strong>This action is irreversible.</strong><br/>
+          <strong>Deleted immediately:</strong> account credentials, synced photos, encrypted metadata, and all server-side data.<br/>
+          <strong>Deleted from device:</strong> local cache, session tokens, and account data.<br/>
+          <strong>Retained:</strong> none — all data is permanently removed with no retention period.
+        </div>
+      </div>
+
+      <!-- Option 4 -->
+      <div class="card" id="clear-synced-photos">
+        <h2>
+          <span class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z"/>
+            </svg>
+          </span>
+          Clear Synced Photos
+        </h2>
+        <span class="badge">In-App</span>
+        <ol class="steps">
+          <li>Open <strong>Graphene Photos</strong> on your device.</li>
+          <li>Navigate to the <strong>Profile</strong> tab.</li>
+          <li>Tap <strong>"Clear Synced Photos"</strong>.</li>
+          <li>Confirm the action when prompted.</li>
+        </ol>
+        <div class="note">
+          This removes all synced photos from your <strong>local device</strong> only. Your photos remain safely stored on the server.
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Graphene Lab Foundation &middot; <a href="index.html">Graphene Cloud</a></p>
+    </footer>
+  </body>
+</html>
