@@ -41,8 +41,8 @@ export function renderFooterCta() {
             </div>
           </div>
           <div class="cta-actions">
-            <a class="button" href="#free-plan">Create Free Account</a>
-            <a class="button button-outline cta-outline" href="#contact">Contact Us</a>
+            <a class="button" href="#free-plan">Create Account</a>
+            <a class="button button-outline cta-outline" href="mailto:contact@graphenelab.cloud">Contact Us</a>
           </div>
         </div>
         <footer class="footer">
@@ -53,7 +53,7 @@ export function renderFooterCta() {
             <span class="footer-sep">&#8226;</span>
             <a href="#security">Security</a>
             <span class="footer-sep">&#8226;</span>
-            <a href="#contact">Contact</a>
+            <a href="mailto:contact@graphenelab.cloud">Contact</a>
           </div>
           <span class="footer-meta">&copy; 2026 Graphene Cloud. All rights reserved.</span>
         </footer>

@@ -1,294 +1,337 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="public/graphene-logo.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Data Deletion – Graphene Cloud Explorer</title>
-    <meta name="description" content="Learn how to delete your data in Graphene Cloud Explorer. Manage your files, request account deletion via email, or permanently remove your account." />
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <style>
-      :root {
-        color-scheme: dark;
-        font-family: 'Manrope', system-ui, sans-serif;
-        --bg: #0b0f1a;
-        --surface: #111629;
-        --surface-alt: #0f1424;
-        --text: #f5f7ff;
-        --muted: #a9b4c9;
-        --accent: #f5f7ff;
-        --accent-soft: rgba(255, 255, 255, 0.08);
-        --border: rgba(255, 255, 255, 0.12);
-        --radius: 16px;
-        --radius-lg: 24px;
-        --max-width: 720px;
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="public/graphene-logo.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Deletion – Graphene Cloud Explorer</title>
+  <meta name="description"
+    content="Learn how to delete your data in Graphene Cloud Explorer. Manage your files, request account deletion via email, or permanently remove your account." />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: 'Manrope', system-ui, sans-serif;
+      --bg: #0b0f1a;
+      --surface: #111629;
+      --surface-alt: #0f1424;
+      --text: #f5f7ff;
+      --muted: #a9b4c9;
+      --accent: #f5f7ff;
+      --accent-soft: rgba(255, 255, 255, 0.08);
+      --border: rgba(255, 255, 255, 0.12);
+      --radius: 16px;
+      --radius-lg: 24px;
+      --max-width: 720px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at 20% 0%, rgba(255, 255, 255, 0.06) 0%, transparent 45%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.04) 0%, transparent 40%),
+        linear-gradient(180deg, #0b0f1a 0%, #0f1424 55%, #0b0f1a 100%);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    /* ── Navbar ── */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 20;
+      background: rgba(11, 15, 26, 0.92);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .nav-brand {
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: -0.01em;
+      text-decoration: none;
+    }
+
+    /* ── Main content ── */
+    .page {
+      flex: 1;
+      width: min(100% - 2rem, var(--max-width));
+      margin: 0 auto;
+      padding: 7.5rem 0 4rem;
+      animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
       }
 
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
+    }
 
-      body {
-        background:
-          radial-gradient(circle at 20% 0%, rgba(255, 255, 255, 0.06) 0%, transparent 45%),
-          radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.04) 0%, transparent 40%),
-          linear-gradient(180deg, #0b0f1a 0%, #0f1424 55%, #0b0f1a 100%);
-        background-color: var(--bg);
-        color: var(--text);
-        line-height: 1.7;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-      }
+    .page h1 {
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.2;
+      margin-bottom: 0.6rem;
+    }
 
-      a { color: inherit; }
+    .page .subtitle {
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-bottom: 2.5rem;
+    }
 
-      /* ── Navbar ── */
-      .navbar {
-        position: fixed;
-        top: 0; left: 0; right: 0;
-        z-index: 20;
-        background: rgba(11, 15, 26, 0.92);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      }
+    /* ── Cards ── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2rem 2.25rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.3s ease, transform 0.3s ease;
+    }
 
-      .nav-inner {
-        max-width: var(--max-width);
-        margin: 0 auto;
-        padding: 1.1rem 1.5rem;
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-      }
+    .card::before {
+      content: '';
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: linear-gradient(180deg, var(--accent), rgba(255, 255, 255, 0.15));
+      opacity: 0.55;
+    }
 
-      .nav-brand {
-        font-weight: 700;
-        font-size: 1.1rem;
-        letter-spacing: -0.01em;
-        text-decoration: none;
-      }
+    .card:hover {
+      border-color: rgba(255, 255, 255, 0.28);
+      transform: translateY(-2px);
+    }
 
-      /* ── Main content ── */
-      .page {
-        flex: 1;
-        width: min(100% - 2rem, var(--max-width));
-        margin: 0 auto;
-        padding: 7.5rem 0 4rem;
-        animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-      }
+    .card h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
 
-      @keyframes fadeUp {
-        from { opacity: 0; transform: translateY(20px); }
-        to   { opacity: 1; transform: translateY(0); }
-      }
+    .card h2 .icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--accent-soft);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      flex-shrink: 0;
+    }
 
-      .page h1 {
-        font-size: clamp(1.8rem, 4vw, 2.4rem);
-        font-weight: 700;
-        letter-spacing: -0.025em;
-        line-height: 1.2;
-        margin-bottom: 0.6rem;
-      }
+    .card h2 .icon svg {
+      width: 20px;
+      height: 20px;
+    }
 
-      .page .subtitle {
-        color: var(--muted);
-        font-size: 1.05rem;
-        margin-bottom: 2.5rem;
-      }
+    .card .badge {
+      display: inline-block;
+      margin-bottom: 1rem;
+      padding: 0.25rem 0.7rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-radius: 6px;
+      background: var(--accent-soft);
+      color: var(--muted);
+    }
 
-      /* ── Cards ── */
-      .card {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: var(--radius-lg);
-        padding: 2rem 2.25rem;
-        margin-bottom: 1.5rem;
-        position: relative;
-        overflow: hidden;
-        transition: border-color 0.3s ease, transform 0.3s ease;
-      }
+    .steps {
+      list-style: none;
+      counter-reset: step;
+      display: grid;
+      gap: 0.75rem;
+    }
 
-      .card::before {
-        content: '';
-        position: absolute;
-        inset: 0 auto 0 0;
-        width: 4px;
-        background: linear-gradient(180deg, var(--accent), rgba(255, 255, 255, 0.15));
-        opacity: 0.55;
-      }
+    .steps li {
+      counter-increment: step;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+      line-height: 1.6;
+    }
 
-      .card:hover {
-        border-color: rgba(255, 255, 255, 0.28);
-        transform: translateY(-2px);
-      }
+    .steps li::before {
+      content: counter(step);
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.78rem;
+      font-weight: 700;
+      background: var(--accent-soft);
+      color: var(--text);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      margin-top: 1px;
+    }
 
-      .card h2 {
-        font-size: 1.25rem;
-        font-weight: 700;
-        margin-bottom: 0.2rem;
-        display: flex;
-        align-items: center;
-        gap: 0.6rem;
-      }
+    .steps li strong {
+      color: var(--text);
+      font-weight: 600;
+    }
 
-      .card h2 .icon {
-        width: 38px; height: 38px;
-        border-radius: 10px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        background: var(--accent-soft);
-        border: 1px solid rgba(255, 255, 255, 0.14);
-        flex-shrink: 0;
-      }
+    .note {
+      margin-top: 1.25rem;
+      padding: 1rem 1.25rem;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
 
-      .card h2 .icon svg { width: 20px; height: 20px; }
+    .note strong {
+      color: var(--text);
+    }
 
-      .card .badge {
-        display: inline-block;
-        margin-bottom: 1rem;
-        padding: 0.25rem 0.7rem;
-        font-size: 0.75rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        border-radius: 6px;
-        background: var(--accent-soft);
-        color: var(--muted);
-      }
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--muted);
+      font-size: 0.82rem;
+      border-top: 1px solid var(--border);
+    }
 
-      .steps {
-        list-style: none;
-        counter-reset: step;
-        display: grid;
-        gap: 0.75rem;
-      }
+    footer a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
 
-      .steps li {
-        counter-increment: step;
-        display: flex;
-        align-items: flex-start;
-        gap: 0.85rem;
-        color: var(--muted);
-        font-size: 0.98rem;
-        line-height: 1.6;
-      }
+    footer a:hover {
+      color: var(--text);
+    }
+  </style>
+</head>
 
-      .steps li::before {
-        content: counter(step);
-        flex-shrink: 0;
-        width: 28px; height: 28px;
-        border-radius: 8px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 0.78rem;
-        font-weight: 700;
-        background: var(--accent-soft);
-        color: var(--text);
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        margin-top: 1px;
-      }
+<body>
+  <!-- Nav -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html">Graphene Cloud</a>
+    </div>
+  </nav>
 
-      .steps li strong { color: var(--text); font-weight: 600; }
+  <!-- Content -->
+  <main class="page">
+    <h1>Data Deletion</h1>
+    <p class="subtitle">How to remove your data from <strong style="color: var(--text);">Graphene Cloud
+        Explorer</strong> by Graphene Lab</p>
 
-      .note {
-        margin-top: 1.25rem;
-        padding: 1rem 1.25rem;
-        border-radius: 12px;
-        background: rgba(255, 255, 255, 0.04);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        color: var(--muted);
-        font-size: 0.92rem;
-        line-height: 1.6;
-      }
-
-      .note strong { color: var(--text); }
-
-      /* ── Footer ── */
-      footer {
-        text-align: center;
-        padding: 2rem 1rem;
-        color: var(--muted);
-        font-size: 0.82rem;
-        border-top: 1px solid var(--border);
-      }
-
-      footer a { text-decoration: underline; text-underline-offset: 3px; }
-      footer a:hover { color: var(--text); }
-    </style>
-  </head>
-
-  <body>
-    <!-- Nav -->
-    <nav class="navbar">
-      <div class="nav-inner">
-        <a class="nav-brand" href="index.html">Graphene Cloud</a>
+    <!-- Option 1 – Out-of-app deletion -->
+    <div class="card" id="request-via-email">
+      <h2>
+        <span class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+          </svg>
+        </span>
+        Request Deletion via Email
+      </h2>
+      <span class="badge">Out-of-App</span>
+      <p style="color: var(--muted); font-size: 0.98rem; margin-bottom: 1rem;">
+        If you no longer have access to the app, or have already logged out or uninstalled it, you can request account
+        and data deletion by contacting us directly.
+      </p>
+      <p style="color: var(--muted); font-size: 0.98rem;">
+        Send an email to
+        <a href="mailto:contact@graphenelab.cloud"
+          style="color: var(--text); font-weight: 700; text-decoration: underline; text-underline-offset: 3px;">contact@graphenelab.cloud</a>
+        with the subject <strong style="color: var(--text);">"Account Deletion Request"</strong> and include the email
+        address associated with your account.
+      </p>
+      <div class="note">
+        We will process your request within <strong>30 days</strong>. The following data will be <strong>permanently
+          deleted</strong>: account credentials, stored files, encrypted metadata, and session tokens. <strong>No data
+          is retained</strong> after deletion is complete.
       </div>
-    </nav>
+    </div>
 
-    <!-- Content -->
-    <main class="page">
-      <h1>Data Deletion</h1>
-      <p class="subtitle">How to remove your data from <strong style="color: var(--text);">Graphene Cloud Explorer</strong> by Graphene Lab</p>
-
-      <!-- Option 1 – Out-of-app deletion -->
-      <div class="card" id="request-via-email">
-        <h2>
-          <span class="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
-            </svg>
-          </span>
-          Request Deletion via Email
-        </h2>
-        <span class="badge">Out-of-App</span>
-        <p style="color: var(--muted); font-size: 0.98rem; margin-bottom: 1rem;">
-          If you no longer have access to the app, or have already logged out or uninstalled it, you can request account and data deletion by contacting us directly.
-        </p>
-        <p style="color: var(--muted); font-size: 0.98rem;">
-          Send an email to
-          <a href="mailto:privacy@graphene-lab.org" style="color: var(--text); font-weight: 700; text-decoration: underline; text-underline-offset: 3px;">privacy@graphene-lab.org</a>
-          with the subject <strong style="color: var(--text);">"Account Deletion Request"</strong> and include the email address associated with your account.
-        </p>
-        <div class="note">
-          We will process your request within <strong>30 days</strong>. The following data will be <strong>permanently deleted</strong>: account credentials, stored files, encrypted metadata, and session tokens. <strong>No data is retained</strong> after deletion is complete.
-        </div>
+    <!-- Option 2 – In-app file deletion -->
+    <div class="card" id="delete-files">
+      <h2>
+        <span class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3.75 9.776c.112-.017.227-.026.344-.026h15.812c.117 0 .232.009.344.026m-16.5 0a2.25 2.25 0 00-1.883 2.542l.857 6a2.25 2.25 0 002.227 1.932H19.19a2.25 2.25 0 002.227-1.932l.857-6a2.25 2.25 0 00-1.883-2.542m-16.5 0V6A2.25 2.25 0 016 3.75h3.879a1.5 1.5 0 011.06.44l2.122 2.12a1.5 1.5 0 001.06.44H18A2.25 2.25 0 0120.25 9v.776" />
+          </svg>
+        </span>
+        Manage & Delete Files
+      </h2>
+      <span class="badge">In-App</span>
+      <ol class="steps">
+        <li>Open <strong>Graphene Cloud Explorer</strong> on your device.</li>
+        <li>Long-press to <strong>select files or folders</strong> you wish to remove.</li>
+        <li>Tap the <strong>Delete</strong> icon (Trash bin).</li>
+        <li>Confirm the deletion when prompted.</li>
+      </ol>
+      <div class="note">
+        <strong>Deleted immediately:</strong> Selected files and their encrypted metadata are permanently removed from
+        the server. <br />
+        <strong>Retained:</strong> Other files in your account remain untouched until manually deleted or the account is
+        closed.
       </div>
+    </div>
 
-      <!-- Option 2 – In-app file deletion -->
-      <div class="card" id="delete-files">
-        <h2>
-          <span class="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9.776c.112-.017.227-.026.344-.026h15.812c.117 0 .232.009.344.026m-16.5 0a2.25 2.25 0 00-1.883 2.542l.857 6a2.25 2.25 0 002.227 1.932H19.19a2.25 2.25 0 002.227-1.932l.857-6a2.25 2.25 0 00-1.883-2.542m-16.5 0V6A2.25 2.25 0 016 3.75h3.879a1.5 1.5 0 011.06.44l2.122 2.12a1.5 1.5 0 001.06.44H18A2.25 2.25 0 0120.25 9v.776"/>
-            </svg>
-          </span>
-          Manage & Delete Files
-        </h2>
-        <span class="badge">In-App</span>
-        <ol class="steps">
-          <li>Open <strong>Graphene Cloud Explorer</strong> on your device.</li>
-          <li>Long-press to <strong>select files or folders</strong> you wish to remove.</li>
-          <li>Tap the <strong>Delete</strong> icon (Trash bin).</li>
-          <li>Confirm the deletion when prompted.</li>
-        </ol>
-        <div class="note">
-          <strong>Deleted immediately:</strong> Selected files and their encrypted metadata are permanently removed from the server. <br/>
-          <strong>Retained:</strong> Other files in your account remain untouched until manually deleted or the account is closed.
-        </div>
-      </div>
+  </main>
 
-    </main>
+  <footer>
+    <p>&copy; 2026 Graphene Lab &middot; <a href="index.html">Graphene Cloud</a></p>
+  </footer>
+</body>
 
-    <footer>
-      <p>&copy; 2026 Graphene Lab Foundation &middot; <a href="index.html">Graphene Cloud</a></p>
-    </footer>
-  </body>
 </html>
