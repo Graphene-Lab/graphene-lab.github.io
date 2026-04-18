@@ -49,7 +49,7 @@ export function renderFooterCta() {
           <div class="footer-links">
             <a href="#terms">Terms</a>
             <span class="footer-sep">&#8226;</span>
-            <a href="#privacy">Privacy</a>
+            <a href="privacy.html">Privacy</a>
             <span class="footer-sep">&#8226;</span>
             <a href="#security">Security</a>
             <span class="footer-sep">&#8226;</span>

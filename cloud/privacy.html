@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="public/graphene-logo.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – Graphene Cloud</title>
+  <meta name="description"
+    content="Our commitment to your privacy. Learn how Graphene Cloud handles your data with zero-knowledge encryption and transparency." />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: 'Manrope', system-ui, sans-serif;
+      --bg: #0b0f1a;
+      --surface: #111629;
+      --surface-alt: #0f1424;
+      --text: #f5f7ff;
+      --muted: #a9b4c9;
+      --accent: #f5f7ff;
+      --accent-soft: rgba(255, 255, 255, 0.08);
+      --border: rgba(255, 255, 255, 0.12);
+      --radius: 16px;
+      --radius-lg: 24px;
+      --max-width: 840px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at 20% 0%, rgba(255, 255, 255, 0.06) 0%, transparent 45%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.04) 0%, transparent 40%),
+        linear-gradient(180deg, #0b0f1a 0%, #0f1424 55%, #0b0f1a 100%);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      color: inherit;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: var(--muted);
+    }
+
+    /* ── Navbar ── */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 20;
+      background: rgba(11, 15, 26, 0.92);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .nav-brand {
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: -0.01em;
+      text-decoration: none;
+    }
+
+    /* ── Main content ── */
+    .page {
+      flex: 1;
+      width: min(100% - 2rem, var(--max-width));
+      margin: 0 auto;
+      padding: 8rem 0 6rem;
+      animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .policy-container {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 3rem 3.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @media (max-width: 640px) {
+      .policy-container {
+        padding: 2rem 1.5rem;
+      }
+    }
+
+    .policy-container::before {
+      content: '';
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: linear-gradient(180deg, var(--accent), rgba(255, 255, 255, 0.15));
+      opacity: 0.55;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .effective-date {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 3rem;
+      display: block;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 3rem 0 1.25rem;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin: 2rem 0 1rem;
+      color: var(--text);
+    }
+
+    p {
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+    }
+
+    ul, ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+      color: var(--muted);
+    }
+
+    li {
+      margin-bottom: 0.75rem;
+      font-size: 1.05rem;
+    }
+
+    strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .highlight-box {
+      background: var(--accent-soft);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .highlight-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .contact-info {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .contact-info p {
+        margin-bottom: 0.5rem;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--muted);
+      font-size: 0.88rem;
+      border-top: 1px solid var(--border);
+    }
+
+    footer a {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Nav -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html">Graphene Cloud</a>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <main class="page">
+    <div class="policy-container">
+      <h1>Privacy Policy</h1>
+      <span class="effective-date">Effective date: April 19, 2026</span>
+
+      <p>
+        This Privacy Policy explains how <strong>Graphene Lab</strong> ("we", "us", "our") handles information in the following products and related services:
+      </p>
+      <ul>
+        <li>Graphene Cloud Client desktop app</li>
+        <li>Graphene Photos for mobile app</li>
+        <li>Graphene Explorer mobile app</li>
+      </ul>
+
+      <h2>1. Scope</h2>
+      <p>
+        This policy applies to information handled through the apps listed above, related synchronization services, authentication endpoints, and support channels.
+      </p>
+      <p>
+        Some products can connect to a private cloud, self-hosted server, or cloud operator chosen by you or your organization. When that happens, the operator of that connected cloud may process your files and account data under its own policies. This policy covers our apps and services, not third-party systems we do not control.
+      </p>
+
+      <h2>2. Information We Collect</h2>
+
+      <h3>2.1 Information you provide directly or authorize through a sign-in flow</h3>
+      <p>Depending on the product you use, we may collect:</p>
+      <ul>
+        <li>account and profile information you provide directly or authorize through sign-in (email address);</li>
+        <li>support or business communications you send to us.</li>
+      </ul>
+
+      <h3>2.2 Files, folders, and media you choose to sync, upload, back up, import, export, download</h3>
+      <p>We may process:</p>
+      <ul>
+        <li>file and folder contents;</li>
+        <li>photos, videos, and other media you choose to sync or manage;</li>
+        <li>related metadata such as file names, folder structure, paths, MIME types, sizes, timestamps, storage usage, sync status, and queue state.</li>
+      </ul>
+      <div class="highlight-box">
+        <p>
+          <strong>File contents are encrypted on your device before transmission.</strong> We receive and store only encrypted content and do not have the ability to decrypt your files, access your encryption keys, or read your files in plaintext.
+        </p>
+      </div>
+
+      <h3>2.3 Security, authentication, and connection data</h3>
+      <p>We may process data needed to authenticate you, connect your device to your cloud, and protect content, such as:</p>
+      <ul>
+        <li>session state and login status;</li>
+        <li>QR-based connection data;</li>
+        <li>server identifiers;</li>
+        <li>public/private keys, passphrase-derived keys, encryption settings, device keys, and similar security material.</li>
+        <li>access tokens and refresh tokens (used to authenticate your session and, only when you sign in via email, to retrieve your QR connection code and PIN);</li>
+      </ul>
+      <p>
+        <strong>This data is stored exclusively on your device or computer.</strong> Encryption keys, passphrase-derived keys, and private keys never leave your device and are never transmitted to or accessible by us. Where supported by your operating system, sensitive security material is stored using encrypted local storage or OS-provided secure storage (such as the system keychain). If you choose to register or sign in using an email address and password, a QR code and PIN gets stored on our servers solely to deliver connection credentials to your account. This does not include your encryption keys or file content.
+      </p>
+
+      <h3>2.4 Technical, device, and operational data</h3>
+      <p>We may process technical data needed to operate the apps, such as:</p>
+      <ul>
+        <li>operating system and app version information;</li>
+        <li>local configuration and preferences;</li>
+        <li>network state, sync progress, and service status;</li>
+        <li>recent items, upload/download queue state, onboarding state, or auto-start preferences;</li>
+        <li>error and diagnostic information where a product includes crash or diagnostics reporting.</li>
+      </ul>
+      <p>
+        All items listed above are processed and stored locally on your device. The only data that may be transmitted externally is crash and diagnostic information, and only in products where such reporting is explicitly enabled.
+      </p>
+
+      <h2>3. How We Use Information</h2>
+      <p>We use information to:</p>
+      <ul>
+        <li>provide login, pairing, sync, backup, restore, file management, and sharing features;</li>
+        <li>operate security features, including encrypted storage, QR pairing, passphrase-based recovery, and zero-knowledge encryption where supported by the product;</li>
+
+        <li>show sync progress, notifications, and device-specific functionality you enable;</li>
+        <li>maintain service reliability, diagnose app errors, prevent abuse, and improve app stability, using diagnostic data only where crash reporting is enabled in the product;</li>
+        <li>comply with legal obligations and enforce our terms.</li>
+      </ul>
+
+      <h2>4. When We Share Information</h2>
+      <p>We may share information:</p>
+      <ul>
+        <li><strong>With service providers</strong> that help us operate identity, hosting, diagnostics, customer support, or similar functions — we share only the minimum data necessary for each provider to perform their function. We do not share your file contents with service providers; as file contents are encrypted client-side before upload, we are technically unable to do so.</li>
+        <li><strong>With a self-hosted or connected server of your choice</strong> — if you choose to connect to a self-hosted or third-party cloud, your data is transferred to that server in encrypted form only. The operator of that server is responsible for their own data practices.</li>
+        <li><strong>If required by law</strong>, regulation, legal process, or to protect the rights, safety, or security of our users, apps, or services — because file contents are encrypted client-side and we do not hold your encryption keys, any legally compelled disclosure would be limited to account-level data such as email address. We cannot provide your file contents in readable form.</li>
+        <li><strong>As part of a business transaction</strong>, such as a merger, acquisition, financing, reorganization, or sale of assets.</li>
+      </ul>
+      <div class="highlight-box">
+        <p>
+          In all cases, your file contents are never shared with any party. Due to our client-side zero-knowledge encryption architecture, sharing your file contents in readable form is technically impossible — we do not hold your encryption keys and have no ability to decrypt your files.
+        </p>
+      </div>
+
+      <h2>5. Retention and Deletion</h2>
+      <p>
+        We retain information for as long as needed to operate the relevant product, maintain security, comply with legal obligations, resolve disputes, and enforce agreements. You may also request account and data deletion at any time by contacting us at <a href="mailto:contact@graphenelab.cloud">contact@graphenelab.cloud</a>.
+      </p>
+      <p>In practice:</p>
+      <ul>
+        <li>local session data, tokens, QR data, and settings may remain on your device until you log out, clear app data, uninstall the app, or remove the relevant local files;</li>
+        <li>synced files and backups stored on your Graphene Cloud are retained in encrypted form until you delete them through the app or your account. Because files are encrypted client-side, we store only encrypted content and cannot access the plaintext. If you connect to a self-hosted or third-party server instead, retention of your data on that server is managed by its operator.</li>
+
+        <li>diagnostic data may be retained according to the relevant provider's retention settings and our operational needs.</li>
+      </ul>
+
+      <h2>6. Security</h2>
+      <p>We design our products with security as a foundational principle, not an afterthought. Key measures include:</p>
+      <ul>
+        <li><strong>Client-side encryption:</strong> All files are encrypted on your device before upload. We never receive, store, or have the ability to recover your encryption keys.</li>
+        <li><strong>Zero-knowledge architecture:</strong> We cannot access, read, or decrypt your file contents. Our systems store only encrypted data.</li>
+        <li><strong>Zero-trust design:</strong> No party — including us — is treated as trusted. Clients are designed so that no server or intermediary can access plaintext content.</li>
+        <li><strong>Metadata obfuscation:</strong> Filenames are obfuscated and metadata exposure is minimized to reduce visibility into your usage patterns.</li>
+        <li><strong>Strong key derivation:</strong> Unique per-file keys are deterministically derived using hash-based derivation with 512-bit key material, which provides resilience against both classical and quantum-computing threats.</li>
+        <li><strong>Open-source transparency:</strong> Our client code is open source, allowing anyone to independently verify our encryption implementations and security claims.</li>
+        <li><strong>Local security measures:</strong> Sensitive data such as tokens, keys, and credentials are stored using encrypted local storage or OS-provided secure storage where supported.</li>
+      </ul>
+
+      <h2>7. Your Choices</h2>
+      <p>You have meaningful control over your data and how our products operate:</p>
+      <ul>
+        <li><strong>Sign-in method:</strong> Choose whether to sign in with an email account or use QR/pairing flows, depending on the product.</li>
+        <li><strong>File control:</strong> Choose which files, folders, or media to sync, upload, back up, download, share, or delete. You can remove synced content at any time through the app.</li>
+        <li><strong>Encryption and recovery:</strong> Set your own passphrase instead of using an auto-generated one. Your passphrase is the main source for your encryption keys — all of which remain exclusively on your device.</li>
+        <li><strong>Device permissions:</strong> Manage permissions such as media library, notifications, and background activity through your device's settings.</li>
+        <li><strong>Diagnostics:</strong> Where a product includes crash or diagnostic reporting, you may be able to control this through device or app settings.</li>
+        <li><strong>Account and data:</strong> Log out, clear local app data, or delete your account.</li>
+      </ul>
+
+      <h2>8. Children's Privacy</h2>
+      <p>
+        The apps are not directed to children under 13, and we do not knowingly collect personal information from children under 13.
+      </p>
+
+      <h2>9. Changes to This Policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time. The updated version will be posted at the policy URL with a revised effective date.
+      </p>
+
+      <h2>10. Contact</h2>
+      <div class="contact-info">
+        <p><strong>Graphene Lab</strong></p>
+        <p><a href="mailto:contact@graphenelab.cloud">contact@graphenelab.cloud</a></p>
+        <p><a href="https://graphenelab.it/cloud/index.html">Our Website</a></p>
+      </div>
+
+      <h2>11. Product-Specific Terms</h2>
+
+      <h3>11.1 Graphene Photos (Android)</h3>
+      <ul>
+        <li><strong>Account data:</strong> If you sign in through OAuth, the app stores access and refresh tokens locally and may read the email claim from the access token to show account information. If you use a QR-only login flow, the app may operate without an email address.</li>
+        <li><strong>Media access:</strong> The app can request access to photos, videos, and related media metadata on your device so you can scan, sync, and, if you choose, request deletion of already-synced items.</li>
+        <li><strong>Camera and QR:</strong> The app uses camera access for QR-based connection or authentication flows.</li>
+        <li><strong>Background sync and notifications:</strong> The app can run a foreground sync service and show ongoing notifications while scanning and synchronizing media.</li>
+
+        <li><strong>Media location metadata:</strong> Where available, the app may read media-location metadata embedded in photos or videos to manage synced media. This is not the same as continuous GPS tracking of your device.</li>
+      </ul>
+
+      <h3>11.2 Explorer / Cloud Services Mobile App</h3>
+      <ul>
+        <li><strong>Account data:</strong> If you use the sign-in flow, the app stores access and refresh tokens locally. The implemented OAuth request currently asks for <code>openid</code> and <code>profile</code> scopes.</li>
+        <li><strong>File handling:</strong> The app can import files using the document picker, receive files shared from other apps, download files locally for offline use or re-sharing, and keep recent-item metadata and upload queue state on the device.</li>
+        <li><strong>Local security data:</strong> The app stores local auth state, client and server identifiers, QR-derived data, public/private keys, encryption preferences, device encryption keys, proxy settings, and related sync state needed to connect to your cloud.</li>
+        <li><strong>Camera and QR:</strong> The app can request camera access to scan QR codes used for connection or authentication.</li>
+        <li><strong>Diagnostics:</strong> The app includes Firebase Crashlytics to record app errors and related diagnostic attributes when failures occur.</li>
+
+        <li><strong>Network and transfer preferences:</strong> The app stores whether cellular data may be used for certain transfers and can react to shared-content intents delivered by the operating system.</li>
+        <li><strong>Media location metadata:</strong> Where supported by the operating system and granted by you, the app may access media-location metadata associated with selected media files.</li>
+      </ul>
+
+      <h3>11.3 Cloud Client Desktop App</h3>
+      <ul>
+        <li><strong>File sync and backup:</strong> The desktop client processes the contents and metadata of files and folders in the cloud path you configure, and can maintain backups, versions, and hard-link-based backup structures.</li>
+        <li><strong>Local configuration:</strong> The app stores settings such as cloud path, entry point, virtual disk preference, theme, local UI address/port, and auto-start behavior.</li>
+        <li><strong>QR, passphrase, and keys:</strong> The app supports QR-based pairing, PIN login, passphrase-based account recovery, locally stored QR values, server public keys, and zero-knowledge encryption master keys or related security material needed for encryption and reconnection.</li>
+        <li><strong>Virtual disk and elevated privileges:</strong> If enabled, the product may store data inside a password-protected virtual disk and may require administrator/root privileges for tasks such as file access, clock synchronization, or hard-link-based backups.</li>
+
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Graphene Lab &middot; <a href="index.html">Graphene Cloud</a></p>
+  </footer>
+</body>
+
+</html>
