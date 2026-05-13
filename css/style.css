@@ -1,0 +1,124 @@
+/* dark theme with neon accents */
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#eee;
+    background:#111;
+    line-height:1.6;
+}
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:1rem 2rem;
+    position:fixed;
+    width:100%;
+    top:0;
+    background:rgba(0,0,0,0.6);
+    z-index:100;
+}
+.logo{
+    font-weight:bold;
+    font-size:1.5rem;
+    color:#0ff;
+}
+.nav-links{
+    list-style:none;
+    display:flex;
+}
+.nav-links li{
+    margin-left:1.5rem;
+}
+.nav-links a{
+    color:#eee;
+    text-decoration:none;
+    transition:color .3s;
+}
+.nav-links a:hover{
+    color:#0ff;
+}
+#hero{
+    height:100vh;
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:0 1rem;
+    /* ensure hero area stays on top while background is fixed */
+    z-index:0;
+}
+
+/* glitch animation for headings */
+@keyframes glitch {
+    0% {text-shadow: 2px 0 red;}
+    20% {text-shadow: -2px 0 cyan;}
+    40% {text-shadow: 2px 2px lime;}
+    60% {text-shadow: -2px -2px magenta;}
+    80% {text-shadow: 2px 0 blue;}
+    100% {text-shadow: 0 0 10px rgba(0,255,255,0.7);}
+}
+
+.hero-content h1 {
+    animation: glitch 2s infinite;
+}
+#particles-js{
+    position:fixed; /* become fixed so it doesn't scroll */
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:-1; /* behind hero content */
+}
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:800px;
+}
+.hero-content h1{
+    font-size:2.5rem;
+    color:#0ff;
+    text-shadow:0 0 10px rgba(0,255,255,0.7);
+}
+.hero-content p{
+    margin-top:1rem;
+    font-size:1.2rem;
+}
+.section{
+    padding:4rem 2rem;
+    max-width:900px;
+    margin:0 auto;
+}
+.section.dark{
+    background:#181818;
+}
+.section.light{
+    background:#222;
+}
+.section h2{
+    margin-bottom:1rem;
+    color:#0ff;
+    font-size:2rem;
+}
+.section p{
+    font-size:1rem;
+}
+footer{
+    text-align:center;
+    padding:2rem;
+    background:#000;
+    color:#555;
+}
+@media(max-width:768px){
+    .hero-content h1{
+        font-size:2rem;
+    }
+    .nav-links{
+        display:none;
+    }
+}
