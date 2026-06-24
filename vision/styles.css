@@ -1,0 +1,639 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+
+:root {
+    /* Completely new palette: near-black with phosphor amber / warm gold */
+    --bg-dark: #080808;
+    --bg-surface: rgba(16, 14, 10, 0.75);
+    --bg-panel: rgba(24, 20, 12, 0.65);
+    --text-primary: #f0ede6;
+    --text-secondary: #7a7268;
+    --text-dim: #3d3830;
+
+    /* Accent — laser crimson/red (variables kept as --amber for compatibility) */
+    --amber: #ea2c36;
+    --amber-bright: #ff4d58;
+    --amber-dim: rgba(234, 44, 54, 0.18);
+    --amber-glow: rgba(234, 44, 54, 0.08);
+
+    /* Secondary accent — deep muted rust for contrast */
+    --rust: #c0392b;
+    --rust-dim: rgba(192, 57, 43, 0.15);
+
+    --glass-border: rgba(234, 44, 54, 0.12);
+    --glass-border-soft: rgba(255, 255, 255, 0.06);
+
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-body: 'Space Grotesk', sans-serif;
+
+    --transition-smooth: 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ── Reset ── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { font-size: 16px; }
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    overflow: hidden;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ── Background ── */
+/* Subtle radial amber glow far right */
+.bg-gradient {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background:
+        radial-gradient(ellipse 60% 70% at 88% 50%, rgba(232,160,32,0.07) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 50% at 10% 80%, rgba(192,57,43,0.04) 0%, transparent 70%);
+    z-index: -2;
+}
+
+/* Diagonal fine-line grid — much more distinctive than square grid */
+.grid-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background-image:
+        repeating-linear-gradient(
+            -55deg,
+            transparent,
+            transparent 38px,
+            rgba(255,255,255,0.025) 38px,
+            rgba(255,255,255,0.025) 39px
+        );
+    z-index: -1;
+}
+
+/* Bottom horizontal bar — technical / terminal feel */
+body::after {
+    content: '';
+    position: fixed;
+    bottom: 0; left: 0; width: 100%; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--amber), transparent);
+    opacity: 0.4;
+    z-index: 200;
+}
+
+/* ── Header ── */
+.header {
+    position: fixed;
+    top: 0; left: 0; width: 100%;
+    padding: 1.75rem 4rem;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lab-link {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--amber-bright);
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.68rem 0.9rem;
+    border: 1px solid rgba(234,44,54,0.45);
+    background: rgba(234,44,54,0.08);
+    box-shadow: 0 0 18px rgba(234,44,54,0.06);
+    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.lab-link::after {
+    content: '↗';
+    font-size: 0.72rem;
+    line-height: 1;
+    transform: translateY(-1px);
+    transition: transform 0.2s ease;
+}
+
+.lab-link:hover,
+.lab-link:focus-visible {
+    color: #fff;
+    border-color: var(--amber);
+    background: rgba(234,44,54,0.14);
+    box-shadow: 0 0 26px rgba(234,44,54,0.18);
+    transform: translateY(-1px);
+}
+
+.lab-link:hover::after,
+.lab-link:focus-visible::after {
+    transform: translate(2px, -3px);
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    letter-spacing: 0.5px;
+    color: var(--text-primary);
+}
+
+/* Logo mark: hexagonal aperture instead of a plain circle */
+.logo svg .aperture-ring { stroke: var(--amber); }
+.logo svg .aperture-dot  { fill: var(--amber); }
+
+/* ── Main Layout ── */
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 0 4rem;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* ── Content Area ── */
+.content-area {
+    flex: 1;
+    max-width: 54%;
+    position: relative;
+    height: 72vh;
+}
+
+.solution-view {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-20px);
+    transition: opacity var(--transition-smooth), transform var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+}
+
+.solution-view.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+
+/* Solution badge — monospace, feels like a terminal label */
+.solution-badge {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 3px;
+    color: var(--amber);
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.solution-badge::before {
+    content: '';
+    display: inline-block;
+    width: 20px; height: 1px;
+    background: var(--amber);
+}
+
+/* Headline — tighter, sharper */
+.headline {
+    font-family: var(--font-heading);
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.05;
+    margin-bottom: 1.4rem;
+    color: var(--text-primary);
+    /* Slight warm gradient — much more premium than flat white */
+    background: linear-gradient(135deg, #f5ede0 30%, #9a8c7a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* Extra shadow to lift it off the background */
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.8));
+}
+
+.description {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: var(--text-secondary);
+    margin-bottom: 1.8rem;
+    max-width: 88%;
+    font-weight: 300;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+.description a {
+    color: var(--amber-bright);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(234,44,54,0.4);
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.description a:hover {
+    color: #fff;
+    border-color: var(--amber);
+}
+
+/* Capabilities — tick marks replaced with amber right-angle bracket */
+.capabilities {
+    list-style: none;
+    margin-bottom: 1.8rem;
+}
+
+.capabilities li {
+    font-size: 0.98rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+    padding-left: 1.6rem;
+    position: relative;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+.capabilities li::before {
+    content: '›';
+    position: absolute;
+    left: 0; top: 0;
+    color: var(--amber);
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.capabilities strong { color: var(--text-primary); font-weight: 600; }
+
+/* Use-cases chip row */
+.use-cases {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    margin-bottom: 2.4rem;
+    padding: 0.9rem 1.1rem;
+    background: var(--bg-panel);
+    border: 1px solid var(--glass-border);
+    border-left: 2px solid var(--amber);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    letter-spacing: 0.5px;
+}
+
+/* CTA Button — architectural clip-path corners, no border-radius */
+.cta-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+}
+
+.cta-button {
+    display: inline-flex;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    align-self: flex-start;
+    width: fit-content;
+    max-width: 100%;
+    color: var(--amber);
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Inner span holds the visible button content */
+.cta-button .btn-inner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0.9rem 1.6rem;
+    background: var(--amber-glow);
+    border: 1px solid var(--amber);
+    /* Architectural: clip top-right and bottom-left corners */
+    clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
+    transition: background 0.35s ease, box-shadow 0.35s ease;
+}
+
+.cta-button .btn-arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover .btn-inner {
+    background: var(--amber-dim);
+    box-shadow: 0 0 24px var(--amber-dim), inset 0 0 10px var(--amber-glow);
+}
+
+.cta-button:hover .btn-arrow { transform: translateX(5px); }
+
+.cta-button-secondary {
+    color: var(--text-secondary);
+}
+
+.cta-button-secondary .btn-inner {
+    background: rgba(255,255,255,0.02);
+    border-color: rgba(255,255,255,0.16);
+}
+
+.cta-button-secondary:hover {
+    color: var(--text-primary);
+}
+
+.cta-button-secondary:hover .btn-inner {
+    background: rgba(255,255,255,0.06);
+    border-color: rgba(234,44,54,0.38);
+}
+
+/* ── Visual Previews ── */
+.solution-visual {
+    position: absolute;
+    /* Push further right so it interferes less with text */
+    right: -32%;
+    top: 50%;
+    transform: translateY(-50%) perspective(1200px) rotateY(-18deg) scale(0.95);
+    width: 480px;
+    overflow: hidden;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.6), 0 0 0 1px var(--glass-border);
+    z-index: -1;
+    opacity: 0.4;
+    transition: all 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.solution-view.active .solution-visual {
+    /* Lower opacity so text pops more */
+    opacity: 0.85;
+    transform: translateY(-50%) perspective(1200px) rotateY(-6deg) scale(1);
+}
+
+.mockup-img { width: 100%; height: auto; display: block; }
+
+.visual-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    /* Stronger fade on the left edge to blend smoothly behind text */
+    background: linear-gradient(
+        90deg,
+        var(--bg-dark) 0%,
+        var(--bg-dark) 15%,
+        transparent 80%,
+        var(--bg-dark) 100%
+    );
+}
+
+/* Scan line overlay on the image for surveillance feel */
+.visual-overlay::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 3px,
+        rgba(0,0,0,0.12) 3px,
+        rgba(0,0,0,0.12) 4px
+    );
+}
+
+/* ── Lens Navigation ── */
+.lens-navigation {
+    flex: 0 0 44%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+
+.lens-wrapper {
+    width: 420px;
+    height: 420px;
+    position: relative;
+}
+
+/* Core */
+.lens-core {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 290px; height: 290px;
+    border-radius: 50%;
+    /* Amber-tinted glass instead of generic dark blue */
+    background: radial-gradient(circle at 40% 35%, #1e1a12 0%, #0d0b06 100%);
+    border: 1px solid rgba(232,160,32,0.25);
+    box-shadow:
+        inset 0 0 40px rgba(0,0,0,0.9),
+        inset 0 0 10px rgba(232,160,32,0.04),
+        0 0 40px rgba(232,160,32,0.08),
+        0 0 80px rgba(232,160,32,0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.lens-core:hover {
+    transform: translate(-50%, -50%) scale(1.02);
+    box-shadow:
+        inset 0 0 40px rgba(0,0,0,0.9),
+        inset 0 0 10px rgba(234,44,54,0.08),
+        0 0 50px rgba(234,44,54,0.15),
+        0 0 100px rgba(234,44,54,0.08);
+}
+
+.lens-core.active {
+    border-color: rgba(234,44,54,0.68);
+    background:
+        radial-gradient(circle at 42% 34%, rgba(234,44,54,0.2) 0%, rgba(30,18,16,0.98) 34%, #0d0707 100%);
+    box-shadow:
+        inset 0 0 44px rgba(0,0,0,0.9),
+        inset 0 0 22px rgba(234,44,54,0.12),
+        0 0 34px rgba(234,44,54,0.22),
+        0 0 86px rgba(234,44,54,0.12),
+        0 0 0 1px rgba(234,44,54,0.2);
+}
+
+.lens-core.active .lens-aperture,
+.lens-core.active .lens-aperture::before {
+    border-color: rgba(234,44,54,0.34);
+}
+
+.lens-core:hover .lens-center-text {
+    color: #fff;
+    text-shadow: 0 0 16px rgba(234,44,54,0.8);
+}
+
+.lens-core.active .lens-center-text {
+    color: #fff;
+    text-shadow: 0 0 16px rgba(234,44,54,0.9), 0 0 30px rgba(234,44,54,0.42);
+}
+
+/* Inner rings — concentric, not dashed */
+.lens-aperture {
+    position: absolute;
+    width: 230px; height: 230px;
+    border-radius: 50%;
+    border: 1px solid rgba(232,160,32,0.15);
+    animation: spin 40s linear infinite;
+}
+
+.lens-aperture::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    width: 160px; height: 160px;
+    border-radius: 50%;
+    border: 1px solid rgba(232,160,32,0.1);
+    animation: spin 20s linear infinite reverse;
+}
+
+/* Scan line — amber-tinted */
+.lens-scanline {
+    position: absolute;
+    width: 100%; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--amber), transparent);
+    box-shadow: 0 0 8px var(--amber);
+    top: 0;
+    animation: scan 4s ease-in-out infinite;
+    opacity: 0;
+}
+
+/* Center label */
+.lens-center-text {
+    position: relative;
+    z-index: 2;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--amber-bright);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 0 0 12px rgba(232,160,32,0.6);
+    transition: opacity 0.3s ease;
+    text-align: center;
+}
+
+/* SVG Ring */
+.lens-ring-svg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.lens-segment {
+    fill: none;
+    stroke: rgba(255,255,255,0.06);
+    stroke-width: 14;
+    stroke-linecap: butt; /* Flat ends for a more mechanical look */
+    cursor: pointer;
+    pointer-events: stroke;
+    transition: stroke 0.4s ease, stroke-width 0.3s ease, opacity 0.3s ease;
+    opacity: 0.7;
+}
+
+.lens-segment:hover {
+    stroke: rgba(232,160,32,0.4);
+    stroke-width: 16;
+    opacity: 1;
+}
+
+.lens-segment.active {
+    stroke: var(--amber);
+    stroke-width: 18;
+    filter: url(#glow);
+    opacity: 1;
+}
+
+/* Curved SVG text labels following the ring arcs */
+.curved-label {
+    fill: var(--text-dim);
+    transition: fill 0.4s ease, opacity 0.4s ease;
+    pointer-events: none;
+    opacity: 0.7;
+    /* dominant-baseline is applied via HTML for Safari compatibility but we add it here too */
+}
+
+.curved-label.active {
+    fill: var(--bg-dark); /* Dark text on amber border creates a cutout effect */
+    opacity: 1;
+    font-weight: 600;
+    /* No filter, so it punches cleanly through the glowing amber segment */
+}
+
+/* ── Animations ── */
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+@keyframes scan {
+    0%   { top: 5%;  opacity: 0; }
+    10%  { opacity: 0.6; }
+    90%  { opacity: 0.6; }
+    100% { top: 95%; opacity: 0; }
+}
+
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+    .main-container {
+        flex-direction: column;
+        padding: 5rem 2rem 3rem;
+        height: auto;
+        gap: 2rem;
+        overflow-y: auto;
+    }
+
+    body { overflow-y: auto; }
+
+    .header { padding: 1.5rem 2rem; }
+    .lab-link { display: none; }
+
+    .content-area {
+        max-width: 100%;
+        height: auto;
+        min-height: auto;
+        order: 2;
+    }
+
+    .solution-view {
+        position: relative;
+        opacity: 0;
+        display: none;
+        transform: none;
+    }
+
+    .solution-view.active {
+        display: flex;
+        opacity: 1;
+    }
+
+    .headline { font-size: 2.2rem; }
+
+    .lens-navigation {
+        order: 1;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .lens-wrapper { width: 300px; height: 300px; }
+    .lens-core    { width: 155px; height: 155px; }
+    .lens-aperture { width: 125px; height: 125px; }
+
+    .solution-visual {
+        position: relative;
+        right: auto; top: auto;
+        transform: none !important;
+        width: 100%;
+        margin-top: 1.5rem;
+        opacity: 1;
+    }
+}

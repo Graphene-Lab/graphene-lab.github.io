@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My-VMS | Enterprise Video Management System for Large IP Camera Networks</title>
+    <meta name="description"
+        content="My-VMS is an enterprise-grade Video Management System for real-time IP camera monitoring, DVR recording, PTZ control, ONVIF discovery, and WebRTC playback — all from one browser-based platform.">
+    <meta name="keywords"
+        content="VMS, Video Management System, IP Camera, CCTV, ONVIF, PTZ, DVR, WebRTC, surveillance software, enterprise">
+    <meta property="og:title" content="My-VMS | Enterprise Video Management System">
+    <meta property="og:description"
+        content="Live monitoring, DVR archive playback, PTZ control, ONVIF discovery, and fleet health monitoring — all from one browser-based platform.">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ============ NAVIGATION ============ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" id="nav-logo-link">
+                <div class="logo-icon">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1" y="1" width="26" height="26" rx="6" stroke="#3B82F6" stroke-width="1.5"
+                            fill="none" />
+                        <circle cx="14" cy="14" r="5" stroke="#3B82F6" stroke-width="1.5" fill="none" />
+                        <circle cx="14" cy="14" r="2" fill="#3B82F6" />
+                        <line x1="14" y1="1" x2="14" y2="6" stroke="#3B82F6" stroke-width="1.5" />
+                        <line x1="14" y1="22" x2="14" y2="27" stroke="#3B82F6" stroke-width="1.5" />
+                        <line x1="1" y1="14" x2="6" y2="14" stroke="#3B82F6" stroke-width="1.5" />
+                        <line x1="22" y1="14" x2="27" y2="14" stroke="#3B82F6" stroke-width="1.5" />
+                    </svg>
+                </div>
+                <span class="logo-text">My-<span class="logo-accent">VMS</span></span>
+            </a>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#platform" class="nav-link">Platform</a></li>
+                <li><a href="#architecture" class="nav-link">Architecture</a></li>
+                <li><a href="#industries" class="nav-link">Industries</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <span class="nav-parent">Part of <a href="../"><strong>GrapheneVision</strong></a></span>
+                <a href="#demo" class="btn btn-ghost">View Platform</a>
+                <a href="#contact" class="btn btn-primary">Request Demo</a>
+            </div>
+
+            <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <ul>
+            <li><a href="#features" class="mobile-link">Features</a></li>
+            <li><a href="#platform" class="mobile-link">Platform</a></li>
+            <li><a href="#architecture" class="mobile-link">Architecture</a></li>
+            <li><a href="#industries" class="mobile-link">Industries</a></li>
+            <li><a href="#faq" class="mobile-link">FAQ</a></li>
+            <li><span class="mobile-parent">Part of <a href="../">GrapheneVision</a></span></li>
+            <li><a href="#contact" class="btn btn-primary" style="display:inline-block;margin-top:1rem;">Request
+                    Demo</a></li>
+        </ul>
+    </div>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-glow hero-glow-1"></div>
+        <div class="hero-glow hero-glow-2"></div>
+
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Enterprise VMS Platform · Self-Hosted · AI Analytics Ready
+                </div>
+                <h1 class="hero-headline">
+                    Enterprise Video Management System for Large IP Camera Networks
+                </h1>
+                <p class="hero-sub">
+                    Live monitoring, DVR archive playback, PTZ control, ONVIF discovery, and fleet health monitoring —
+                    all from one platform. <span class="hero-sub-strong">Optional computer vision analytics can be
+                        integrated on customer request for human, vehicle, and object detection workflows.</span>
+                </p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary btn-lg" id="hero-demo-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <polygon points="10,8 16,12 10,16" />
+                        </svg>
+                        Request Demo
+                    </a>
+                    <a href="#demo" class="btn btn-outline btn-lg" id="hero-platform-btn">
+                        View Platform
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12,5 19,12 12,19" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="stat-value">100+</span>
+                        <span class="stat-label">Concurrent Cameras</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="stat-value">&lt;2s</span>
+                        <span class="stat-label">Glass-to-Glass Latency</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="stat-value">4x</span>
+                        <span class="stat-label">Playback Speed Control</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual" id="demo">
+                <div class="dashboard-mockup">
+                    <div class="mockup-topbar">
+                        <div class="mockup-dots">
+                            <span class="dot dot-red"></span>
+                            <span class="dot dot-yellow"></span>
+                            <span class="dot dot-green"></span>
+                        </div>
+                        <div class="mockup-url">my-vms.local · Live Dashboard</div>
+                        <div class="mockup-status">
+                            <span class="online-indicator"></span> Online
+                        </div>
+                    </div>
+                    <div class="mockup-body">
+                        <img src="./assets/myvms-real-app-hero.png"
+                            alt="My-VMS real live dashboard showing a multi-camera video grid and camera list"
+                            class="mockup-screenshot">
+                        <div class="mockup-overlay-badge badge-live">● LIVE</div>
+                        <div class="mockup-overlay-badge badge-cams">Camera Fleet</div>
+                    </div>
+                </div>
+                <div class="hero-float-card card-fl-1">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2">
+                        <polyline points="22,12 18,12 15,21 9,3 6,12 2,12" />
+                    </svg>
+                    <span>Stream health nominal</span>
+                </div>
+                <div class="hero-float-card card-fl-2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                    </svg>
+                    <span>AI detection on request</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trusted by -->
+        <div class="trusted-bar">
+            <div class="container">
+                <p class="trusted-label">Vendor-Compatible With</p>
+                <div class="trusted-logos">
+                    <div class="vendor-badge">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <rect x="2" y="3" width="20" height="14" rx="2" />
+                            <path d="M8 21h8M12 17v4" />
+                        </svg>
+                        Hikvision
+                    </div>
+                    <div class="vendor-badge">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <rect x="2" y="3" width="20" height="14" rx="2" />
+                            <path d="M8 21h8M12 17v4" />
+                        </svg>
+                        Dahua
+                    </div>
+                    <div class="vendor-badge">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <rect x="2" y="3" width="20" height="14" rx="2" />
+                            <path d="M8 21h8M12 17v4" />
+                        </svg>
+                        Axis
+                    </div>
+                    <div class="vendor-badge">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <rect x="2" y="3" width="20" height="14" rx="2" />
+                            <path d="M8 21h8M12 17v4" />
+                        </svg>
+                        Hanwha
+                    </div>
+                    <div class="vendor-badge onvif">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 8v4l3 3" />
+                        </svg>
+                        ONVIF Compatible
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ GRAPHENEVISION ============ -->
+    <section class="section section-vision" id="graphene-vision">
+        <div class="container vision-container">
+            <div class="vision-copy">
+                <a class="section-tag" href="../">GrapheneVision</a>
+                <h2 class="section-title">Computer Vision Products for Security-Oriented Operations</h2>
+                <p class="section-desc"><a href="../">GrapheneVision</a> is the computer vision product line of <a
+                        href="../../">GrapheneLab</a>, a
+                    security-oriented engineering organization building secure messenger and cloud systems. My-VMS sits
+                    within this ecosystem alongside products for identity verification and AI detection.</p>
+            </div>
+
+            <div class="vision-points">
+                <div class="vision-point">
+                    <strong>Product Ecosystem</strong>
+                    <span>Video management, identity verification, and AI detection products built for specific
+                        operational problems.</span>
+                </div>
+                <div class="vision-point">
+                    <strong>Security-Oriented Engineering</strong>
+                    <span>Shaped by GrapheneLab's focus on secure systems, practical infrastructure, and data
+                        control.</span>
+                </div>
+                <div class="vision-point">
+                    <strong>AI Detection On Request</strong>
+                    <span>Customer-specific human, vehicle, and object detection workflows can be integrated with VMS
+                        operations.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PLATFORM OVERVIEW ============ -->
+    <section class="section section-platform" id="platform">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Platform Architecture</span>
+                <h2 class="section-title">One Unified System Replacing<br>a Dozen Point Solutions</h2>
+                <p class="section-desc">Large camera networks create vendor, bandwidth, archive, health-monitoring, and
+                    analytics complexity. My-VMS centralizes those workflows in one self-hosted platform with optional
+                    AI detection integrations.</p>
+            </div>
+
+            <div class="arch-flow">
+                <div class="arch-node arch-node-camera">
+                    <div class="arch-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M23 7l-7 5 7 5V7z" />
+                            <rect x="1" y="5" width="15" height="14" rx="2" />
+                        </svg>
+                    </div>
+                    <h4>IP Cameras</h4>
+                    <p>RTSP-compatible IP cameras</p>
+                    <div class="arch-protocols">RTSP · ONVIF</div>
+                </div>
+
+                <div class="arch-arrow">
+                    <svg width="48" height="24" viewBox="0 0 48 24" fill="none">
+                        <line x1="0" y1="12" x2="40" y2="12" stroke="#3B82F6" stroke-width="1.5"
+                            stroke-dasharray="4 3" />
+                        <polyline points="34,6 42,12 34,18" stroke="#3B82F6" stroke-width="1.5" fill="none" />
+                    </svg>
+                    <span>Stream Ingest via FFmpeg</span>
+                </div>
+
+                <div class="arch-node arch-node-media">
+                    <div class="arch-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <rect x="2" y="3" width="20" height="14" rx="2" />
+                            <path d="M8 21h8M12 17v4" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                    </div>
+                    <h4>Media Servers</h4>
+                    <p>Distributed, load-balanced stream distribution</p>
+                    <div class="arch-protocols">HLS · FLV · WebRTC/WHEP</div>
+                </div>
+
+                <div class="arch-arrow">
+                    <svg width="48" height="24" viewBox="0 0 48 24" fill="none">
+                        <line x1="0" y1="12" x2="40" y2="12" stroke="#3B82F6" stroke-width="1.5"
+                            stroke-dasharray="4 3" />
+                        <polyline points="34,6 42,12 34,18" stroke="#3B82F6" stroke-width="1.5" fill="none" />
+                    </svg>
+                    <span>Browser Delivery</span>
+                </div>
+
+                <div class="arch-node arch-node-ops">
+                    <div class="arch-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <rect x="2" y="3" width="20" height="15" rx="2" />
+                            <path d="M8 21h8M12 18v3" />
+                            <line x1="7" y1="8" x2="17" y2="8" />
+                            <line x1="7" y1="12" x2="13" y2="12" />
+                        </svg>
+                    </div>
+                    <h4>Browser Operators</h4>
+                    <p>Secure access from any modern browser, anywhere</p>
+                    <div class="arch-protocols">React 18 · TypeScript</div>
+                </div>
+            </div>
+
+            <div class="arch-stack">
+                <div class="stack-layer">
+                    <div class="stack-label">Go Backend API</div>
+                    <div class="stack-detail">REST API · PTZ Control · Health Polling · Archive Search · Fleet
+                        Management</div>
+                </div>
+                <div class="stack-connector">▼</div>
+                <div class="stack-layer">
+                    <div class="stack-label">PostgreSQL Database</div>
+                    <div class="stack-detail">Camera Registry · Recording Index · ONVIF Configs · Fleet Hierarchy</div>
+                </div>
+            </div>
+
+            <div class="platform-highlights">
+                <div class="ph-item">
+                    <div class="ph-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <strong>Self-Hosted Deployment</strong>
+                        <p>Full data sovereignty. Deploy on your own Linux infrastructure — your data never leaves your
+                            network.</p>
+                    </div>
+                </div>
+                <div class="ph-item">
+                    <div class="ph-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2">
+                            <polyline points="16,3 21,3 21,8" />
+                            <line x1="4" y1="20" x2="21" y2="3" />
+                            <polyline points="21,16 21,21 16,21" />
+                            <line x1="15" y1="15" x2="21" y2="21" />
+                        </svg>
+                    </div>
+                    <div>
+                        <strong>Horizontal Scaling</strong>
+                        <p>Add media server instances as your camera fleet grows, with camera streams spread across the
+                            available servers.</p>
+                    </div>
+                </div>
+                <div class="ph-item">
+                    <div class="ph-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12,6 12,12 16,14" />
+                        </svg>
+                    </div>
+                    <div>
+                        <strong>No Client Software</strong>
+                        <p>No proprietary client software required. Operators work from Chrome, Firefox, or Edge.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FEATURES ============ -->
+    <section class="section section-features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Core Capabilities</span>
+                <h2 class="section-title">Everything Your Security Operations Center Needs</h2>
+                <p class="section-desc">Nine purpose-built modules, tightly integrated into a single coherent platform.
+                </p>
+            </div>
+
+            <div class="features-grid">
+
+                <div class="feature-card feature-card-large" data-animate="fade-up">
+                    <div class="fc-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <rect x="2" y="2" width="9" height="9" rx="1" />
+                            <rect x="13" y="2" width="9" height="9" rx="1" />
+                            <rect x="2" y="13" width="9" height="9" rx="1" />
+                            <rect x="13" y="13" width="9" height="9" rx="1" />
+                        </svg>
+                    </div>
+                    <div class="fc-number">01</div>
+                    <h3>Live Multi-Camera Dashboard</h3>
+                    <p>Configurable grid supporting 1 to N cameras simultaneously. Drag-and-drop tile rearrangement,
+                        fullscreen per-camera mode, and visual online/offline status badges. Sub-2-second glass-to-glass
+                        latency via HTTP-FLV and HLS.</p>
+                    <div class="fc-tags">
+                        <span class="fc-tag">Configurable Grid</span>
+                        <span class="fc-tag">Drag & Drop</span>
+                        <span class="fc-tag">HLS / HTTP-FLV</span>
+                    </div>
+                </div>
+
+                <div class="feature-card feature-card-large" data-animate="fade-up" style="--delay:0.1s">
+                    <div class="fc-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12,6 12,12 16,14" />
+                        </svg>
+                    </div>
+                    <div class="fc-number">02</div>
+                    <h3>DVR Recording & Archive Search</h3>
+                    <p>Continuous MP4 recording auto-segmented into 10-minute chunks, date-organized by
+                        <code>/YYYY/MM/DD/HH/</code>. Instant timestamp search, seamless dual-buffer cross-segment
+                        playback, and multi-speed controls at 0.5×, 1×, 2×, 4×.
+                    </p>
+                    <div class="fc-tags">
+                        <span class="fc-tag">MP4 Segments</span>
+                        <span class="fc-tag">Timestamp Search</span>
+                        <span class="fc-tag">Multi-Speed Playback</span>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-animate="fade-up" style="--delay:0.15s">
+                    <div class="fc-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <circle cx="12" cy="12" r="3" />
+                            <path
+                                d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
+                        </svg>
+                    </div>
+                    <div class="fc-number">03</div>
+                    <h3>PTZ Control</h3>
+                    <p>Auto-detects manufacturer on first use. Full pan, tilt, zoom with adjustable speed. Preset
+                        management: save, list, and recall. Supports Hikvision, Dahua, Axis, and Hanwha/Samsung
+                        natively.</p>
+                    <div class="fc-tags">
+                        <span class="fc-tag">Auto-Detect</span>
+                        <span class="fc-tag">Presets</span>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-animate="fade-up" style="--delay:0.2s">
+                    <div class="fc-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="2" y1="12" x2="22" y2="12" />
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                        </svg>
+                    </div>
+                    <div class="fc-number">04</div>
+                    <h3>ONVIF Discovery</h3>
+                    <p>Auto-discover cameras on the local network, pull manufacturer and model metadata, and retrieve
+                        RTSP stream URLs — all via standard ONVIF protocol. Bulk credential management for fleet-wide
+                        configuration.</p>
+                    <div class="fc-tags">
+                        <span class="fc-tag">Auto-Discovery</span>
+                        <span class="fc-tag">Bulk Config</span>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-animate="fade-up" style="--delay:0.25s">
+                    <div class="fc-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                    </div>
+                    <div class="fc-number">05</div>
+                    <h3>Camera Fleet Management</h3>
+                    <p>Full hierarchy management: Region → District → Group → Camera. Per-camera detail view with live
+                        feed, archive, and configuration tabs. Start/stop stream ingestion on demand.</p>
+                    <div class="fc-tags">
+                        <span class="fc-tag">Hierarchical Org</span>
+                        <span class="fc-tag">CRUD</span>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-animate="fade-up" style="--delay:0.3s">
+                    <div class="fc-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <polyline points="22,12 18,12 15,21 9,3 6,12 2,12" />
+                        </svg>
+                    </div>
+                    <div class="fc-number">06</div>
+                    <h3>Stream Health Monitoring</h3>
+                    <p>30-second telemetry polling delivers per-camera metrics: bitrate, resolution, codec, and DVR
+                        write status. Fleet-wide dashboard shows real-time online/offline counts across your entire
+                        deployment.</p>
+                    <div class="fc-tags">
+                        <span class="fc-tag">30s Polling</span>
+                        <span class="fc-tag">Bitrate Metrics</span>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-animate="fade-up" style="--delay:0.35s">
+                    <div class="fc-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <polygon points="23,7 16,12 23,17" />
+                            <rect x="1" y="5" width="15" height="14" rx="2" />
+                        </svg>
+                    </div>
+                    <div class="fc-number">07</div>
+                    <h3>WebRTC Playback</h3>
+                    <p>WHEP (WebRTC-HTTP Egress Protocol) proxy delivers ultra-low-latency browser playback — measured
+                        in milliseconds, not seconds. Ideal for real-time PTZ monitoring and incident response.</p>
+                    <div class="fc-tags">
+                        <span class="fc-tag">WHEP Protocol</span>
+                        <span class="fc-tag">&lt;500ms Latency</span>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-animate="fade-up" style="--delay:0.4s">
+                    <div class="fc-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="17,8 12,3 7,8" />
+                            <line x1="12" y1="3" x2="12" y2="15" />
+                        </svg>
+                    </div>
+                    <div class="fc-number">08</div>
+                    <h3>Disk Synchronization</h3>
+                    <p>Background scanner reconciles filesystem MP4 files with database records. Automatically recovers
+                        orphaned recordings after server restarts or crashes — no manual intervention required.</p>
+                    <div class="fc-tags">
+                        <span class="fc-tag">Auto-Recovery</span>
+                        <span class="fc-tag">Crash-Safe</span>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-animate="fade-up" style="--delay:0.45s">
+                    <div class="fc-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M4 7V5a2 2 0 0 1 2-2h2" />
+                            <path d="M16 3h2a2 2 0 0 1 2 2v2" />
+                            <path d="M20 17v2a2 2 0 0 1-2 2h-2" />
+                            <path d="M8 21H6a2 2 0 0 1-2-2v-2" />
+                            <circle cx="12" cy="12" r="3" />
+                            <path d="M12 8v1M12 15v1M8 12h1M15 12h1" />
+                        </svg>
+                    </div>
+                    <div class="fc-number">09</div>
+                    <h3>AI Detection Integration</h3>
+                    <p>Designed to support optional computer vision analytics for customer-specific workflows,
+                        including human, vehicle, and object detection. Detection events can support alerts, overlays,
+                        and searchable metadata.</p>
+                    <div class="fc-tags">
+                        <span class="fc-tag">On Request</span>
+                        <span class="fc-tag">Object Detection</span>
+                        <span class="fc-tag">Event Metadata</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ LIVE MONITORING DETAIL ============ -->
+    <section class="section section-detail section-detail-dark" id="live-monitoring">
+        <div class="container detail-container">
+            <div class="detail-content">
+                <span class="section-tag">Live Monitoring</span>
+                <h2 class="section-title">Command-Level Situational Awareness</h2>
+                <p class="section-desc">Your entire camera network, on one screen. Laid out exactly how your operators
+                    need it.</p>
+                <ul class="detail-list">
+                    <li>
+                        <div class="dl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="#3B82F6" stroke-width="2">
+                                <rect x="2" y="2" width="9" height="9" rx="1" />
+                                <rect x="13" y="2" width="9" height="9" rx="1" />
+                                <rect x="2" y="13" width="9" height="9" rx="1" />
+                                <rect x="13" y="13" width="9" height="9" rx="1" />
+                            </svg></div>
+                        <div><strong>Configurable Camera Grid</strong> — Scale from 1 to hundreds of cameras. Operators
+                            choose their layout per shift and per screen.</div>
+                    </li>
+                    <li>
+                        <div class="dl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="#3B82F6" stroke-width="2">
+                                <path d="M5 9l-3 3 3 3M9 5l3-3 3 3M15 19l-3 3-3-3M19 9l3 3-3 3M2 12h20M12 2v20" />
+                            </svg></div>
+                        <div><strong>Drag-and-Drop Layout</strong> — Rearrange camera tiles in real-time. No page
+                            reload, no mode switching.</div>
+                    </li>
+                    <li>
+                        <div class="dl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="#3B82F6" stroke-width="2">
+                                <path
+                                    d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3" />
+                            </svg></div>
+                        <div><strong>Per-Camera Fullscreen Mode</strong> — Instant fullscreen with one click. Direct
+                            archive access without leaving the view.</div>
+                    </li>
+                    <li>
+                        <div class="dl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="#22C55E" stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12,6 12,12 16,14" />
+                            </svg></div>
+                        <div><strong>Online/Offline Status Badges</strong> — Instantly see which cameras are live and
+                            which need attention, per tile.</div>
+                    </li>
+                    <li>
+                        <div class="dl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="#3B82F6" stroke-width="2">
+                                <polygon points="23,7 16,12 23,17" />
+                                <rect x="1" y="5" width="15" height="14" rx="2" />
+                            </svg></div>
+                        <div><strong>HLS, HTTP-FLV & WebRTC Playback</strong> — Choose latency profile per camera: HLS
+                            for reliability, HTTP-FLV for low-latency, WebRTC/WHEP for real-time PTZ response.</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="detail-visual">
+                <img src="./assets/dashboard_mockup.png" alt="My-VMS live multi-camera monitoring dashboard"
+                    class="detail-img">
+                <div class="detail-img-glow"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ARCHIVE PLAYBACK DETAIL ============ -->
+    <section class="section section-detail" id="archive">
+        <div class="container detail-container detail-reversed">
+            <div class="detail-visual">
+                <img src="./assets/archive_playback.png" alt="My-VMS DVR archive playback timeline interface"
+                    class="detail-img">
+                <div class="detail-img-glow detail-img-glow-right"></div>
+            </div>
+            <div class="detail-content">
+                <span class="section-tag">DVR Archive</span>
+                <h2 class="section-title">Frame-Accurate Incident Review</h2>
+                <p class="section-desc">Find historical footage by timestamp, review incidents smoothly, and move
+                    through archived segments without file browsing.</p>
+                <ul class="detail-list">
+                    <li>
+                        <div class="dl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="#3B82F6" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="7,10 12,15 17,10" />
+                                <line x1="12" y1="15" x2="12" y2="3" />
+                            </svg></div>
+                        <div><strong>Continuous MP4 Recording</strong> — Auto-segmented into 10-minute chunks.
+                            Date-organized storage: <code>/YYYY/MM/DD/HH/</code> for predictable retrieval.</div>
+                    </li>
+                    <li>
+                        <div class="dl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="#3B82F6" stroke-width="2">
+                                <circle cx="11" cy="11" r="8" />
+                                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                            </svg></div>
+                        <div><strong>Exact Timestamp Search</strong> — Enter a date and time, jump directly to the right
+                            segment. No scrubbing required.</div>
+                    </li>
+                    <li>
+                        <div class="dl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="#3B82F6" stroke-width="2">
+                                <polyline points="1,4 1,10 7,10" />
+                                <path d="M3.51 15a9 9 0 1 0 .49-3.1" />
+                            </svg></div>
+                        <div><strong>Seamless Cross-Segment Playback</strong> — Dual-buffer player transitions invisibly
+                            between 10-minute files. No interruptions at segment boundaries.</div>
+                    </li>
+                    <li>
+                        <div class="dl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="#3B82F6" stroke-width="2">
+                                <polygon points="5,3 19,12 5,21" />
+                            </svg></div>
+                        <div><strong>Multi-Speed Playback</strong> — 0.5×, 1×, 2×, 4× speeds. Review long incidents at
+                            4× without missing critical moments.</div>
+                    </li>
+                    <li>
+                        <div class="dl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="#22C55E" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                                <polyline points="22,4 12,14.01 9,11.01" />
+                            </svg></div>
+                        <div><strong>Live Recording Support</strong> — Plays back in-progress recordings
+                            (<code>.mp4.tmp</code> growing files) without waiting for segment completion.</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PTZ & ONVIF ============ -->
+    <section class="section section-ptz" id="ptz">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">PTZ & ONVIF</span>
+                <h2 class="section-title">Vendor-Agnostic Camera Control</h2>
+                <p class="section-desc">One interface for supported PTZ camera manufacturers. Zero manual driver
+                    configuration.</p>
+            </div>
+
+            <div class="ptz-layout">
+                <div class="ptz-vendors">
+                    <h3>Supported Manufacturers</h3>
+                    <div class="vendor-list">
+                        <div class="vendor-item">
+                            <div class="vendor-item-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B82F6"
+                                    stroke-width="1.5">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" />
+                                    <path d="M8 21h8M12 17v4" />
+                                </svg>
+                            </div>
+                            <div>
+                                <strong>Hikvision</strong>
+                                <span>ISAPI Protocol</span>
+                            </div>
+                            <div class="vendor-status">Supported</div>
+                        </div>
+                        <div class="vendor-item">
+                            <div class="vendor-item-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B82F6"
+                                    stroke-width="1.5">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" />
+                                    <path d="M8 21h8M12 17v4" />
+                                </svg>
+                            </div>
+                            <div>
+                                <strong>Dahua</strong>
+                                <span>CGI Protocol</span>
+                            </div>
+                            <div class="vendor-status">Supported</div>
+                        </div>
+                        <div class="vendor-item">
+                            <div class="vendor-item-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B82F6"
+                                    stroke-width="1.5">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" />
+                                    <path d="M8 21h8M12 17v4" />
+                                </svg>
+                            </div>
+                            <div>
+                                <strong>Axis</strong>
+                                <span>VAPIX Protocol</span>
+                            </div>
+                            <div class="vendor-status">Supported</div>
+                        </div>
+                        <div class="vendor-item">
+                            <div class="vendor-item-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B82F6"
+                                    stroke-width="1.5">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" />
+                                    <path d="M8 21h8M12 17v4" />
+                                </svg>
+                            </div>
+                            <div>
+                                <strong>Hanwha / Samsung</strong>
+                                <span>SunAPI Protocol</span>
+                            </div>
+                            <div class="vendor-status">Supported</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ptz-features">
+                    <h3>ONVIF Auto-Discovery</h3>
+                    <div class="onvif-steps">
+                        <div class="onvif-step">
+                            <div class="step-num">1</div>
+                            <div>
+                                <strong>Network Scan</strong>
+                                <p>My-VMS broadcasts ONVIF discovery probe to your camera subnet.</p>
+                            </div>
+                        </div>
+                        <div class="onvif-step">
+                            <div class="step-num">2</div>
+                            <div>
+                                <strong>Metadata Pull</strong>
+                                <p>Camera manufacturer, model name, and RTSP stream URL retrieved automatically.</p>
+                            </div>
+                        </div>
+                        <div class="onvif-step">
+                            <div class="step-num">3</div>
+                            <div>
+                                <strong>Bulk Configuration</strong>
+                                <p>Apply credentials and stream settings across your entire discovered fleet in one
+                                    action.</p>
+                            </div>
+                        </div>
+                        <div class="onvif-step">
+                            <div class="step-num">4</div>
+                            <div>
+                                <strong>PTZ Auto-Detection</strong>
+                                <p>Manufacturer fingerprinted on first PTZ interaction — no manual driver selection
+                                    ever.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FLEET HEALTH ============ -->
+    <section class="section section-detail section-detail-dark" id="fleet-health">
+        <div class="container detail-container">
+            <div class="detail-content">
+                <span class="section-tag">Fleet Health</span>
+                <h2 class="section-title">Know Your Entire Network at a Glance</h2>
+                <p class="section-desc">Real-time telemetry across every camera, updated every 30 seconds. No surprises
+                    during incidents.</p>
+
+                <div class="health-metrics">
+                    <div class="health-metric">
+                        <div class="hm-value hm-green">Online</div>
+                        <div class="hm-label">Cameras Online</div>
+                    </div>
+                    <div class="health-metric">
+                        <div class="hm-value hm-red">Alert</div>
+                        <div class="hm-label">Offline / Alert</div>
+                    </div>
+                    <div class="health-metric">
+                        <div class="hm-value hm-blue">Bitrate</div>
+                        <div class="hm-label">Stream Telemetry</div>
+                    </div>
+                    <div class="health-metric">
+                        <div class="hm-value hm-purple">DVR OK</div>
+                        <div class="hm-label">Write Status</div>
+                    </div>
+                </div>
+
+                <ul class="detail-list">
+                    <li>
+                        <div class="dl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="#3B82F6" stroke-width="2">
+                                <polyline points="22,12 18,12 15,21 9,3 6,12 2,12" />
+                            </svg></div>
+                        <div><strong>Per-Camera Telemetry</strong> — Bitrate, resolution, codec (H.264/H.265), and DVR
+                            write status per camera, updated every 30 seconds.</div>
+                    </li>
+                    <li>
+                        <div class="dl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="#22C55E" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                                <polyline points="22,4 12,14.01 9,11.01" />
+                            </svg></div>
+                        <div><strong>Fleet-Wide Online/Offline View</strong> — At-a-glance counts for camera
+                            availability across all regions and districts.</div>
+                    </li>
+                    <li>
+                        <div class="dl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="#3B82F6" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="7,10 12,15 17,10" />
+                                <line x1="12" y1="15" x2="12" y2="3" />
+                            </svg></div>
+                        <div><strong>DVR Write Status</strong> — Know which cameras are recording successfully and which
+                            have write failures — before an incident demands the footage.</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="detail-visual">
+                <img src="./assets/fleet_health.png"
+                    alt="My-VMS fleet health monitoring dashboard with camera status metrics" class="detail-img">
+                <div class="detail-img-glow"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ARCHITECTURE ============ -->
+    <section class="section section-arch" id="architecture">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Technical Architecture</span>
+                <h2 class="section-title">Built on a Modern,<br>Production-Ready Stack</h2>
+                <p class="section-desc">Open, auditable, and deployable on your own infrastructure — no black boxes, no
+                    vendor lock-in.</p>
+            </div>
+
+            <div class="tech-stack-grid">
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#61DAFB" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="3" />
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"
+                                opacity="0.3" />
+                            <ellipse cx="12" cy="12" rx="10" ry="4" stroke="#61DAFB" stroke-width="1.5" fill="none" />
+                            <ellipse cx="12" cy="12" rx="10" ry="4" stroke="#61DAFB" stroke-width="1.5" fill="none"
+                                transform="rotate(60 12 12)" />
+                            <ellipse cx="12" cy="12" rx="10" ry="4" stroke="#61DAFB" stroke-width="1.5" fill="none"
+                                transform="rotate(120 12 12)" />
+                        </svg>
+                    </div>
+                    <h4>Browser Frontend</h4>
+                    <p>Operator interface for live monitoring, archive playback, PTZ control, and fleet health
+                        workflows from a modern browser.</p>
+                    <div class="tech-libs">React 18 · TypeScript · HLS.js · FLV.js</div>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#00ADD8" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                    <h4>Backend API</h4>
+                    <p>Go service for camera management, PTZ proxying, archive search, health polling, and ONVIF
+                        discovery workflows.</p>
+                    <div class="tech-libs">Go 1.21 · Gin HTTP Framework</div>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#336791" stroke-width="1.5">
+                            <ellipse cx="12" cy="5" rx="9" ry="3" />
+                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                        </svg>
+                    </div>
+                    <h4>Database & Archive Index</h4>
+                    <p>PostgreSQL stores the camera hierarchy, ONVIF configuration, and searchable recording metadata
+                        used for timestamp-based archive lookup.</p>
+                    <div class="tech-libs">PostgreSQL 12+ · Recording Metadata</div>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#FF6B35" stroke-width="1.5">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                    </div>
+                    <h4>Media Ingest</h4>
+                    <p>FFmpeg ingests compatible RTSP camera streams and feeds the media pipeline for live delivery and
+                        DVR recording.</p>
+                    <div class="tech-libs">RTSP → RTMP · MP4 DVR Recording</div>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="1.5">
+                            <polygon points="23,7 16,12 23,17" />
+                            <rect x="1" y="5" width="15" height="14" rx="2" />
+                        </svg>
+                    </div>
+                    <h4>Browser Playback</h4>
+                    <p>Live and archive streams are delivered through browser-friendly protocols for different latency
+                        and reliability needs.</p>
+                    <div class="tech-libs">HLS · HTTP-FLV · WebRTC/WHEP</div>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="1.5">
+                            <rect x="2" y="3" width="20" height="14" rx="2" />
+                            <path d="M8 21h8M12 17v4" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                    </div>
+                    <h4>Self-Hosted Deployment</h4>
+                    <p>Runs on Linux infrastructure with PostgreSQL, FFmpeg, network-mounted storage, and layer-2 access
+                        to the camera subnet.</p>
+                    <div class="tech-libs">Ubuntu 20.04+ · FFmpeg · Network Storage</div>
+                </div>
+            </div>
+
+            <div class="arch-diagram">
+                <div class="arch-diagram-inner">
+                    <div class="arch-tier">
+                        <div class="arch-tier-label">Camera Layer</div>
+                        <div class="arch-tier-nodes">
+                            <div class="arch-tier-node">📷 IP Cam 1</div>
+                            <div class="arch-tier-node">📷 IP Cam 2</div>
+                            <div class="arch-tier-node">📷 IP Cam N</div>
+                        </div>
+                        <div class="arch-tier-proto">RTSP · ONVIF</div>
+                    </div>
+                    <div class="arch-connector-v">
+                        <svg width="2" height="40" viewBox="0 0 2 40">
+                            <line x1="1" y1="0" x2="1" y2="40" stroke="#3B82F6" stroke-width="1.5"
+                                stroke-dasharray="4 3" />
+                        </svg>
+                        <span>FFmpeg Ingest</span>
+                    </div>
+                    <div class="arch-tier">
+                        <div class="arch-tier-label">Media Layer (Distributed)</div>
+                        <div class="arch-tier-nodes">
+                            <div class="arch-tier-node arch-tier-node-blue">⚡ Media Server :1</div>
+                            <div class="arch-tier-node arch-tier-node-blue">⚡ Media Server :2</div>
+                            <div class="arch-tier-node arch-tier-node-blue">⚡ Media Server :N</div>
+                        </div>
+                        <div class="arch-tier-proto">HLS · HTTP-FLV · WebRTC/WHEP · DVR MP4</div>
+                    </div>
+                    <div class="arch-connector-v">
+                        <svg width="2" height="40" viewBox="0 0 2 40">
+                            <line x1="1" y1="0" x2="1" y2="40" stroke="#3B82F6" stroke-width="1.5"
+                                stroke-dasharray="4 3" />
+                        </svg>
+                        <span>Go API + PostgreSQL</span>
+                    </div>
+                    <div class="arch-tier">
+                        <div class="arch-tier-label">Operator Layer</div>
+                        <div class="arch-tier-nodes">
+                            <div class="arch-tier-node arch-tier-node-green">🖥 Operator 1</div>
+                            <div class="arch-tier-node arch-tier-node-green">🖥 Operator 2</div>
+                            <div class="arch-tier-node arch-tier-node-green">🖥 Operator N</div>
+                        </div>
+                        <div class="arch-tier-proto">React 18 · TypeScript · Any Browser</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ INDUSTRIES ============ -->
+    <section class="section section-industries" id="industries">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Industries</span>
+                <h2 class="section-title">Built for Organizations That Operate at Scale</h2>
+                <p class="section-desc">My-VMS serves any organization managing large, distributed camera networks that
+                    demand reliability and operator accountability.</p>
+            </div>
+
+            <div class="industries-grid">
+                <div class="industry-card" data-animate="fade-up">
+                    <div class="industry-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                            <polyline points="9,22 9,12 15,12 15,22" />
+                        </svg>
+                    </div>
+                    <h3>Government & City Surveillance</h3>
+                    <p>Manage hundreds of traffic, street, and public safety cameras across districts from a single
+                        control room. ONVIF auto-discovery scales fleet management without manual provisioning.</p>
+                    <div class="industry-use-cases">
+                        <span>Traffic Monitoring</span>
+                        <span>Public Safety</span>
+                        <span>Municipality Control</span>
+                    </div>
+                </div>
+
+                <div class="industry-card" data-animate="fade-up" style="--delay:0.1s">
+                    <div class="industry-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <rect x="2" y="7" width="20" height="14" rx="2" />
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                        </svg>
+                    </div>
+                    <h3>Warehouses & Logistics</h3>
+                    <p>24/7 recording across loading docks, storage aisles, and perimeter cameras. Instant archive
+                        search for incident investigation with multi-speed playback for rapid review.</p>
+                    <div class="industry-use-cases">
+                        <span>Incident Review</span>
+                        <span>Perimeter Security</span>
+                        <span>Loss Prevention</span>
+                    </div>
+                </div>
+
+                <div class="industry-card" data-animate="fade-up" style="--delay:0.2s">
+                    <div class="industry-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                            <line x1="3" y1="6" x2="21" y2="6" />
+                            <path d="M16 10a4 4 0 0 1-8 0" />
+                        </svg>
+                    </div>
+                    <h3>Retail Chains</h3>
+                    <p>Centralized monitoring of multi-store camera networks. Operator teams review footage across
+                        dozens of locations without vendor-specific client software for each store system.</p>
+                    <div class="industry-use-cases">
+                        <span>Multi-Store View</span>
+                        <span>Shrinkage Control</span>
+                        <span>Queue Analysis</span>
+                    </div>
+                </div>
+
+                <div class="industry-card" data-animate="fade-up" style="--delay:0.3s">
+                    <div class="industry-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <rect x="2" y="3" width="20" height="14" rx="2" />
+                            <path d="M8 21h8M12 17v4" />
+                            <line x1="7" y1="8" x2="17" y2="8" />
+                            <line x1="7" y1="12" x2="13" y2="12" />
+                        </svg>
+                    </div>
+                    <h3>Corporate Offices</h3>
+                    <p>Secure access control and lobby monitoring integrated with PTZ cameras on every floor. Stream
+                        health dashboard ensures security teams are never flying blind.</p>
+                    <div class="industry-use-cases">
+                        <span>Access Points</span>
+                        <span>Executive Floors</span>
+                        <span>Parking Structures</span>
+                    </div>
+                </div>
+
+                <div class="industry-card" data-animate="fade-up" style="--delay:0.4s">
+                    <div class="industry-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                        </svg>
+                    </div>
+                    <h3>Schools & Campuses</h3>
+                    <p>Unified monitoring across classrooms, hallways, parking lots, and campus perimeters. DVR
+                        recording supports incident reconstruction and safety audits.</p>
+                    <div class="industry-use-cases">
+                        <span>Campus Safety</span>
+                        <span>Building Access</span>
+                        <span>Incident Reconstruction</span>
+                    </div>
+                </div>
+
+                <div class="industry-card" data-animate="fade-up" style="--delay:0.5s">
+                    <div class="industry-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <rect x="2" y="6" width="20" height="16" rx="2" />
+                            <path d="M22 10H2" />
+                            <path d="M7 2v4M17 2v4" />
+                            <circle cx="12" cy="16" r="2" />
+                        </svg>
+                    </div>
+                    <h3>Industrial Sites</h3>
+                    <p>High-camera-density environments like factories, power plants, and refineries demand stream
+                        reliability and archive accuracy. My-VMS scales to hundreds of concurrent feeds.</p>
+                    <div class="industry-use-cases">
+                        <span>Process Monitoring</span>
+                        <span>Safety Compliance</span>
+                        <span>Perimeter Control</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section section-faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">Common Questions</h2>
+                <p class="section-desc">Everything you need to evaluate My-VMS for your organization.</p>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item" id="faq-1">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
+                        How many cameras can My-VMS handle concurrently?
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-1" role="region">
+                        <p>My-VMS is designed to scale horizontally. Camera streams can be distributed across multiple
+                            media server instances, so capacity can grow with the camera fleet through configuration.
+                            Deployments with 100+ concurrent streams are supported.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" id="faq-2">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
+                        Which camera manufacturers does My-VMS support?
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-2" role="region">
+                        <p>RTSP-compatible camera streams can be ingested by My-VMS. PTZ control supports Hikvision
+                            (ISAPI), Dahua (CGI), Axis (VAPIX), and Hanwha/Samsung (SunAPI) natively, with automatic
+                            vendor detection on first PTZ use. ONVIF-compatible cameras can be auto-discovered and
+                            configured without manual provisioning.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" id="faq-3">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
+                        Where is the video data stored? Does it go to a cloud?
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-3" role="region">
+                        <p>My-VMS is 100% self-hosted. All video recordings are stored as MP4 files on your own Linux
+                            server's filesystem or network-mounted storage. No data is sent to any cloud service. You
+                            retain full data sovereignty and can apply your own retention and encryption policies.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" id="faq-4">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
+                        What client software do operators need to install?
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-4" role="region">
+                        <p>None. My-VMS is entirely browser-based. Operators access the dashboard through Chrome,
+                            Firefox, or Edge with zero installation required. The React 18 frontend handles live
+                            streaming, archive playback, PTZ control, and fleet monitoring natively in the browser using
+                            HLS.js, FLV.js, and the WebRTC API.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" id="faq-5">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-5">
+                        How does archive search work? Can I find footage from weeks ago?
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-5" role="region">
+                        <p>Yes. Recordings are indexed for fast timestamp search. Enter a camera and time, and My-VMS
+                            resolves the matching 10-minute segment for playback. Footage retention is limited only by
+                            your storage capacity. Operators can also play at 4× speed to review long time windows
+                            rapidly.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" id="faq-6">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-6">
+                        What happens to recordings if the media server restarts?
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-6" role="region">
+                        <p>My-VMS includes a background Disk Synchronization scanner that reconciles filesystem MP4
+                            files with the database on startup. Any orphaned recordings created before a crash are
+                            automatically discovered, registered in the database, and made available for playback. No
+                            manual intervention is required.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" id="faq-7">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-7">
+                        Can My-VMS support human, vehicle, or object detection?
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-7" role="region">
+                        <p>Yes. My-VMS can be extended with optional computer vision analytics for customer-specific
+                            use cases such as human, vehicle, and object detection. Detection events can be integrated
+                            into alerts, overlays, and searchable archive metadata depending on the deployment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="section section-cta" id="contact">
+        <div class="cta-bg-grid"></div>
+        <div class="cta-glow cta-glow-1"></div>
+        <div class="cta-glow cta-glow-2"></div>
+        <div class="container">
+            <div class="cta-inner">
+                <div class="cta-badge">Enterprise Video Management</div>
+                <h2 class="cta-headline">Ready to Unify Your Camera Network?</h2>
+                <p class="cta-sub">My-VMS consolidates your entire camera fleet — from live monitoring to archive search
+                    — into a single, self-hosted, browser-based platform. Built for operators who need reliability, not
+                    complexity.</p>
+
+                <div class="cta-actions">
+                    <a href="mailto:contact@graphenelab.cloud" class="btn btn-primary btn-xl" id="cta-demo-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <polygon points="10,8 16,12 10,16" />
+                        </svg>
+                        Request a Demo
+                    </a>
+                    <a href="#features" class="btn btn-outline btn-xl" id="cta-features-btn">
+                        Explore All Features
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12,5 19,12 12,19" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="cta-specs">
+                    <div class="cta-spec">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2">
+                            <polyline points="20,6 9,17 4,12" />
+                        </svg>
+                        Self-hosted on Linux
+                    </div>
+                    <div class="cta-spec">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2">
+                            <polyline points="20,6 9,17 4,12" />
+                        </svg>
+                        No client software required
+                    </div>
+                    <div class="cta-spec">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2">
+                            <polyline points="20,6 9,17 4,12" />
+                        </svg>
+                        Vendor-agnostic PTZ & ONVIF
+                    </div>
+                    <div class="cta-spec">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2">
+                            <polyline points="20,6 9,17 4,12" />
+                        </svg>
+                        100+ concurrent camera streams
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo footer-logo">
+                        <div class="logo-icon">
+                            <svg width="24" height="24" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="1" y="1" width="26" height="26" rx="6" stroke="#3B82F6" stroke-width="1.5"
+                                    fill="none" />
+                                <circle cx="14" cy="14" r="5" stroke="#3B82F6" stroke-width="1.5" fill="none" />
+                                <circle cx="14" cy="14" r="2" fill="#3B82F6" />
+                                <line x1="14" y1="1" x2="14" y2="6" stroke="#3B82F6" stroke-width="1.5" />
+                                <line x1="14" y1="22" x2="14" y2="27" stroke="#3B82F6" stroke-width="1.5" />
+                                <line x1="1" y1="14" x2="6" y2="14" stroke="#3B82F6" stroke-width="1.5" />
+                                <line x1="22" y1="14" x2="27" y2="14" stroke="#3B82F6" stroke-width="1.5" />
+                            </svg>
+                        </div>
+                        <span class="logo-text">My-<span class="logo-accent">VMS</span></span>
+                    </a>
+                    <p class="footer-desc">Enterprise-grade Video Management System for large IP camera networks. Built
+                        for operators who need reliability, not complexity.</p>
+                    <div class="footer-tagline">A <a href="../">GrapheneVision</a> product</div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h5>Platform</h5>
+                        <ul>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#live-monitoring">Live Monitoring</a></li>
+                            <li><a href="#archive">Archive Playback</a></li>
+                            <li><a href="#ptz">PTZ Control</a></li>
+                            <li><a href="#fleet-health">Fleet Health</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Technical</h5>
+                        <ul>
+                            <li><a href="#architecture">Architecture</a></li>
+                            <li><a href="#platform">System Overview</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Industries</h5>
+                        <ul>
+                            <li><a href="#industries">Government</a></li>
+                            <li><a href="#industries">Warehouses</a></li>
+                            <li><a href="#industries">Retail</a></li>
+                            <li><a href="#industries">Corporate</a></li>
+                            <li><a href="#industries">Education</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copy">© 2025 My-VMS. A <a href="../">GrapheneVision</a> product. Built for operators who need
+                    reliability,
+                    not complexity.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

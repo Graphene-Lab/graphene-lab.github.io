@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrapheneVision | Next-Gen AI Vision Solutions</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Background and Grid Overlay -->
+    <div class="bg-gradient"></div>
+    <div class="grid-overlay"></div>
+
+    <header class="header">
+        <div class="logo">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Hexagonal aperture mark -->
+                <polygon points="13,2 22,7 22,19 13,24 4,19 4,7" stroke="var(--amber)" stroke-width="1.5" fill="none" class="aperture-ring"/>
+                <circle cx="13" cy="13" r="3.5" fill="var(--amber)" class="aperture-dot"/>
+                <line x1="13" y1="2" x2="13" y2="6" stroke="var(--amber)" stroke-width="1" opacity="0.5"/>
+                <line x1="13" y1="20" x2="13" y2="24" stroke="var(--amber)" stroke-width="1" opacity="0.5"/>
+            </svg>
+            GrapheneVision
+        </div>
+        <a class="lab-link" href="../">Visit GrapheneLab</a>
+    </header>
+
+    <main class="main-container">
+        
+        <!-- Content Area -->
+        <section class="content-area">
+
+            <!-- Overview: GrapheneVision (Default State) -->
+            <article class="solution-view active" id="view-overview">
+                <div class="solution-content">
+                    <span class="solution-badge">Product Ecosystem</span>
+                    <h1 class="headline">Computer Vision Products</h1>
+                    <p class="description">GrapheneVision is the computer vision product line of <a href="../">GrapheneLab</a>, a security-oriented engineering organization building secure messenger and cloud systems. We build focused products for camera monitoring, identity verification, and real-time analytics, each designed to solve a specific operational problem with practical AI, reliable infrastructure, and clean workflows.</p>
+                    
+                    <ul class="capabilities">
+                        <li><strong>Product Ecosystem</strong> covering Video Management System, identity verification, and AI detection.</li>
+                        <li><strong>Security-Oriented Engineering</strong> shaped by GrapheneLab's focus on secure systems.</li>
+                        <li><strong>Practical Computer Vision</strong> focused on clear workflows.</li>
+                    </ul>
+
+                    <div class="use-cases">
+                        <strong>Products:</strong> Identity Verification, Video Management, Object Detection
+                    </div>
+                </div>
+            </article>
+            
+            <!-- View 1: Identity Verification -->
+            <article class="solution-view" id="view-1">
+                <div class="solution-content">
+                    <span class="solution-badge">Solution 01</span>
+                    <h1 class="headline">Instant & Deepfake-Resistant ID Verification</h1>
+                    <p class="description">TrueScene leverages Continuous Scene Verification™ (CSV) to analyze the face, ID, and physical environment in one seamless 2-second capture. No gestures, no uploads—just absolute certainty.</p>
+                    
+                    <ul class="capabilities">
+                        <li><strong>Scene-Level Passive Liveness</strong> detects shadows, occlusion, and lighting consistency.</li>
+                        <li><strong>Zero User Friction</strong> with no head-turning, blinking, or retakes required.</li>
+                        <li><strong>Unmatched Deepfake Defense</strong> stopping AI-generated fraud in real-time.</li>
+                    </ul>
+
+                    <div class="use-cases">
+                        <strong>Use Cases:</strong> Fintech Onboarding, KYC/AML Compliance, Secure Access
+                    </div>
+                    
+                    <div class="cta-actions">
+                        <a class="cta-button" href="https://truescene.site/" target="_blank" rel="noopener noreferrer"><span class="btn-inner">Visit TrueScene <span class="btn-arrow">→</span></span></a>
+                        <a class="cta-button cta-button-secondary" href="https://demo.truescene.site/" target="_blank" rel="noopener noreferrer"><span class="btn-inner">Live Demo <span class="btn-arrow">→</span></span></a>
+                    </div>
+                </div>
+                <div class="solution-visual">
+                    <img src="./assets/truescene_preview_1782154690872.png" alt="TrueScene Interface" class="mockup-img">
+                    <div class="visual-overlay"></div>
+                </div>
+            </article>
+
+            <!-- View 2: Video Management System -->
+            <article class="solution-view" id="view-2">
+                <div class="solution-content">
+                    <span class="solution-badge">Solution 02</span>
+                    <h1 class="headline">Enterprise-Grade Video Management</h1>
+                    <p class="description">My-VMS is a distributed platform designed for real-time IP camera monitoring, high-speed recording, and archive retrieval at massive scale. Built for reliability, not complexity.</p>
+                    
+                    <ul class="capabilities">
+                        <li><strong>Multi-Camera Dashboard</strong> with sub-2-second glass-to-glass latency.</li>
+                        <li><strong>Distributed Architecture</strong> supporting hundreds of concurrent high-def streams.</li>
+                        <li><strong>Vendor-Agnostic PTZ</strong> seamlessly controlling Hikvision, Dahua, Axis, and more.</li>
+                        <li><strong>Custom Detection Workflows</strong> for human, vehicle, and object detection integrated with VMS operations.</li>
+                    </ul>
+
+                    <div class="use-cases">
+                        <strong>Use Cases:</strong> Surveillance, Fleet Health Monitoring, Rapid Archive Search
+                    </div>
+                    
+                    <a class="cta-button" href="./MyVMS/"><span class="btn-inner">Explore My-VMS <span class="btn-arrow">→</span></span></a>
+                </div>
+                <div class="solution-visual">
+                    <img src="./assets/vms_preview_1782154698662.png" alt="My-VMS Interface" class="mockup-img">
+                    <div class="visual-overlay"></div>
+                </div>
+            </article>
+
+            <!-- View 3: Object Detection -->
+            <article class="solution-view" id="view-3">
+                <div class="solution-content">
+                    <span class="solution-badge">Solution 03</span>
+                    <h1 class="headline">Intelligent Scene Understanding</h1>
+                    <p class="description">Transform passive camera feeds into proactive intelligence. Our Object Detection & Analytics engines extract real-time, actionable spatial data from complex environments.</p>
+                    
+                    <ul class="capabilities">
+                        <li><strong>Real-Time Alerts</strong> from specific triggers on live camera feeds.</li>
+                        <li><strong>High-Accuracy Tracking</strong> across multiple camera zones.</li>
+                        <li><strong>Edge & Cloud Processing</strong> optimized for maximum throughput.</li>
+                    </ul>
+
+                    <div class="use-cases">
+                        <strong>Use Cases:</strong> ANPR, People Counting, Building Occupancy, Classroom Monitoring
+                    </div>
+                    
+                    <button class="cta-button"><span class="btn-inner">View Analytics Demo <span class="btn-arrow">→</span></span></button>
+                </div>
+                <div class="solution-visual">
+                    <img src="./assets/object_detection_preview_1782154710811.png" alt="Object Detection Interface" class="mockup-img">
+                    <div class="visual-overlay"></div>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- Lens Navigation Widget -->
+        <aside class="lens-navigation">
+            <div class="lens-wrapper">
+                
+                <!-- Central animated aperture/glass (Clickable Home Button) -->
+                <div class="lens-core active" id="lens-core-btn">
+                    <div class="lens-aperture"></div>
+                    <div class="lens-scanline"></div>
+                    <div class="lens-center-text" id="lens-label">Overview</div>
+                </div>
+
+                <!-- SVG Ring with 3 clickable segments -->
+                <svg class="lens-ring-svg" viewBox="0 0 300 300">
+                    <defs>
+                        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                            <!-- Removed feColorMatrix so the glow inherits the exact stroke color (red) -->
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                        <!-- Text arc paths: r=130 — exactly on the border line (stroke center at r=130) -->
+                        <!-- Seg1: -75° to +5°, CW → text reads left-to-right at top-right -->
+                        <path id="arc-label-1" d="M 183.6,24.4 A 130,130 0 0,1 279.5,161.3" fill="none"/>
+                        <!-- Seg2: 130° to 40°, CCW → text reads left-to-right at bottom -->
+                        <path id="arc-label-2" d="M 66.4,249.6 A 130,130 0 0,0 249.6,233.5" fill="none"/>
+                        <!-- Seg3: 160° to 250°, CW → text curves upward on left side -->
+                        <path id="arc-label-3" d="M 27.8,194.4 A 130,130 0 0,1 105.5,27.8" fill="none"/>
+                    </defs>
+                    
+                    <!-- Segment 1 -->
+                    <!-- r=130. circumference = 2 * PI * 130 = 816.81 -->
+                    <!-- dash length for 1/3 with gap = 250, rest 566.81 -->
+                    <circle cx="150" cy="150" r="130" 
+                            class="lens-segment" 
+                            id="seg-1"
+                            data-view="view-1"
+                            data-label="TrueScene"
+                            stroke-dasharray="250 566.81" 
+                            transform="rotate(-90 150 150)" />
+                    
+                    <!-- Segment 2 -->
+                    <circle cx="150" cy="150" r="130" 
+                            class="lens-segment" 
+                            id="seg-2"
+                            data-view="view-2"
+                            data-label="My-VMS"
+                            stroke-dasharray="250 566.81" 
+                            transform="rotate(30 150 150)" />
+                            
+                    <!-- Segment 3 -->
+                    <circle cx="150" cy="150" r="130" 
+                            class="lens-segment" 
+                            id="seg-3"
+                            data-view="view-3"
+                            data-label="Analytics"
+                            stroke-dasharray="250 566.81" 
+                            transform="rotate(150 150 150)" />
+
+                    <!-- Curved labels following the ring arcs -->
+                    <text id="curved-label-1" class="curved-label" font-size="8.5" letter-spacing="1.5" font-family="'JetBrains Mono', monospace" dominant-baseline="middle">
+                        <textPath href="#arc-label-1" startOffset="50%" text-anchor="middle">IDENTITY VERIFICATION</textPath>
+                    </text>
+                    <text id="curved-label-2" class="curved-label" font-size="8.5" letter-spacing="1.5" font-family="'JetBrains Mono', monospace" dominant-baseline="middle">
+                        <textPath href="#arc-label-2" startOffset="50%" text-anchor="middle">VIDEO MANAGEMENT</textPath>
+                    </text>
+                    <text id="curved-label-3" class="curved-label" font-size="8.5" letter-spacing="1.5" font-family="'JetBrains Mono', monospace" dominant-baseline="middle">
+                        <textPath href="#arc-label-3" startOffset="50%" text-anchor="middle">OBJECT DETECTION</textPath>
+                    </text>
+                </svg>
+
+
+
+            </div>
+        </aside>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

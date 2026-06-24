@@ -68,9 +68,7 @@ export function renderProducts() {
           </div>
           <a
             class="button button-outline"
-            href="https://graphenelab.it/"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="../"
           >
             Visit Graphene Lab
           </a>
