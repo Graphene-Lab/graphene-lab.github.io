@@ -1,4 +1,30 @@
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+if (navToggle && navLinks) {
+  const closeNav = () => {
+    navLinks.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  };
+
+  navToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  navLinks.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', closeNav);
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeNav();
+    }
+  });
+}
+
 /* initialize particles.js with a cyber-theme configuration */
+if (typeof particlesJS === 'function') {
 particlesJS('particles-js',
   {
     "particles": {
@@ -78,3 +104,4 @@ particlesJS('particles-js',
     "retina_detect": true
   }
 );
+}
