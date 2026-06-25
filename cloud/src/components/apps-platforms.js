@@ -1,5 +1,13 @@
 import { escapeAttr, escapeHtml } from '../utils/html.js'
 import { renderDownloadIcon } from '../utils/download-icons.js'
+import { renderComingSoonAttrs } from './coming-soon-modal.js'
+
+const EXPLORER_APK_URL =
+  'https://github.com/Graphene-Lab/graphene-cloud-explorer-react-native-app/releases/latest'
+const PHOTOS_APK_URL =
+  'https://github.com/Graphene-Lab/graphene-photos-android-app/releases/latest'
+const WINDOWS_CLIENT_URL = './downloads/DesktopClient_v2.0.3.zip'
+const WEB_CLIENT_URL = './downloads/GExplorer_Web_Client.html'
 
 const platforms = [
   {
@@ -8,14 +16,20 @@ const platforms = [
     featureSections: [
       {
         title: 'Client',
-        features: ['First free space provider for Linux', 'Fast sync', 'Background updates', 'Offline access'],
+        features: [
+          'First free space provider for Linux',
+          'Fast sync',
+          'Background updates',
+          'Offline access',
+          'Windows client requires .NET 10',
+        ],
       },
     ],
     downloadLabel: 'Download:',
     downloads: [
-      { label: 'Windows', href: '/download/windows' },
-      { label: 'macOS', href: '/download/macos' },
-      { label: 'Linux', href: '/download/linux' },
+      { label: 'Windows', href: WINDOWS_CLIENT_URL },
+      { label: 'macOS', href: '#coming-soon', comingSoon: 'macOS desktop client' },
+      { label: 'Linux', href: '#coming-soon', comingSoon: 'Linux desktop client' },
     ],
     icon: desktopIcon(),
     gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
@@ -33,15 +47,15 @@ const platforms = [
       {
         title: 'Explorer',
         downloads: [
-          { label: 'App Store', href: '/download/ios/explorer' },
-          { label: 'Google Play', href: '/download/android/explorer' },
+          { label: 'App Store', href: '#coming-soon', comingSoon: 'Explorer for iOS' },
+          { label: 'Android Releases', href: EXPLORER_APK_URL },
         ],
       },
       {
         title: 'Photo Sync',
         downloads: [
-          { label: 'App Store', href: '/download/ios/gallery-sync' },
-          { label: 'Google Play', href: '/download/android/gallery-sync' },
+          { label: 'App Store', href: '#coming-soon', comingSoon: 'Graphene Photos for iOS' },
+          { label: 'Android Releases', href: PHOTOS_APK_URL },
         ],
       },
     ],
@@ -59,7 +73,7 @@ const platforms = [
       },
     ],
     downloadLabel: 'Download:',
-    downloads: [{ label: 'Web Client', href: '/app' }],
+    downloads: [{ label: 'Web Client', href: WEB_CLIENT_URL }],
     icon: webIcon(),
     gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
     color: '#00f2fe',
@@ -122,7 +136,7 @@ export function renderAppsPlatforms() {
                               ${sectionDownloads.downloads
                                 .map(
                                   (download) => `
-                                <a class="platform-download-link" href="${escapeAttr(download.href)}">
+                                <a class="platform-download-link" href="${escapeAttr(download.href)}"${renderDownloadAttrs(download)}>
                                   <span class="download-link-content">
                                     ${renderDownloadIcon(download.label, download.href)}
                                     <span class="download-link-text">${escapeHtml(download.label)}</span>
@@ -172,7 +186,7 @@ export function renderAppsPlatforms() {
                             ${section.downloads
                               .map(
                                 (download) => `
-                              <a class="platform-download-link" href="${escapeAttr(download.href)}">
+                              <a class="platform-download-link" href="${escapeAttr(download.href)}"${renderDownloadAttrs(download)}>
                                 <span class="download-link-content">
                                   ${renderDownloadIcon(download.label, download.href)}
                                   <span class="download-link-text">${escapeHtml(download.label)}</span>
@@ -194,7 +208,7 @@ export function renderAppsPlatforms() {
                         ${platform.downloads
                           .map(
                             (download) => `
-                        <a class="platform-download-link" href="${escapeAttr(download.href)}">
+                        <a class="platform-download-link" href="${escapeAttr(download.href)}"${renderDownloadAttrs(download)}>
                           <span class="download-link-content">
                             ${renderDownloadIcon(download.label, download.href)}
                             <span class="download-link-text">${escapeHtml(download.label)}</span>
@@ -247,6 +261,13 @@ export function renderAppsPlatforms() {
 }
 
 export function setupAppsPlatforms() {}
+
+function renderDownloadAttrs(download) {
+  const externalAttrs = /^https?:\/\//i.test(String(download.href)) ? ' target="_blank" rel="noopener noreferrer"' : ''
+  const comingSoonAttrs = download.comingSoon ? renderComingSoonAttrs(download.comingSoon) : ''
+
+  return `${externalAttrs}${comingSoonAttrs}`
+}
 
 function getOrderedPlatforms() {
   if (!isMobileClient()) return platforms

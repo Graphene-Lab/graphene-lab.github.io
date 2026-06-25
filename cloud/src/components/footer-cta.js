@@ -1,13 +1,22 @@
 import { escapeAttr, escapeHtml } from '../utils/html.js'
 import { renderDownloadIcon } from '../utils/download-icons.js'
+import { renderComingSoonAttrs } from './coming-soon-modal.js'
+
+const EXPLORER_APK_URL =
+  'https://github.com/Graphene-Lab/graphene-cloud-explorer-react-native-app/releases/latest'
+const PHOTOS_APK_URL =
+  'https://github.com/Graphene-Lab/graphene-photos-android-app/releases/latest'
+const WINDOWS_CLIENT_URL = './downloads/DesktopClient_v2.0.3.zip'
+const WEB_CLIENT_URL = './downloads/GExplorer_Web_Client.html'
 
 const footerDownloads = [
-  { label: 'Windows', href: '/download/windows' },
-  { label: 'macOS', href: '/download/macos' },
-  { label: 'Linux', href: '/download/linux' },
-  { label: 'iOS', href: '/download/ios' },
-  { label: 'Android', href: '/download/android' },
-  { label: 'Web App', href: '/app' },
+  { label: 'Windows', href: WINDOWS_CLIENT_URL },
+  { label: 'macOS', href: '#coming-soon', comingSoon: 'macOS desktop client' },
+  { label: 'Linux', href: '#coming-soon', comingSoon: 'Linux desktop client' },
+  { label: 'iOS', href: '#coming-soon', comingSoon: 'iOS apps' },
+  { label: 'Explorer Android Releases', href: EXPLORER_APK_URL },
+  { label: 'Photos Android Releases', href: PHOTOS_APK_URL },
+  { label: 'Web App', href: WEB_CLIENT_URL },
 ]
 
 export function renderFooterCta() {
@@ -29,7 +38,7 @@ export function renderFooterCta() {
               ${footerDownloads
                 .map(
                   (download) => `
-                <a class="cta-app-link" href="${escapeAttr(download.href)}">
+                <a class="cta-app-link" href="${escapeAttr(download.href)}"${renderDownloadAttrs(download)}>
                   <span class="download-link-content">
                     ${renderDownloadIcon(download.label, download.href)}
                     <span class="download-link-text">${escapeHtml(download.label)}</span>
@@ -41,7 +50,8 @@ export function renderFooterCta() {
             </div>
           </div>
           <div class="cta-actions">
-            <a class="button" href="#free-plan">Create Account</a>
+            <a class="button" href="${EXPLORER_APK_URL}" target="_blank" rel="noopener noreferrer">Explorer App</a>
+            <a class="button button-outline cta-outline" href="${PHOTOS_APK_URL}" target="_blank" rel="noopener noreferrer">Photos App</a>
             <a class="button button-outline cta-outline" href="mailto:contact@graphenelab.cloud">Contact Us</a>
           </div>
         </div>
@@ -60,4 +70,11 @@ export function renderFooterCta() {
       </div>
     </section>
   `
+}
+
+function renderDownloadAttrs(download) {
+  const externalAttrs = /^https?:\/\//i.test(String(download.href)) ? ' target="_blank" rel="noopener noreferrer"' : ''
+  const comingSoonAttrs = download.comingSoon ? renderComingSoonAttrs(download.comingSoon) : ''
+
+  return `${externalAttrs}${comingSoonAttrs}`
 }

@@ -1,5 +1,11 @@
 import { renderGrapheneLogo } from './logo.js'
 
+const EXPLORER_APK_URL =
+  'https://github.com/Graphene-Lab/graphene-cloud-explorer-react-native-app/releases/latest'
+const PHOTOS_APK_URL =
+  'https://github.com/Graphene-Lab/graphene-photos-android-app/releases/latest'
+const WINDOWS_CLIENT_URL = './downloads/DesktopClient_v2.0.3.zip'
+
 export function renderFreePlan() {
   return `
     <section id="free-plan" class="section free-plan">
@@ -14,9 +20,11 @@ export function renderFreePlan() {
               cross-platform clients deliver fast sync.
             </p>
             <div class="free-plan-actions">
-              <a class="button" href="#top">Create Acccount</a>
-              <a class="button button-outline" href="#platforms" data-download-clients-cta>Download Clients</a>
+              <a class="button" href="${EXPLORER_APK_URL}" target="_blank" rel="noopener noreferrer">Explorer App</a>
+              <a class="button button-outline" href="${PHOTOS_APK_URL}" target="_blank" rel="noopener noreferrer">Photos App</a>
+              <a class="button button-outline" href="#platforms" data-download-clients-cta>Install Desktop Client</a>
               <span>No credit card required</span>
+              <span class="client-requirement-note">Windows client requires .NET 10.</span>
             </div>
           </div>
 
@@ -46,7 +54,13 @@ export function setupFreePlan() {
   cta.setAttribute('href', desktopTarget.href)
   cta.setAttribute('aria-label', `Install Graphene Cloud for ${desktopTarget.osName}`)
   cta.classList.add('button-with-os')
-  cta.innerHTML = `<span>Install Graphene Cloud</span>${desktopTarget.icon}`
+  cta.innerHTML = `<span>Desktop Client</span>${desktopTarget.icon}`
+
+  if (desktopTarget.comingSoon) {
+    cta.setAttribute('data-coming-soon', desktopTarget.comingSoon)
+  } else {
+    cta.removeAttribute('data-coming-soon')
+  }
 }
 
 function getDesktopDownloadTarget() {
@@ -62,7 +76,7 @@ function getDesktopDownloadTarget() {
 
   if (/Win/i.test(platform) || /Windows/i.test(userAgent)) {
     return {
-      href: '/download/windows',
+      href: WINDOWS_CLIENT_URL,
       osName: 'Windows',
       icon: renderOsIcon('windows'),
     }
@@ -70,16 +84,18 @@ function getDesktopDownloadTarget() {
 
   if (/Mac/i.test(platform) || /Mac OS X/i.test(userAgent)) {
     return {
-      href: '/download/macos',
+      href: '#coming-soon',
       osName: 'macOS',
+      comingSoon: 'macOS desktop client',
       icon: renderOsIcon('macos'),
     }
   }
 
   if (/Linux|X11/i.test(platform) || /Linux/i.test(userAgent)) {
     return {
-      href: '/download/linux',
+      href: '#coming-soon',
       osName: 'Linux',
+      comingSoon: 'Linux desktop client',
       icon: renderOsIcon('linux'),
     }
   }

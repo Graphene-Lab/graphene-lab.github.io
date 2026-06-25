@@ -8,6 +8,7 @@ import { renderComparisonTable, setupComparisonTable } from './components/compar
 import { renderFaq, setupFaq } from './components/faq.js'
 import { renderProducts } from './components/products.js'
 import { renderFooterCta } from './components/footer-cta.js'
+import { renderComingSoonModal, setupComingSoonModal } from './components/coming-soon-modal.js'
 
 const app = document.getElementById('app')
 
@@ -25,6 +26,7 @@ if (app) {
       ${renderProducts()}
       ${renderFooterCta()}
     </main>
+    ${renderComingSoonModal()}
   `
 
   setupWhyCloud()
@@ -33,4 +35,5 @@ if (app) {
   setupAppsPlatforms()
   setupComparisonTable()
   setupFaq()
+  setupComingSoonModal()
 }

@@ -1522,6 +1522,89 @@ a {
   flex-wrap: wrap;
 }
 
+.free-plan-actions .client-requirement-note {
+  flex-basis: 100%;
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.coming-soon-modal[hidden] {
+  display: none;
+}
+
+.coming-soon-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+}
+
+.coming-soon-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(3, 6, 18, 0.72);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+.coming-soon-dialog {
+  position: relative;
+  width: min(100%, 440px);
+  padding: 2rem;
+  border-radius: 18px;
+  background: #101629;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
+}
+
+.coming-soon-close {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.coming-soon-kicker {
+  display: inline-flex;
+  margin-bottom: 0.85rem;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.coming-soon-dialog h2 {
+  margin-bottom: 0.75rem;
+  font-size: 1.65rem;
+}
+
+.coming-soon-dialog p {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.coming-soon-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
 .e2e-visual-container {
   position: relative;
   display: flex;
