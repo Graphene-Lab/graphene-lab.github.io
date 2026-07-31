@@ -6,6 +6,8 @@ const EXPLORER_APK_URL =
   'https://github.com/Graphene-Lab/graphene-cloud-explorer-react-native-app/releases/latest'
 const PHOTOS_APK_URL =
   'https://github.com/Graphene-Lab/graphene-photos-android-app/releases/latest'
+const EXPLORER_PLAY_URL = 'https://play.google.com/store/apps/details?id=com.graphenelab.cloudexplorer'
+const PHOTOS_PLAY_URL = 'https://play.google.com/store/apps/details?id=com.graphenelab.photosync'
 const WINDOWS_CLIENT_URL = './downloads/DesktopClient_v2.0.3.zip'
 const WEB_CLIENT_URL = './downloads/GExplorer_Web_Client.html'
 
@@ -48,6 +50,7 @@ const platforms = [
         title: 'Explorer',
         downloads: [
           { label: 'App Store', href: '#coming-soon', comingSoon: 'Explorer for iOS' },
+          { label: 'Google Play', href: EXPLORER_PLAY_URL },
           { label: 'Android Releases', href: EXPLORER_APK_URL },
         ],
       },
@@ -55,6 +58,7 @@ const platforms = [
         title: 'Photo Sync',
         downloads: [
           { label: 'App Store', href: '#coming-soon', comingSoon: 'Graphene Photos for iOS' },
+          { label: 'Google Play', href: PHOTOS_PLAY_URL },
           { label: 'Android Releases', href: PHOTOS_APK_URL },
         ],
       },
