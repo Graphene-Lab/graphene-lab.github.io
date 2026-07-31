@@ -177,7 +177,7 @@ a {
 }
 
 .os-icon {
-  color: #ffffff;
+  color: currentColor;
   width: 1.5rem;
   height: 1.5rem;
   display: inline-flex;

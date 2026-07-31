@@ -1,9 +1,7 @@
 import { renderGrapheneLogo } from './logo.js'
 
-const EXPLORER_APK_URL =
-  'https://github.com/Graphene-Lab/graphene-cloud-explorer-react-native-app/releases/latest'
-const PHOTOS_APK_URL =
-  'https://github.com/Graphene-Lab/graphene-photos-android-app/releases/latest'
+const EXPLORER_PLAY_URL = 'https://play.google.com/store/apps/details?id=com.graphenelab.cloudexplorer'
+const PHOTOS_PLAY_URL = 'https://play.google.com/store/apps/details?id=com.graphenelab.photosync'
 const WINDOWS_CLIENT_URL = './downloads/DesktopClient_v2.0.3.zip'
 
 export function renderFreePlan() {
@@ -20,8 +18,8 @@ export function renderFreePlan() {
               cross-platform clients deliver fast sync.
             </p>
             <div class="free-plan-actions">
-              <a class="button" href="${EXPLORER_APK_URL}" target="_blank" rel="noopener noreferrer">Explorer App</a>
-              <a class="button button-outline" href="${PHOTOS_APK_URL}" target="_blank" rel="noopener noreferrer">Photos App</a>
+              <a class="button button-outline button-with-os" href="${EXPLORER_PLAY_URL}" target="_blank" rel="noopener noreferrer" aria-label="Get Graphene Explorer on Google Play"><span>Explorer App</span>${renderPlayIcon()}</a>
+              <a class="button button-outline button-with-os" href="${PHOTOS_PLAY_URL}" target="_blank" rel="noopener noreferrer" aria-label="Get Graphene Photos on Google Play"><span>Photos App</span>${renderPlayIcon()}</a>
               <a class="button button-outline" href="#platforms" data-download-clients-cta>Install Desktop Client</a>
               <span>No credit card required</span>
               <span class="client-requirement-note">Windows client requires .NET 10.</span>
@@ -101,6 +99,19 @@ function getDesktopDownloadTarget() {
   }
 
   return null
+}
+
+function renderPlayIcon() {
+  return `
+    <span class="os-icon" aria-hidden="true">
+      <svg viewBox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M48,59.49v393a4.33,4.33,0,0,0,7.37,3.07L260,256,55.37,56.42A4.33,4.33,0,0,0,48,59.49Z"></path>
+        <path d="M345.8,174,89.22,32.64l-.16-.09c-4.42-2.4-8.62,3.58-5,7.06L285.19,231.93Z"></path>
+        <path d="M84.08,472.39c-3.64,3.48.56,9.46,5,7.06l.16-.09L345.8,338l-60.61-57.95Z"></path>
+        <path d="M449.38,231l-71.65-39.46L310.36,256l67.37,64.43L449.38,281C468.87,270.23,468.87,241.77,449.38,231Z"></path>
+      </svg>
+    </span>
+  `
 }
 
 function renderOsIcon(os) {
