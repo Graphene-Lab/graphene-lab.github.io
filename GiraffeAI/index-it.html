@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GiraffeAI — Il tuo assistente digitale che pensa, agisce e ricorda</title>
+    <meta name="description"
+        content="GiraffeAI è un assistente personale di intelligenza artificiale che vive sul tuo computer: ascolta, comprende, ricorda tutto e svolge compiti complessi per te — con risposte verificabili e tracciabili." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+    <script>
+        (function () {
+            var t = null;
+            try { t = localStorage.getItem('giraffe-theme'); } catch (e) { }
+            if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+        })();
+    </script>
+    <link rel="stylesheet" href="css/light.css" />
+    <link rel="stylesheet" href="css/dark.css" />
+    <script>
+        // Auto-redirect to the browser-language version; EN (index.html) is the fallback default.
+        var langMap = { 'it': 'index-it.html', 'fr': 'index-fr.html', 'es': 'index-es.html', 'ru': 'index-ru.html' };
+        var userLang = (navigator.language || navigator.userLanguage || '').slice(0, 2).toLowerCase();
+        var fileName = window.location.pathname.split('/').pop();
+        if (langMap[userLang] && fileName !== langMap[userLang] && !window.location.search.includes('noredirect')) {
+            window.location.replace(langMap[userLang]);
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- particles background -->
+    <div id="particles-js"></div>
+
+    <!-- navigation -->
+    <nav id="main-nav">
+        <a href="#hero" class="logo">
+            <span class="mark">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z" />
+                </svg>
+            </span>
+            <span class="grad-gold">GiraffeAI</span>
+        </a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#features">Funzionalità</a></li>
+            <li><a href="#memory">Memoria</a></li>
+            <li><a href="#how">Come funziona</a></li>
+            <li><a href="#compare">Confronto</a></li>
+            <li><a href="#security">Sicurezza</a></li>
+            <li><a href="#about">Chi siamo</a></li>
+            <li class="nav-li-theme">
+                <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Passa da tema chiaro a scuro" aria-pressed="false">
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                </button>
+            </li>
+            <li><a href="#cta" class="nav-cta">Inizia ora</a></li>
+        </ul>
+        <button class="nav-toggle" type="button" id="nav-toggle" aria-label="Apri navigazione" aria-expanded="false"
+            aria-controls="nav-links">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- hero -->
+    <header id="hero">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+
+        <div class="container hero-grid">
+            <div class="hero-copy">
+                <span class="badge"><span class="pulse"></span> Assistente digitale · Reimmaginato</span>
+                <h1>Il tuo assistente digitale che <span class="grad-text">pensa</span>, <span class="grad-text">agisce</span> e <span class="grad-text">ricorda</span>.</h1>
+                <p class="type-line"><span id="typewriter"></span><span class="caret"></span></p>
+                <div class="hero-btns">
+                    <a href="#agent" class="btn primary">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                            stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="6 3 20 12 6 21 6 3" />
+                        </svg>
+                        Vedilo in azione
+                    </a>
+                    <a href="#features" class="btn ghost">Esplora le funzionalità</a>
+                </div>
+                <div class="hero-meta">
+                    <span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2 4 5v6c0 5.25 3.4 10.2 8 11 4.6-.8 8-5.75 8-11V5l-8-3z" />
+                            <path d="m9 12 2 2 4-4" />
+                        </svg>
+                        Concreto, mai inventato
+                    </span>
+                    <span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                            <circle cx="12" cy="7" r="4" />
+                        </svg>
+                        Gira sulla tua infrastruttura
+                    </span>
+                    <span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z" />
+                        </svg>
+                        24/7 — mai in vacanza
+                    </span>
+                </div>
+            </div>
+
+            <div class="terminal" id="terminal" aria-hidden="true">
+                <div class="term-head">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="term-title">giraffe — esecuzione attività</span>
+                </div>
+                <div class="term-body">
+                    <div class="term-line"><span class="t-user">you ›</span> Prepara un report sui nostri principali concorrenti, cerca le ultime notizie online e includi i loro bilanci.</div>
+                    <div class="term-bar"><div class="fill" id="term-fill"></div></div>
+                    <ol class="term-steps" id="term-steps">
+                        <li><span class="step-num">01</span> Scomposizione dell'attività in 6 passaggi</li>
+                        <li><span class="step-num">02</span> Ricerca delle ultime notizie sui concorrenti</li>
+                        <li><span class="step-num">03</span> Download dei bilanci · 3 fonti</li>
+                        <li><span class="step-num">04</span> Lettura e verifica incrociata di 1.248 documenti</li>
+                        <li><span class="step-num">05</span> Redazione del report di 200 pagine</li>
+                        <li><span class="step-num">06</span> Allegato di un riferimento verificabile per ogni affermazione</li>
+                    </ol>
+                    <div class="term-done" id="term-done">✓ Attività completata — report.pdf · 200 pagine · 4m 32s</div>
+                    <div class="term-refs" id="term-refs">
+                        <span class="ref-chip">annual-report-2025.pdf</span>
+                        <span class="ref-chip">press-release-q2.pdf</span>
+                        <span class="ref-chip">institutional-db.gov</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-hint">Scorri <span class="chevron"></span></div>
+    </header>
+
+    <!-- ticker -->
+    <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+            <div class="ticker-group">
+                <span>Ascolta e <em>comprende</em></span>
+                <span>Una memoria che <em>non dimentica mai</em></span>
+                <span>Agisce nel <em>mondo digitale</em></span>
+                <span>Ogni risposta <em>verificabile</em></span>
+                <span>Installazione <em>on-premises</em></span>
+                <span><em>Registro di controllo</em> completo</span>
+            </div>
+            <div class="ticker-group">
+                <span>Ascolta e <em>comprende</em></span>
+                <span>Una memoria che <em>non dimentica mai</em></span>
+                <span>Agisce nel <em>mondo digitale</em></span>
+                <span>Ogni risposta <em>verificabile</em></span>
+                <span>Installazione <em>on-premises</em></span>
+                <span><em>Registro di controllo</em> completo</span>
+            </div>
+        </div>
+    </div>
+
+    <main>
+
+        <!-- features -->
+        <section id="features" class="section">
+            <div class="container">
+                <div class="sec-head reveal">
+                    <span class="sec-tag">Capacità</span>
+                    <h2>Più di una semplice <span class="grad-text">chat</span></h2>
+                    <p>Puoi parlare con GiraffeAI a testo o a voce, come con un collega. Ma la vera magia avviene quando gli affidi un compito: non si limita a rispondere, agisce.</p>
+                </div>
+                <div class="features-grid">
+                    <article class="f-card reveal" data-tilt>
+                        <div class="f-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                                <path d="M8 12h.01M12 12h.01M16 12h.01" />
+                            </svg>
+                        </div>
+                        <h3>Chat e voce, in modo naturale</h3>
+                        <p>Interagisci digitando o semplicemente parlando, come se parlassi con un collega — e ricevi risposte con la stessa naturalezza.</p>
+                    </article>
+                    <article class="f-card reveal" data-tilt>
+                        <div class="f-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="4" y="8" width="16" height="12" rx="2" />
+                                <path d="M12 8V4M8 4h8" />
+                                <circle cx="12" cy="14" r="2" />
+                                <path d="M12 16v2" />
+                            </svg>
+                        </div>
+                        <h3>Un agente che agisce</h3>
+                        <p>Naviga su internet, accede ai portali, compila moduli, scarica documenti e risponde alle email — tutto il lavoro ripetitivo di un impiegato.</p>
+                    </article>
+                    <article class="f-card reveal" data-tilt>
+                        <div class="f-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <ellipse cx="12" cy="5" rx="9" ry="3" />
+                                <path d="M3 5v14a9 3 0 0 0 18 0V5" />
+                                <path d="M3 12a9 3 0 0 0 18 0" />
+                            </svg>
+                        </div>
+                        <h3>Una memoria che non dimentica mai</h3>
+                        <p>Contratti, email, scadenze, report di produzione — assorbiti costantemente e sempre presenti nella sua mente digitale, come una fotografia aggiornata della vita aziendale.</p>
+                    </article>
+                    <article class="f-card reveal" data-tilt>
+                        <div class="f-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                <path d="M14 2v6h6" />
+                                <path d="m9 15 2 2 4-4" />
+                            </svg>
+                        </div>
+                        <h3>Non inventa mai nulla</h3>
+                        <p>Ogni affermazione, numero e consiglio arriva con un riferimento preciso. Puoi sempre verificare, controllare e fidarti di ciò che dice.</p>
+                    </article>
+                    <article class="f-card reveal" data-tilt>
+                        <div class="f-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                <path d="M12 8v4M12 16h.01" />
+                            </svg>
+                        </div>
+                        <h3>Sicurezza e controllo totale</h3>
+                        <p>I tuoi dati restano sempre sotto il tuo controllo, protetti con gli standard più avanzati — e ogni azione è registrata in un log dettagliato.</p>
+                    </article>
+                    <article class="f-card reveal" data-tilt>
+                        <div class="f-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z" />
+                            </svg>
+                        </div>
+                        <h3>Velocità senza compromessi</h3>
+                        <p>Un report di 200 pagine che normalmente richiederebbe settimane è pronto in pochi minuti. Migliaia di fatture esaminate in un'ora. Una presentazione preparata in pochi secondi.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- memory spotlight -->
+        <section id="memory" class="section alt">
+            <div class="container memory-band">
+                <div class="memory-copy reveal">
+                    <span class="sec-tag">Memoria</span>
+                    <h2>Una <span class="grad-gold">memoria aziendale</span> sempre attiva</h2>
+                    <p>I programmi tradizionali cercano informazioni solo quando glielo chiedi. GiraffeAI funziona diversamente: tutti i dati della tua azienda vengono assorbiti costantemente e mantenuti presenti nella sua mente digitale.</p>
+                    <p>Conosce lo stato di ogni progetto, ricorda ogni obbligo contrattuale e tiene traccia di ogni scadenza — così non perde mai tempo a cercare: sa già tutto.</p>
+                    <ul class="memory-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg>
+                            Contratti, email e scadenze, sempre presenti
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg>
+                            Stato dei progetti e report di produzione, aggiornati al minuto
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg>
+                            Un lavoro con una completezza che nessun essere umano potrebbe eguagliare
+                        </li>
+                    </ul>
+                </div>
+                <div class="brain-stage reveal" aria-hidden="true">
+                    <div class="brain-core"></div>
+                    <span class="m-chip c1">contratti.pdf</span>
+                    <span class="m-chip c2">scadenza · 15/09</span>
+                    <span class="m-chip c3">email cliente</span>
+                    <span class="m-chip c4">report produzione Q2</span>
+                    <span class="m-chip c5">riunione consiglio · note</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- how it works -->
+        <section id="how" class="section">
+            <div class="container">
+                <div class="sec-head reveal">
+                    <span class="sec-tag">Come funziona</span>
+                    <h2>Come fa a essere <span class="grad-text">così intelligente?</span></h2>
+                    <p>Nessuna magia — solo tecnologie molto avanzate che lavorano insieme in armonia.</p>
+                </div>
+                <div class="steps">
+                    <div class="step-card reveal">
+                        <div class="step-num-big">01</div>
+                        <h3>Scompone il problema</h3>
+                        <p>Quando gli viene affidato un compito complesso, lo suddivide in tanti piccoli passaggi, esattamente come farebbe un buon project manager.</p>
+                    </div>
+                    <div class="step-card reveal">
+                        <div class="step-num-big">02</div>
+                        <h3>Recupera da fonti autorevoli</h3>
+                        <p>Per ogni passaggio raccoglie le informazioni necessarie dai luoghi più affidabili: documenti interni, siti istituzionali, database pubblici.</p>
+                    </div>
+                    <div class="step-card reveal">
+                        <div class="step-num-big">03</div>
+                        <h3>Consegna con i riferimenti</h3>
+                        <p>Ogni affermazione è accompagnata da un riferimento preciso, così puoi sempre verificare da dove arriva ogni dato. Basta con le risposte inventate.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- agent in action -->
+        <section id="agent" class="section alt">
+            <div class="container agent-band">
+                <div class="agent-copy reveal">
+                    <span class="sec-tag">Agente in azione</span>
+                    <h2>Non si limita a pensare — <span class="grad-text">fa le cose</span></h2>
+                    <p>L'agente operativo si muove in autonomia nel mondo digitale, seguendo procedure molto specifiche che gli sono state insegnate. E puoi sempre controllare cosa sta facendo, o semplicemente dirgli <em>“stop.”</em></p>
+                    <ul class="agent-actions">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                            </svg>
+                            Naviga su internet e visita i siti giusti
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                <path d="M14 2v6h6" />
+                                <path d="M12 18v-6M9 15l3 3 3-3" />
+                            </svg>
+                            Scarica documenti e legge articoli
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="4" width="20" height="16" rx="2" />
+                                <path d="m2 7 10 6L22 7" />
+                            </svg>
+                            Accede ai portali, compila moduli, risponde alle email
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="7 10 12 15 17 10" />
+                                <line x1="12" y1="15" x2="12" y2="3" />
+                            </svg>
+                            Consegna lavori completi e ben scritti — pronti per la revisione
+                        </li>
+                    </ul>
+                </div>
+                <div class="terminal reveal" aria-hidden="true">
+                    <div class="term-head">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="term-title">giraffe — fa il lavoro noioso</span>
+                    </div>
+                    <div class="term-body">
+                        <div class="term-line"><span class="t-user">you ›</span> Controlla tutte le fatture aperte, segnala quelle scadute e redige le email di sollecito.</div>
+                        <div class="term-bar"><div class="fill" style="width:72%"></div></div>
+                        <ol class="term-steps">
+                            <li class="on done"><span class="step-num">01</span> Scansione di 1.000+ fatture dal portale contabile</li>
+                            <li class="on done"><span class="step-num">02</span> Verifica incrociata dello stato dei pagamenti con i registri bancari</li>
+                            <li class="on done"><span class="step-num">03</span> Segnalazione di 43 fatture scadute · con riferimento ai termini contrattuali</li>
+                            <li class="on done"><span class="step-num">04</span> Redazione di 43 email di sollecito, pronte per la tua approvazione</li>
+                            <li><span class="step-num">05</span> In attesa della tua conferma prima di inviare…</li>
+                        </ol>
+                        <div class="term-done" style="opacity:1;transform:none">⏸ In pausa — richiesta la tua approvazione prima di qualsiasi azione</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- performance comparison -->
+        <section id="compare" class="section">
+            <div class="container">
+                <div class="sec-head reveal">
+                    <span class="sec-tag">La differenza</span>
+                    <h2>Perché GiraffeAI <span class="grad-gold">vince</span></h2>
+                    <p>Non solo risposte più veloci — un livello di utilità fondamentalmente superiore: azione reale, memoria permanente e risultati tracciabili, contro la semplice generazione di testo.</p>
+                </div>
+            </div>
+            <div class="compare-frame reveal">
+                <div class="compare-img-wrap">
+                    <span class="compare-tag">GiraffeAI vs Ollama</span>
+                    <img src="PerformanceComparer.png" alt="Grafico comparativo delle performance: GiraffeAI rispetto a strumenti generici come Ollama, che mostra un grande aumento di prestazioni e utilità" loading="lazy" />
+                </div>
+                <div class="compare-chips">
+                    <span class="compare-chip">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z" />
+                        </svg>
+                        Minuti invece di settimane
+                    </span>
+                    <span class="compare-chip">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                        </svg>
+                        Azioni reali, non solo testo
+                    </span>
+                    <span class="compare-chip">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <ellipse cx="12" cy="5" rx="9" ry="3" />
+                            <path d="M3 5v14a9 3 0 0 0 18 0V5" />
+                            <path d="M3 12a9 3 0 0 0 18 0" />
+                        </svg>
+                        Memoria aziendale permanente
+                    </span>
+                    <span class="compare-chip">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                            <path d="M14 2v6h6" />
+                            <path d="m9 15 2 2 4-4" />
+                        </svg>
+                        Risposte verificabili al 100%
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- stats -->
+        <section class="section alt">
+            <div class="container stats-band">
+                <div class="stat reveal">
+                    <div class="num"><span class="counter" data-target="200">0</span>+</div>
+                    <div class="lbl">pagine in un report, pronte in minuti invece di settimane</div>
+                </div>
+                <div class="stat reveal">
+                    <div class="num"><span class="counter" data-target="1000">0</span>+</div>
+                    <div class="lbl">fatture e contratti esaminati in un'ora</div>
+                </div>
+                <div class="stat reveal">
+                    <div class="num"><span class="counter" data-target="24">0</span>/7</div>
+                    <div class="lbl">sempre disponibile — mai stanco, mai in vacanza</div>
+                </div>
+                <div class="stat reveal">
+                    <div class="num"><span class="counter" data-target="100">0</span>%</div>
+                    <div class="lbl">delle affermazioni tracciabili a un riferimento preciso</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- use cases -->
+        <section id="cases" class="section">
+            <div class="container">
+                <div class="sec-head reveal">
+                    <span class="sec-tag">A chi serve</span>
+                    <h2>Aiuto concreto per il <span class="grad-text">lavoro di ogni giorno</span></h2>
+                    <p>Qualsiasi organizzazione sommersa da documenti, dati e richieste ripetitive.</p>
+                </div>
+                <div class="cases-grid">
+                    <div class="case-card reveal">
+                        <div class="case-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2 2 7l10 5 10-5-10-5z" />
+                                <path d="M2 17l10 5 10-5" />
+                                <path d="M2 12l10 5 10-5" />
+                            </svg>
+                        </div>
+                        <h3>Banche e finanza</h3>
+                        <p>Prepara report, analizza bilanci e risponde alle richieste con qualità verificabile e tracciabile — nel rispetto di regole di trasparenza sempre più severe.</p>
+                    </div>
+                    <div class="case-card reveal">
+                        <div class="case-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                            </svg>
+                        </div>
+                        <h3>Società di investimento</h3>
+                        <p>Esamina migliaia di contratti e documenti in un'ora, con la profondità analitica delle migliori società di consulenza internazionali.</p>
+                    </div>
+                    <div class="case-card reveal">
+                        <div class="case-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="7" width="20" height="14" rx="2" />
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                            </svg>
+                        </div>
+                        <h3>Grandi aziende</h3>
+                        <p>Libera i professionisti dal lavoro noioso e ripetitivo, così possono concentrarsi su relazioni, strategia, innovazione e gestione delle eccezioni.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- security -->
+        <section id="security" class="section alt">
+            <div class="container secu-band">
+                <div class="secu-visual reveal" aria-hidden="true">
+                    <div class="secu-ring">
+                        <div class="secu-shield">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                <path d="m9 12 2 2 4-4" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="secu-copy reveal">
+                    <span class="sec-tag">Sicurezza e controllo</span>
+                    <h2>I tuoi dati. Le tue regole. <span class="grad-text">Trasparenza totale.</span></h2>
+                    <p>Affidare dati importanti a un sistema automatico è una decisione seria. Per questo GiraffeAI è stato progettato con la sicurezza come priorità assoluta.</p>
+                    <ul class="secu-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg>
+                            <div><b>Dati sempre sotto il tuo controllo</b><span>Protetti con gli standard più avanzati, installati fisicamente dentro la tua azienda — nessun estraneo può accedere alle informazioni.</span></div>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg>
+                            <div><b>Ogni azione registrata</b><span>Un log dettagliato registra cosa ha fatto e perché — puoi sempre tornare indietro e vedere la base di ogni scelta.</span></div>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg>
+                            <div><b>Comandi sempre tu</b><span>L'agente segue procedure insegnate e si ferma subito se gli dici “stop.” Nessuna sorpresa, mai.</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- testimonials -->
+        <section id="testimonials" class="section">
+            <div class="container">
+                <div class="sec-head reveal">
+                    <span class="sec-tag">Cosa dicono</span>
+                    <h2>Apprezzato da team che <span class="grad-gold">non possono permettersi errori</span></h2>
+                </div>
+                <div class="t-grid">
+                    <div class="t-card reveal">
+                        <div class="t-stars">★★★★★</div>
+                        <blockquote>“Prima servivano settimane per preparare i report sui concorrenti. Ora sono pronti in minuti, e ogni numero rimanda alla sua fonte. È un altro modo di lavorare.”</blockquote>
+                        <div class="t-who">
+                            <span class="t-avatar" style="background:linear-gradient(135deg,#00fff2,#3b82f6)">AR</span>
+                            <div><b>A. Laurent</b><span>Direttore operativo · Banca privata</span></div>
+                        </div>
+                    </div>
+                    <div class="t-card reveal">
+                        <div class="t-stars">★★★★★</div>
+                        <blockquote>“Migliaia di contratti, un'ora. La qualità dell'analisi eguaglia i nostri migliori analisti senior, ma nulla si perde e nulla viene inventato. La tracciabilità è tutto.”</blockquote>
+                        <div class="t-who">
+                            <span class="t-avatar" style="background:linear-gradient(135deg,#ffc94d,#ff8a3d)">MS</span>
+                            <div><b>M. Silva</b><span>Responsabile compliance · Società di investimento</span></div>
+                        </div>
+                    </div>
+                    <div class="t-card reveal">
+                        <div class="t-stars">★★★★★</div>
+                        <blockquote>“Il mio team finalmente fa il lavoro che conta: relazioni, strategia, giudizio. GiraffeAI prepara tutto e lo presenta pronto per la decisione finale.”</blockquote>
+                        <div class="t-who">
+                            <span class="t-avatar" style="background:linear-gradient(135deg,#a855f7,#ec4899)">KD</span>
+                            <div><b>K. Demir</b><span>Socio amministratore · Società di consulenza</span></div>
+                        </div>
+                    </div>
+                </div>
+                <p class="demo-note">Contenuto demo — testimonianze fittizie a scopo dimostrativo.</p>
+            </div>
+        </section>
+
+        <!-- about -->
+        <section id="about" class="section alt">
+            <div class="container">
+                <div class="about-card reveal">
+                    <span class="sec-tag">Chi siamo</span>
+                    <h2>Realizzato da <span class="grad-text">Graphene Lab</span></h2>
+                    <p>GiraffeAI è sviluppato da <strong>Graphene Lab</strong>, una fondazione dedicata a ridefinire gli standard di cybersicurezza e sovranità digitale. La nostra missione è fornire soluzioni enterprise di livello militare per la protezione della privacy, la sicurezza delle comunicazioni e la resilienza digitale, soddisfacendo i requisiti più stringenti di enti governativi, ONG e giornalisti in scenari critici.</p>
+                    <p>La nostra filosofia si basa su una semplice convinzione: gli strumenti digitali di un'organizzazione devono essere robusti quanto è sensibile la sua missione — proteggendo dati, infrastrutture e processi democratici a ogni livello.</p>
+                    <div class="about-links">
+                        <a href="../" title="Graphene Lab main site">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                            </svg>
+                            graphene-lab.github.io
+                        </a>
+                        <a href="mailto:contact@graphenelab.cloud">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="4" width="20" height="16" rx="2" />
+                                <path d="m2 7 10 6L22 7" />
+                            </svg>
+                            contact@graphenelab.cloud
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- cta -->
+        <section id="cta" class="section cta-section">
+            <div class="orb orb-1" style="top:-160px;left:-120px"></div>
+            <div class="orb orb-2" style="bottom:-160px;right:-120px"></div>
+            <div class="container reveal">
+                <h2>Il momento è <span class="grad-gold">adesso</span>.</h2>
+                <p>Non è una promessa per il futuro: è una realtà già funzionante, già testata, già pronta per ambienti professionali esigenti. Le organizzazioni che si muovono per prime ottengono un vantaggio significativo e duraturo.</p>
+                <a href="mailto:contact@graphenelab.cloud" class="btn primary big">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                        stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z" />
+                    </svg>
+                    Parlaci
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <div class="container footer-grid">
+            <a href="#hero" class="logo">
+                <span class="mark">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z" />
+                    </svg>
+                </span>
+                <span class="grad-gold">GiraffeAI</span>
+            </a>
+            <div class="footer-links">
+                <a href="../">Graphene Lab</a>
+                <a href="mailto:contact@graphenelab.cloud">Contatti</a>
+                <a href="#features">Funzionalità</a>
+                <a href="#security">Sicurezza</a>
+            </div>
+            <p class="copyright">© 2026 Graphene Lab Foundation. Tutti i diritti riservati. — GiraffeAI è una pagina di prodotto demo.</p>
+        </div>
+    </footer>
+
+    <!-- particles.js from CDN (same library used by the Graphene Lab main site) -->
+    <script src="https://cdn.jsdelivr.net/gh/VincentGarreau/particles.js/particles.min.js"></script>
+    <script>
+        (function () {
+            'use strict';
+
+            /* ── particles background ── */
+            if (window.particlesJS) {
+                particlesJS('particles-js', {
+                    particles: {
+                        number: { value: 70, density: { enable: true, value_area: 900 } },
+                        color: { value: ['#00d6c8', '#7c3aed', '#e8a400'] },
+                        shape: { type: 'circle' },
+                        opacity: { value: 0.55, random: true, anim: { enable: false } },
+                        size: { value: 3, random: true, anim: { enable: false } },
+                        line_linked: {
+                            enable: true,
+                            distance: 150,
+                            color: '#00d6c8',
+                            opacity: 0.16,
+                            width: 1
+                        },
+                        move: {
+                            enable: true,
+                            speed: 1.5,
+                            direction: 'none',
+                            random: true,
+                            straight: false,
+                            out_mode: 'out'
+                        }
+                    },
+                    interactivity: {
+                        detect_on: 'canvas',
+                        events: {
+                            onhover: { enable: true, mode: 'grab' },
+                            onclick: { enable: true, mode: 'push' },
+                            resize: true
+                        },
+                        modes: {
+                            grab: { distance: 170, line_linked: { opacity: 0.5 } },
+                            push: { particles_nb: 4 }
+                        }
+                    },
+                    retina_detect: true
+                });
+            }
+
+            /* ── nav: scrolled state + mobile toggle ── */
+            var nav = document.getElementById('main-nav');
+            var navLinks = document.getElementById('nav-links');
+            var navToggle = document.getElementById('nav-toggle');
+
+            function onScroll() {
+                nav.classList.toggle('scrolled', window.scrollY > 40);
+            }
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+
+            navToggle.addEventListener('click', function () {
+                var open = navLinks.classList.toggle('open');
+                navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            });
+
+            navLinks.addEventListener('click', function (e) {
+                if (e.target.tagName === 'A') {
+                    navLinks.classList.remove('open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            /* ── typewriter ── */
+            var phrases = [
+                'Ascolta, comprende e svolge compiti per te.',
+                'Ricorda ogni contratto, scadenza ed email.',
+                'Risponde con riferimenti verificabili — non inventa mai.',
+                'Completa un report di 200 pagine in pochi minuti.'
+            ];
+            var typeEl = document.getElementById('typewriter');
+            var pIdx = 0, cIdx = 0, deleting = false;
+
+            function type() {
+                var current = phrases[pIdx];
+                if (!deleting) {
+                    typeEl.textContent = current.slice(0, ++cIdx);
+                    if (cIdx === current.length) {
+                        deleting = true;
+                        setTimeout(type, 2200);
+                        return;
+                    }
+                    setTimeout(type, 42);
+                } else {
+                    typeEl.textContent = current.slice(0, --cIdx);
+                    if (cIdx === 0) {
+                        deleting = false;
+                        pIdx = (pIdx + 1) % phrases.length;
+                        setTimeout(type, 350);
+                        return;
+                    }
+                    setTimeout(type, 18);
+                }
+            }
+            type();
+
+            /* ── hero terminal: animate steps when visible ── */
+            var termSteps = document.getElementById('term-steps');
+            var termFill = document.getElementById('term-fill');
+            var termDone = document.getElementById('term-done');
+            var termRefs = document.getElementById('term-refs');
+            var terminal = document.getElementById('terminal');
+            var termStarted = false;
+
+            function playTerminal() {
+                if (termStarted) return;
+                termStarted = true;
+                var items = termSteps.children;
+                var i = 0;
+                var timer = setInterval(function () {
+                    if (i >= items.length) {
+                        clearInterval(timer);
+                        termFill.style.width = '100%';
+                        termDone.classList.add('show');
+                        termRefs.classList.add('show');
+                        items[items.length - 1].classList.add('done');
+                        return;
+                    }
+                    items[i].classList.add('on');
+                    termFill.style.width = Math.round(((i + 1) / items.length) * 100) + '%';
+                    if (i > 0) items[i - 1].classList.add('done');
+                    i++;
+                }, 900);
+            }
+
+            var termObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(function (en) {
+                    if (en.isIntersecting) {
+                        playTerminal();
+                        termObserver.disconnect();
+                    }
+                });
+            }, { threshold: 0.35 });
+            termObserver.observe(terminal);
+
+            /* ── reveal on scroll ── */
+            var revealEls = document.querySelectorAll('.reveal');
+            var revealObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(function (en) {
+                    if (en.isIntersecting) {
+                        en.target.classList.add('visible');
+                        revealObserver.unobserve(en.target);
+                    }
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+            revealEls.forEach(function (el) { revealObserver.observe(el); });
+
+            /* ── animated counters ── */
+            function animateCounter(el) {
+                var target = parseInt(el.getAttribute('data-target'), 10);
+                var dur = 1600;
+                var start = null;
+                function step(ts) {
+                    if (!start) start = ts;
+                    var p = Math.min((ts - start) / dur, 1);
+                    var eased = 1 - Math.pow(1 - p, 3);
+                    el.textContent = Math.round(target * eased).toLocaleString('en-US');
+                    if (p < 1) requestAnimationFrame(step);
+                }
+                requestAnimationFrame(step);
+            }
+
+            var counters = document.querySelectorAll('.counter');
+            var counterObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(function (en) {
+                    if (en.isIntersecting) {
+                        animateCounter(en.target);
+                        counterObserver.unobserve(en.target);
+                    }
+                });
+            }, { threshold: 0.6 });
+            counters.forEach(function (el) { counterObserver.observe(el); });
+
+            /* ── subtle tilt on feature cards (desktop only) ── */
+            var finePointer = window.matchMedia('(pointer: fine)').matches;
+            if (finePointer) {
+                document.querySelectorAll('[data-tilt]').forEach(function (card) {
+                    card.addEventListener('pointermove', function (e) {
+                        var r = card.getBoundingClientRect();
+                        var x = (e.clientX - r.left) / r.width;
+                        var y = (e.clientY - r.top) / r.height;
+                        card.style.setProperty('--mx', (x * 100) + '%');
+                        card.style.setProperty('--my', (y * 100) + '%');
+                        card.style.transform =
+                            'translateY(-8px) perspective(800px) rotateX(' + ((0.5 - y) * 6).toFixed(2) +
+                            'deg) rotateY(' + ((x - 0.5) * 6).toFixed(2) + 'deg)';
+                    });
+                    card.addEventListener('pointerleave', function () {
+                        card.style.transform = '';
+                    });
+                });
+            }
+            /* ── theme toggle ── */
+            var themeToggle = document.getElementById('theme-toggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', function () {
+                    var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+                    var next = dark ? 'light' : 'dark';
+                    document.documentElement.setAttribute('data-theme', next);
+                    try { localStorage.setItem('giraffe-theme', next); } catch (e) { }
+                    themeToggle.setAttribute('aria-pressed', next === 'dark' ? 'true' : 'false');
+                });
+                themeToggle.setAttribute('aria-pressed',
+                    document.documentElement.getAttribute('data-theme') === 'dark' ? 'true' : 'false');
+            }
+        })();
+    </script>
+</body>
+
+</html>

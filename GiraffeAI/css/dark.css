@@ -1,0 +1,73 @@
+/* ═══════════════════════════════════════════════════════════════
+   GiraffeAI — Dark theme
+   This stylesheet contains ONLY the token overrides for the dark
+   theme. It is applied when <html data-theme="dark"> is set by the
+   theme toggle (css/light.css holds the full component styles).
+   ═══════════════════════════════════════════════════════════════ */
+
+:root[data-theme="dark"] {
+    /* surfaces */
+    --bg: #030305;
+    --bg-soft: #08080c;
+    --card: rgba(18, 18, 24, 0.72);
+    --card-solid: #101016;
+    --footer-bg: #020204;
+    --nav-bg: rgba(3, 3, 6, 0.72);
+    --nav-bg-solid: rgba(3, 3, 6, 0.92);
+    --nav-mobile-bg: rgba(3, 3, 6, 0.97);
+    --line: rgba(255, 255, 255, 0.07);
+    --text: #e8e8ee;
+    --text-strong: #ffffff;
+    --dim: #9b9ba8;
+    --blockquote: #d5d7e0;
+    --ghost-bg: rgba(255, 255, 255, 0.04);
+    --ghost-border: rgba(255, 255, 255, 0.14);
+
+    /* accents */
+    --accent: #00fff2;
+    --accent-ink: #00fff2;
+    --accent-dim: rgba(0, 255, 242, 0.1);
+    --accent-border: rgba(0, 255, 242, 0.35);
+    --violet-dim: rgba(124, 58, 237, 0.16);
+    --violet-border: rgba(124, 58, 237, 0.35);
+    --gold: #ffc94d;
+    --gold-ink: #ffc94d;
+    --gold-dim: rgba(255, 201, 77, 0.12);
+    --gold-border: rgba(255, 201, 77, 0.45);
+    --green: #00e5a0;
+    --green-ink: #00e5a0;
+    --green-border: rgba(0, 229, 160, 0.3);
+
+    /* gradients */
+    --grad1: #ffffff;
+    --grad2: #cfcfe0;
+    --grad3: var(--accent);
+    --gg1: var(--accent);
+    --gg2: #6fd3ff;
+    --gg3: var(--gold);
+
+    /* misc */
+    --selection-bg: rgba(0, 255, 242, 0.25);
+    --selection-color: #ffffff;
+    --scroll-track: #050507;
+    --link-hover: #ffffff;
+    --particles-opacity: 0.5;
+
+    /* terminal + chips */
+    --term-bg: rgba(12, 12, 18, 0.82);
+    --term-head-bg: rgba(255, 255, 255, 0.03);
+    --term-text: #d8dae4;
+    --term-track: rgba(255, 255, 255, 0.06);
+    --chip-bg: rgba(12, 12, 18, 0.85);
+    --chip-c1: #00fff2;
+    --chip-c2: #ffc94d;
+    --chip-c3: #c4b5fd;
+    --chip-c4: #7ef0d4;
+    --chip-c5: #ffb4c2;
+
+    /* shadows */
+    --shadow: 0 24px 70px rgba(0, 0, 0, 0.55);
+    --panel-shadow: 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 70px rgba(0, 255, 242, 0.06);
+    --card-glow: 0 24px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 255, 242, 0.07);
+    --chip-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}

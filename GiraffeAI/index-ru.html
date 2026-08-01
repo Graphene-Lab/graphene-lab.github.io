@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GiraffeAI — ваш цифровой помощник, который думает, действует и помнит</title>
+    <meta name="description"
+        content="GiraffeAI — персональный ИИ-ассистент, который живёт на вашем компьютере: слушает, понимает, запоминает всё и выполняет за вас сложные задачи — с проверяемыми и отслеживаемыми ответами." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+    <script>
+        (function () {
+            var t = null;
+            try { t = localStorage.getItem('giraffe-theme'); } catch (e) { }
+            if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+        })();
+    </script>
+    <link rel="stylesheet" href="css/light.css" />
+    <link rel="stylesheet" href="css/dark.css" />
+    <script>
+        // Auto-redirect to the browser-language version; EN (index.html) is the fallback default.
+        var langMap = { 'it': 'index-it.html', 'fr': 'index-fr.html', 'es': 'index-es.html', 'ru': 'index-ru.html' };
+        var userLang = (navigator.language || navigator.userLanguage || '').slice(0, 2).toLowerCase();
+        var fileName = window.location.pathname.split('/').pop();
+        if (langMap[userLang] && fileName !== langMap[userLang] && !window.location.search.includes('noredirect')) {
+            window.location.replace(langMap[userLang]);
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- particles background -->
+    <div id="particles-js"></div>
+
+    <!-- navigation -->
+    <nav id="main-nav">
+        <a href="#hero" class="logo">
+            <span class="mark">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z" />
+                </svg>
+            </span>
+            <span class="grad-gold">GiraffeAI</span>
+        </a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#features">Возможности</a></li>
+            <li><a href="#memory">Память</a></li>
+            <li><a href="#how">Как это работает</a></li>
+            <li><a href="#compare">Сравнение</a></li>
+            <li><a href="#security">Безопасность</a></li>
+            <li><a href="#about">О нас</a></li>
+            <li class="nav-li-theme">
+                <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Переключить светлую и тёмную тему" aria-pressed="false">
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                </button>
+            </li>
+            <li><a href="#cta" class="nav-cta">Начать</a></li>
+        </ul>
+        <button class="nav-toggle" type="button" id="nav-toggle" aria-label="Открыть навигацию" aria-expanded="false"
+            aria-controls="nav-links">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- hero -->
+    <header id="hero">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+
+        <div class="container hero-grid">
+            <div class="hero-copy">
+                <span class="badge"><span class="pulse"></span> Цифровой ассистент · Переосмысленный</span>
+                <h1>Ваш цифровой ассистент, который <span class="grad-text">думает</span>, <span class="grad-text">действует</span> и <span class="grad-text">помнит</span>.</h1>
+                <p class="type-line"><span id="typewriter"></span><span class="caret"></span></p>
+                <div class="hero-btns">
+                    <a href="#agent" class="btn primary">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                            stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="6 3 20 12 6 21 6 3" />
+                        </svg>
+                        Посмотреть в действии
+                    </a>
+                    <a href="#features" class="btn ghost">Изучить возможности</a>
+                </div>
+                <div class="hero-meta">
+                    <span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2 4 5v6c0 5.25 3.4 10.2 8 11 4.6-.8 8-5.75 8-11V5l-8-3z" />
+                            <path d="m9 12 2 2 4-4" />
+                        </svg>
+                        Точно, никогда не выдумывает
+                    </span>
+                    <span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                            <circle cx="12" cy="7" r="4" />
+                        </svg>
+                        Работает в вашей инфраструктуре
+                    </span>
+                    <span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z" />
+                        </svg>
+                        24/7 — никогда не в отпуске
+                    </span>
+                </div>
+            </div>
+
+            <div class="terminal" id="terminal" aria-hidden="true">
+                <div class="term-head">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="term-title">giraffe — выполнение задачи</span>
+                </div>
+                <div class="term-body">
+                    <div class="term-line"><span class="t-user">you ›</span> Подготовь отчёт о наших основных конкурентах, найди последние новости в интернете и включи их финансовую отчётность.</div>
+                    <div class="term-bar"><div class="fill" id="term-fill"></div></div>
+                    <ol class="term-steps" id="term-steps">
+                        <li><span class="step-num">01</span> Разбивка задачи на 6 шагов</li>
+                        <li><span class="step-num">02</span> Поиск последних новостей о конкурентах</li>
+                        <li><span class="step-num">03</span> Скачивание финансовой отчётности · 3 источника</li>
+                        <li><span class="step-num">04</span> Чтение и перекрёстная проверка 1 248 документов</li>
+                        <li><span class="step-num">05</span> Написание отчёта на 200 страниц</li>
+                        <li><span class="step-num">06</span> Прикрепление проверяемой ссылки к каждому утверждению</li>
+                    </ol>
+                    <div class="term-done" id="term-done">✓ Задача выполнена — report.pdf · 200 страниц · 4 мин 32 с</div>
+                    <div class="term-refs" id="term-refs">
+                        <span class="ref-chip">annual-report-2025.pdf</span>
+                        <span class="ref-chip">press-release-q2.pdf</span>
+                        <span class="ref-chip">institutional-db.gov</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-hint">Листайте <span class="chevron"></span></div>
+    </header>
+
+    <!-- ticker -->
+    <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+            <div class="ticker-group">
+                <span>Слушает и <em>понимает</em></span>
+                <span>Память, которая <em>не забывает</em></span>
+                <span>Действует в <em>цифровом мире</em></span>
+                <span>Каждый ответ <em>проверяем</em></span>
+                <span>Установка <em>on-premises</em></span>
+                <span>Полный <em>журнал аудита</em></span>
+            </div>
+            <div class="ticker-group">
+                <span>Слушает и <em>понимает</em></span>
+                <span>Память, которая <em>не забывает</em></span>
+                <span>Действует в <em>цифровом мире</em></span>
+                <span>Каждый ответ <em>проверяем</em></span>
+                <span>Установка <em>on-premises</em></span>
+                <span>Полный <em>журнал аудита</em></span>
+            </div>
+        </div>
+    </div>
+
+    <main>
+
+        <!-- features -->
+        <section id="features" class="section">
+            <div class="container">
+                <div class="sec-head reveal">
+                    <span class="sec-tag">Возможности</span>
+                    <h2>Больше, чем просто <span class="grad-text">чат</span></h2>
+                    <p>Вы можете общаться с GiraffeAI текстом или голосом, как с коллегой. Но настоящая магия происходит, когда вы поручаете ему задачу: он не просто отвечает — он действует.</p>
+                </div>
+                <div class="features-grid">
+                    <article class="f-card reveal" data-tilt>
+                        <div class="f-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                                <path d="M8 12h.01M12 12h.01M16 12h.01" />
+                            </svg>
+                        </div>
+                        <h3>Чат и голос, естественно</h3>
+                        <p>Общайтесь, печатая или просто говоря, как с коллегой, — и получайте ответы с той же естественностью.</p>
+                    </article>
+                    <article class="f-card reveal" data-tilt>
+                        <div class="f-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="4" y="8" width="16" height="12" rx="2" />
+                                <path d="M12 8V4M8 4h8" />
+                                <circle cx="12" cy="14" r="2" />
+                                <path d="M12 16v2" />
+                            </svg>
+                        </div>
+                        <h3>Агент, который действует</h3>
+                        <p>Серфит в интернете, заходит на порталы, заполняет формы, скачивает документы и отвечает на письма — вся рутинная работа офисного сотрудника.</p>
+                    </article>
+                    <article class="f-card reveal" data-tilt>
+                        <div class="f-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <ellipse cx="12" cy="5" rx="9" ry="3" />
+                                <path d="M3 5v14a9 3 0 0 0 18 0V5" />
+                                <path d="M3 12a9 3 0 0 0 18 0" />
+                            </svg>
+                        </div>
+                        <h3>Память, которая не забывает</h3>
+                        <p>Контракты, письма, сроки, производственные отчёты — постоянно впитываются и всегда присутствуют в его цифровом разуме, как актуальный снимок жизни компании.</p>
+                    </article>
+                    <article class="f-card reveal" data-tilt>
+                        <div class="f-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                <path d="M14 2v6h6" />
+                                <path d="m9 15 2 2 4-4" />
+                            </svg>
+                        </div>
+                        <h3>Никогда ничего не выдумывает</h3>
+                        <p>Каждое утверждение, цифра и совет сопровождаются точной ссылкой. Вы всегда можете проверить и довериться тому, что он говорит.</p>
+                    </article>
+                    <article class="f-card reveal" data-tilt>
+                        <div class="f-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                <path d="M12 8v4M12 16h.01" />
+                            </svg>
+                        </div>
+                        <h3>Безопасность и полный контроль</h3>
+                        <p>Ваши данные всегда остаются под вашим контролем, защищённые по самым передовым стандартам, а каждое действие фиксируется в подробном журнале.</p>
+                    </article>
+                    <article class="f-card reveal" data-tilt>
+                        <div class="f-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z" />
+                            </svg>
+                        </div>
+                        <h3>Скорость без компромиссов</h3>
+                        <p>Отчёт на 200 страниц, на который обычно уходят недели, готов за минуты. Тысячи счетов проверены за час. Презентация подготовлена за секунды.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- memory spotlight -->
+        <section id="memory" class="section alt">
+            <div class="container memory-band">
+                <div class="memory-copy reveal">
+                    <span class="sec-tag">Память</span>
+                    <h2>Всегда активная <span class="grad-gold">корпоративная память</span></h2>
+                    <p>Обычные программы ищут информацию только когда их просят. GiraffeAI работает иначе: все данные вашей компании постоянно впитываются и остаются в его цифровом разуме.</p>
+                    <p>Он знает статус каждого проекта, помнит каждое договорное обязательство и отслеживает каждый срок — поэтому не тратит время на поиски: он уже всё знает.</p>
+                    <ul class="memory-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg>
+                            Контракты, письма и сроки — всегда под рукой
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg>
+                            Статус проектов и производственные отчёты — с точностью до минуты
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg>
+                            Работа с полнотой, недостижимой для человека
+                        </li>
+                    </ul>
+                </div>
+                <div class="brain-stage reveal" aria-hidden="true">
+                    <div class="brain-core"></div>
+                    <span class="m-chip c1">контракты.pdf</span>
+                    <span class="m-chip c2">срок · 15/09</span>
+                    <span class="m-chip c3">письмо клиента</span>
+                    <span class="m-chip c4">производственный отчёт Q2</span>
+                    <span class="m-chip c5">заседание совета · заметки</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- how it works -->
+        <section id="how" class="section">
+            <div class="container">
+                <div class="sec-head reveal">
+                    <span class="sec-tag">Как это работает</span>
+                    <h2>Как ему удаётся быть <span class="grad-text">таким умным?</span></h2>
+                    <p>Без магии — просто очень продвинутые технологии, работающие вместе слаженно.</p>
+                </div>
+                <div class="steps">
+                    <div class="step-card reveal">
+                        <div class="step-num-big">01</div>
+                        <h3>Разбивает проблему на части</h3>
+                        <p>Получив сложную задачу, он делит её на множество маленьких шагов — точно так же, как сделал бы хороший руководитель проекта.</p>
+                    </div>
+                    <div class="step-card reveal">
+                        <div class="step-num-big">02</div>
+                        <h3>Берёт данные из авторитетных источников</h3>
+                        <p>Для каждого шага он собирает нужную информацию из самых надёжных мест: внутренних документов, государственных сайтов, публичных баз данных.</p>
+                    </div>
+                    <div class="step-card reveal">
+                        <div class="step-num-big">03</div>
+                        <h3>Отдаёт результат со ссылками</h3>
+                        <p>Каждое утверждение сопровождается точной ссылкой, чтобы вы всегда могли проверить, откуда взялся каждый факт. Никаких выдуманных ответов.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- agent in action -->
+        <section id="agent" class="section alt">
+            <div class="container agent-band">
+                <div class="agent-copy reveal">
+                    <span class="sec-tag">Агент в действии</span>
+                    <h2>Он не просто думает — <span class="grad-text">он делает</span></h2>
+                    <p>Операционный агент автономно действует в цифровом мире, следуя очень конкретным процедурам, которым его научили. Вы всегда можете проверить, что он делает, или просто сказать ему <em>«стоп».</em></p>
+                    <ul class="agent-actions">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                            </svg>
+                            Серфит в интернете и заходит на нужные сайты
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                <path d="M14 2v6h6" />
+                                <path d="M12 18v-6M9 15l3 3 3-3" />
+                            </svg>
+                            Скачивает документы и читает статьи
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="4" width="20" height="16" rx="2" />
+                                <path d="m2 7 10 6L22 7" />
+                            </svg>
+                            Заходит на порталы, заполняет формы, отвечает на письма
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="7 10 12 15 17 10" />
+                                <line x1="12" y1="15" x2="12" y2="3" />
+                            </svg>
+                            Сдаёт готовую, хорошо написанную работу — готовую к проверке
+                        </li>
+                    </ul>
+                </div>
+                <div class="terminal reveal" aria-hidden="true">
+                    <div class="term-head">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="term-title">giraffe — делает скучную работу</span>
+                    </div>
+                    <div class="term-body">
+                        <div class="term-line"><span class="t-user">you ›</span> Проверь все открытые счета, отметь просроченные и составь напоминания.</div>
+                        <div class="term-bar"><div class="fill" style="width:72%"></div></div>
+                        <ol class="term-steps">
+                            <li class="on done"><span class="step-num">01</span> Сканирование 1 000+ счетов из бухгалтерского портала</li>
+                            <li class="on done"><span class="step-num">02</span> Перекрёстная проверка статуса платежей с банковскими записями</li>
+                            <li class="on done"><span class="step-num">03</span> Отметка 43 просроченных счетов · со ссылкой на условия договора</li>
+                            <li class="on done"><span class="step-num">04</span> Составление 43 напоминаний, готовых к вашему одобрению</li>
+                            <li><span class="step-num">05</span> Ожидание вашего подтверждения перед отправкой…</li>
+                        </ol>
+                        <div class="term-done" style="opacity:1;transform:none">⏸ Пауза — требуется ваше одобрение перед любым действием</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- performance comparison -->
+        <section id="compare" class="section">
+            <div class="container">
+                <div class="sec-head reveal">
+                    <span class="sec-tag">Разница</span>
+                    <h2>Почему GiraffeAI <span class="grad-gold">побеждает</span></h2>
+                    <p>Не просто более быстрые ответы — принципиально более высокий уровень полезности: реальные действия, постоянная память и отслеживаемые результаты вместо простой генерации текста.</p>
+                </div>
+            </div>
+            <div class="compare-frame reveal">
+                <div class="compare-img-wrap">
+                    <span class="compare-tag">GiraffeAI vs Ollama</span>
+                    <img src="PerformanceComparer.png" alt="Сравнительный график производительности: GiraffeAI против универсальных инструментов, таких как Ollama, показывающий большой рост производительности и полезности" loading="lazy" />
+                </div>
+                <div class="compare-chips">
+                    <span class="compare-chip">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z" />
+                        </svg>
+                        Минуты вместо недель
+                    </span>
+                    <span class="compare-chip">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                        </svg>
+                        Реальные действия, а не просто текст
+                    </span>
+                    <span class="compare-chip">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <ellipse cx="12" cy="5" rx="9" ry="3" />
+                            <path d="M3 5v14a9 3 0 0 0 18 0V5" />
+                            <path d="M3 12a9 3 0 0 0 18 0" />
+                        </svg>
+                        Постоянная корпоративная память
+                    </span>
+                    <span class="compare-chip">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                            <path d="M14 2v6h6" />
+                            <path d="m9 15 2 2 4-4" />
+                        </svg>
+                        100 % проверяемых ответов
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- stats -->
+        <section class="section alt">
+            <div class="container stats-band">
+                <div class="stat reveal">
+                    <div class="num"><span class="counter" data-target="200">0</span>+</div>
+                    <div class="lbl">страниц в отчёте, готового за минуты вместо недель</div>
+                </div>
+                <div class="stat reveal">
+                    <div class="num"><span class="counter" data-target="1000">0</span>+</div>
+                    <div class="lbl">счетов и контрактов проверено за час</div>
+                </div>
+                <div class="stat reveal">
+                    <div class="num"><span class="counter" data-target="24">0</span>/7</div>
+                    <div class="lbl">всегда доступен — никогда не устаёт и не в отпуске</div>
+                </div>
+                <div class="stat reveal">
+                    <div class="num"><span class="counter" data-target="100">0</span>%</div>
+                    <div class="lbl">утверждений с точной ссылкой на источник</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- use cases -->
+        <section id="cases" class="section">
+            <div class="container">
+                <div class="sec-head reveal">
+                    <span class="sec-tag">Кому помогает</span>
+                    <h2>Реальная помощь в <span class="grad-text">повседневной работе</span></h2>
+                    <p>Любой организации, тонущей в документах, данных и повторяющихся запросах.</p>
+                </div>
+                <div class="cases-grid">
+                    <div class="case-card reveal">
+                        <div class="case-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2 2 7l10 5 10-5-10-5z" />
+                                <path d="M2 17l10 5 10-5" />
+                                <path d="M2 12l10 5 10-5" />
+                            </svg>
+                        </div>
+                        <h3>Банки и финансы</h3>
+                        <p>Готовит отчёты, анализирует финансовую отчётность и отвечает на запросы с проверяемым и отслеживаемым качеством — в соответствии с всё более строгими правилами прозрачности.</p>
+                    </div>
+                    <div class="case-card reveal">
+                        <div class="case-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                            </svg>
+                        </div>
+                        <h3>Инвестиционные компании</h3>
+                        <p>Проверяет тысячи контрактов и документов за час с аналитической глубиной лучших международных консалтинговых фирм.</p>
+                    </div>
+                    <div class="case-card reveal">
+                        <div class="case-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="7" width="20" height="14" rx="2" />
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                            </svg>
+                        </div>
+                        <h3>Крупные предприятия</h3>
+                        <p>Освобождает профессионалов от скучной рутинной работы, чтобы они занимались отношениями, стратегией, инновациями и управлением исключениями.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- security -->
+        <section id="security" class="section alt">
+            <div class="container secu-band">
+                <div class="secu-visual reveal" aria-hidden="true">
+                    <div class="secu-ring">
+                        <div class="secu-shield">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                <path d="m9 12 2 2 4-4" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="secu-copy reveal">
+                    <span class="sec-tag">Безопасность и контроль</span>
+                    <h2>Ваши данные. Ваши правила. <span class="grad-text">Полная прозрачность.</span></h2>
+                    <p>Доверить важные данные автоматической системе — серьёзное решение. Поэтому GiraffeAI спроектирован с безопасностью как главным приоритетом.</p>
+                    <ul class="secu-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg>
+                            <div><b>Данные всегда под вашим контролем</b><span>Защищены по самым передовым стандартам, физически установлены внутри вашей компании — никто посторонний не сможет получить доступ к информации.</span></div>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg>
+                            <div><b>Каждое действие фиксируется</b><span>Подробный журнал записывает, что он сделал и почему: вы всегда можете вернуться и увидеть основу каждого решения.</span></div>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg>
+                            <div><b>Командуете всегда вы</b><span>Агент следует обученным процедурам и немедленно останавливается, если вы скажете «стоп». Никаких сюрпризов.</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- testimonials -->
+        <section id="testimonials" class="section">
+            <div class="container">
+                <div class="sec-head reveal">
+                    <span class="sec-tag">Отзывы</span>
+                    <h2>Ему доверяют команды, которые <span class="grad-gold">не могут ошибаться</span></h2>
+                </div>
+                <div class="t-grid">
+                    <div class="t-card reveal">
+                        <div class="t-stars">★★★★★</div>
+                        <blockquote>«Раньше на подготовку конкурентных отчётов уходили недели. Теперь они готовы за минуты, и каждая цифра ссылается на свой источник. Это другой способ работы.»</blockquote>
+                        <div class="t-who">
+                            <span class="t-avatar" style="background:linear-gradient(135deg,#00fff2,#3b82f6)">AR</span>
+                            <div><b>A. Laurent</b><span>Операционный директор · Частный банк</span></div>
+                        </div>
+                    </div>
+                    <div class="t-card reveal">
+                        <div class="t-stars">★★★★★</div>
+                        <blockquote>«Тысячи контрактов за час. Качество анализа не уступает нашим лучшим старшим аналитикам, но ничего не теряется и ничего не выдумывается. Отслеживаемость — это всё.»</blockquote>
+                        <div class="t-who">
+                            <span class="t-avatar" style="background:linear-gradient(135deg,#ffc94d,#ff8a3d)">MS</span>
+                            <div><b>M. Silva</b><span>Руководитель комплаенс · Инвестиционная компания</span></div>
+                        </div>
+                    </div>
+                    <div class="t-card reveal">
+                        <div class="t-stars">★★★★★</div>
+                        <blockquote>«Наконец-то моя команда занимается тем, что важно: отношениями, стратегией, суждениями. GiraffeAI всё готовит и представляет готовым к финальному решению.»</blockquote>
+                        <div class="t-who">
+                            <span class="t-avatar" style="background:linear-gradient(135deg,#a855f7,#ec4899)">KD</span>
+                            <div><b>K. Demir</b><span>Управляющий партнёр · Консалтинговая фирма</span></div>
+                        </div>
+                    </div>
+                </div>
+                <p class="demo-note">Демонстрационный контент — вымышленные отзывы для наглядности.</p>
+            </div>
+        </section>
+
+        <!-- about -->
+        <section id="about" class="section alt">
+            <div class="container">
+                <div class="about-card reveal">
+                    <span class="sec-tag">О нас</span>
+                    <h2>Создано в <span class="grad-text">Graphene Lab</span></h2>
+                    <p>GiraffeAI разработан компанией <strong>Graphene Lab</strong> — фондом, который переопределяет стандарты кибербезопасности и цифрового суверенитета. Наша миссия — предоставлять корпоративные решения уровня военных технологий для защиты конфиденциальности, безопасности коммуникаций и цифровой устойчивости, отвечая самым строгим требованиям государственных органов, НКО и журналистов в критических сценариях.</p>
+                    <p>Наша философия основана на простом убеждении: цифровые инструменты организации должны быть настолько же защищёнными, насколько чувствительна её миссия — защищая данные, инфраструктуру и демократические процессы на всех уровнях.</p>
+                    <div class="about-links">
+                        <a href="../" title="Graphene Lab main site">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                            </svg>
+                            graphene-lab.github.io
+                        </a>
+                        <a href="mailto:contact@graphenelab.cloud">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="4" width="20" height="16" rx="2" />
+                                <path d="m2 7 10 6L22 7" />
+                            </svg>
+                            contact@graphenelab.cloud
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- cta -->
+        <section id="cta" class="section cta-section">
+            <div class="orb orb-1" style="top:-160px;left:-120px"></div>
+            <div class="orb orb-2" style="bottom:-160px;right:-120px"></div>
+            <div class="container reveal">
+                <h2>Время — <span class="grad-gold">сейчас</span>.</h2>
+                <p>Это не обещание на будущее: это реальность, которая уже работает, уже протестирована и уже готова для требовательных профессиональных сред. Организации, которые действуют первыми, получают значительное и долговременное преимущество.</p>
+                <a href="mailto:contact@graphenelab.cloud" class="btn primary big">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                        stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z" />
+                    </svg>
+                    Свяжитесь с нами
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <div class="container footer-grid">
+            <a href="#hero" class="logo">
+                <span class="mark">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z" />
+                    </svg>
+                </span>
+                <span class="grad-gold">GiraffeAI</span>
+            </a>
+            <div class="footer-links">
+                <a href="../">Graphene Lab</a>
+                <a href="mailto:contact@graphenelab.cloud">Контакты</a>
+                <a href="#features">Возможности</a>
+                <a href="#security">Безопасность</a>
+            </div>
+            <p class="copyright">© 2026 Graphene Lab Foundation. Все права защищены. — GiraffeAI — демонстрационная страница продукта.</p>
+        </div>
+    </footer>
+
+    <!-- particles.js from CDN (same library used by the Graphene Lab main site) -->
+    <script src="https://cdn.jsdelivr.net/gh/VincentGarreau/particles.js/particles.min.js"></script>
+    <script>
+        (function () {
+            'use strict';
+
+            /* ── particles background ── */
+            if (window.particlesJS) {
+                particlesJS('particles-js', {
+                    particles: {
+                        number: { value: 70, density: { enable: true, value_area: 900 } },
+                        color: { value: ['#00d6c8', '#7c3aed', '#e8a400'] },
+                        shape: { type: 'circle' },
+                        opacity: { value: 0.55, random: true, anim: { enable: false } },
+                        size: { value: 3, random: true, anim: { enable: false } },
+                        line_linked: {
+                            enable: true,
+                            distance: 150,
+                            color: '#00d6c8',
+                            opacity: 0.16,
+                            width: 1
+                        },
+                        move: {
+                            enable: true,
+                            speed: 1.5,
+                            direction: 'none',
+                            random: true,
+                            straight: false,
+                            out_mode: 'out'
+                        }
+                    },
+                    interactivity: {
+                        detect_on: 'canvas',
+                        events: {
+                            onhover: { enable: true, mode: 'grab' },
+                            onclick: { enable: true, mode: 'push' },
+                            resize: true
+                        },
+                        modes: {
+                            grab: { distance: 170, line_linked: { opacity: 0.5 } },
+                            push: { particles_nb: 4 }
+                        }
+                    },
+                    retina_detect: true
+                });
+            }
+
+            /* ── nav: scrolled state + mobile toggle ── */
+            var nav = document.getElementById('main-nav');
+            var navLinks = document.getElementById('nav-links');
+            var navToggle = document.getElementById('nav-toggle');
+
+            function onScroll() {
+                nav.classList.toggle('scrolled', window.scrollY > 40);
+            }
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+
+            navToggle.addEventListener('click', function () {
+                var open = navLinks.classList.toggle('open');
+                navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            });
+
+            navLinks.addEventListener('click', function (e) {
+                if (e.target.tagName === 'A') {
+                    navLinks.classList.remove('open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            /* ── typewriter ── */
+            var phrases = [
+                'Слушает, понимает и выполняет задачи за вас.',
+                'Помнит каждый контракт, срок и письмо.',
+                'Отвечает с проверяемыми ссылками — никогда не выдумывает.',
+                'Готовит отчёт на 200 страниц за считанные минуты.'
+            ];
+            var typeEl = document.getElementById('typewriter');
+            var pIdx = 0, cIdx = 0, deleting = false;
+
+            function type() {
+                var current = phrases[pIdx];
+                if (!deleting) {
+                    typeEl.textContent = current.slice(0, ++cIdx);
+                    if (cIdx === current.length) {
+                        deleting = true;
+                        setTimeout(type, 2200);
+                        return;
+                    }
+                    setTimeout(type, 42);
+                } else {
+                    typeEl.textContent = current.slice(0, --cIdx);
+                    if (cIdx === 0) {
+                        deleting = false;
+                        pIdx = (pIdx + 1) % phrases.length;
+                        setTimeout(type, 350);
+                        return;
+                    }
+                    setTimeout(type, 18);
+                }
+            }
+            type();
+
+            /* ── hero terminal: animate steps when visible ── */
+            var termSteps = document.getElementById('term-steps');
+            var termFill = document.getElementById('term-fill');
+            var termDone = document.getElementById('term-done');
+            var termRefs = document.getElementById('term-refs');
+            var terminal = document.getElementById('terminal');
+            var termStarted = false;
+
+            function playTerminal() {
+                if (termStarted) return;
+                termStarted = true;
+                var items = termSteps.children;
+                var i = 0;
+                var timer = setInterval(function () {
+                    if (i >= items.length) {
+                        clearInterval(timer);
+                        termFill.style.width = '100%';
+                        termDone.classList.add('show');
+                        termRefs.classList.add('show');
+                        items[items.length - 1].classList.add('done');
+                        return;
+                    }
+                    items[i].classList.add('on');
+                    termFill.style.width = Math.round(((i + 1) / items.length) * 100) + '%';
+                    if (i > 0) items[i - 1].classList.add('done');
+                    i++;
+                }, 900);
+            }
+
+            var termObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(function (en) {
+                    if (en.isIntersecting) {
+                        playTerminal();
+                        termObserver.disconnect();
+                    }
+                });
+            }, { threshold: 0.35 });
+            termObserver.observe(terminal);
+
+            /* ── reveal on scroll ── */
+            var revealEls = document.querySelectorAll('.reveal');
+            var revealObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(function (en) {
+                    if (en.isIntersecting) {
+                        en.target.classList.add('visible');
+                        revealObserver.unobserve(en.target);
+                    }
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+            revealEls.forEach(function (el) { revealObserver.observe(el); });
+
+            /* ── animated counters ── */
+            function animateCounter(el) {
+                var target = parseInt(el.getAttribute('data-target'), 10);
+                var dur = 1600;
+                var start = null;
+                function step(ts) {
+                    if (!start) start = ts;
+                    var p = Math.min((ts - start) / dur, 1);
+                    var eased = 1 - Math.pow(1 - p, 3);
+                    el.textContent = Math.round(target * eased).toLocaleString('en-US');
+                    if (p < 1) requestAnimationFrame(step);
+                }
+                requestAnimationFrame(step);
+            }
+
+            var counters = document.querySelectorAll('.counter');
+            var counterObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(function (en) {
+                    if (en.isIntersecting) {
+                        animateCounter(en.target);
+                        counterObserver.unobserve(en.target);
+                    }
+                });
+            }, { threshold: 0.6 });
+            counters.forEach(function (el) { counterObserver.observe(el); });
+
+            /* ── subtle tilt on feature cards (desktop only) ── */
+            var finePointer = window.matchMedia('(pointer: fine)').matches;
+            if (finePointer) {
+                document.querySelectorAll('[data-tilt]').forEach(function (card) {
+                    card.addEventListener('pointermove', function (e) {
+                        var r = card.getBoundingClientRect();
+                        var x = (e.clientX - r.left) / r.width;
+                        var y = (e.clientY - r.top) / r.height;
+                        card.style.setProperty('--mx', (x * 100) + '%');
+                        card.style.setProperty('--my', (y * 100) + '%');
+                        card.style.transform =
+                            'translateY(-8px) perspective(800px) rotateX(' + ((0.5 - y) * 6).toFixed(2) +
+                            'deg) rotateY(' + ((x - 0.5) * 6).toFixed(2) + 'deg)';
+                    });
+                    card.addEventListener('pointerleave', function () {
+                        card.style.transform = '';
+                    });
+                });
+            }
+            /* ── theme toggle ── */
+            var themeToggle = document.getElementById('theme-toggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', function () {
+                    var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+                    var next = dark ? 'light' : 'dark';
+                    document.documentElement.setAttribute('data-theme', next);
+                    try { localStorage.setItem('giraffe-theme', next); } catch (e) { }
+                    themeToggle.setAttribute('aria-pressed', next === 'dark' ? 'true' : 'false');
+                });
+                themeToggle.setAttribute('aria-pressed',
+                    document.documentElement.getAttribute('data-theme') === 'dark' ? 'true' : 'false');
+            }
+        })();
+    </script>
+</body>
+
+</html>
