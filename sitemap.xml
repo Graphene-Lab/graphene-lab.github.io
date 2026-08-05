@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Homepage (EN default + localized) -->
+  <url>
+    <loc>https://graphenelab.it/</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://graphenelab.it/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://graphenelab.it/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://graphenelab.it/index-it.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://graphenelab.it/index-es.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://graphenelab.it/index-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://graphenelab.it/index-de.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://graphenelab.it/index-ru.html"/>
+  </url>
+  <url>
+    <loc>https://graphenelab.it/index-it.html</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://graphenelab.it/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://graphenelab.it/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://graphenelab.it/index-it.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://graphenelab.it/index-es.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://graphenelab.it/index-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://graphenelab.it/index-de.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://graphenelab.it/index-ru.html"/>
+  </url>
+  <url>
+    <loc>https://graphenelab.it/index-es.html</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://graphenelab.it/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://graphenelab.it/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://graphenelab.it/index-it.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://graphenelab.it/index-es.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://graphenelab.it/index-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://graphenelab.it/index-de.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://graphenelab.it/index-ru.html"/>
+  </url>
+  <url>
+    <loc>https://graphenelab.it/index-fr.html</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://graphenelab.it/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://graphenelab.it/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://graphenelab.it/index-it.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://graphenelab.it/index-es.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://graphenelab.it/index-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://graphenelab.it/index-de.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://graphenelab.it/index-ru.html"/>
+  </url>
+  <url>
+    <loc>https://graphenelab.it/index-de.html</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://graphenelab.it/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://graphenelab.it/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://graphenelab.it/index-it.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://graphenelab.it/index-es.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://graphenelab.it/index-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://graphenelab.it/index-de.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://graphenelab.it/index-ru.html"/>
+  </url>
+  <url>
+    <loc>https://graphenelab.it/index-ru.html</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://graphenelab.it/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://graphenelab.it/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://graphenelab.it/index-it.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://graphenelab.it/index-es.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://graphenelab.it/index-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://graphenelab.it/index-de.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://graphenelab.it/index-ru.html"/>
+  </url>
+
+  <!-- Solutions -->
+  <url>
+    <loc>https://graphenelab.it/solutions/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://graphenelab.it/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://graphenelab.it/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://graphenelab.it/solutions/index-it.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://graphenelab.it/solutions/index-es.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://graphenelab.it/solutions/index-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://graphenelab.it/solutions/index-de.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://graphenelab.it/solutions/index-ru.html"/>
+  </url>
+  <url>
+    <loc>https://graphenelab.it/solutions/index-it.html</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://graphenelab.it/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://graphenelab.it/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://graphenelab.it/solutions/index-it.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://graphenelab.it/solutions/index-es.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://graphenelab.it/solutions/index-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://graphenelab.it/solutions/index-de.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://graphenelab.it/solutions/index-ru.html"/>
+  </url>
+  <url>
+    <loc>https://graphenelab.it/solutions/index-es.html</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://graphenelab.it/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://graphenelab.it/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://graphenelab.it/solutions/index-it.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://graphenelab.it/solutions/index-es.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://graphenelab.it/solutions/index-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://graphenelab.it/solutions/index-de.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://graphenelab.it/solutions/index-ru.html"/>
+  </url>
+  <url>
+    <loc>https://graphenelab.it/solutions/index-fr.html</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://graphenelab.it/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://graphenelab.it/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://graphenelab.it/solutions/index-it.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://graphenelab.it/solutions/index-es.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://graphenelab.it/solutions/index-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://graphenelab.it/solutions/index-de.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://graphenelab.it/solutions/index-ru.html"/>
+  </url>
+  <url>
+    <loc>https://graphenelab.it/solutions/index-de.html</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://graphenelab.it/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://graphenelab.it/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://graphenelab.it/solutions/index-it.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://graphenelab.it/solutions/index-es.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://graphenelab.it/solutions/index-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://graphenelab.it/solutions/index-de.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://graphenelab.it/solutions/index-ru.html"/>
+  </url>
+  <url>
+    <loc>https://graphenelab.it/solutions/index-ru.html</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://graphenelab.it/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://graphenelab.it/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://graphenelab.it/solutions/index-it.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://graphenelab.it/solutions/index-es.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://graphenelab.it/solutions/index-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://graphenelab.it/solutions/index-de.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://graphenelab.it/solutions/index-ru.html"/>
+  </url>
+
+  <!-- GiraffeAI -->
+  <url>
+    <loc>https://graphenelab.it/GiraffeAI/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://graphenelab.it/GiraffeAI/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://graphenelab.it/GiraffeAI/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://graphenelab.it/GiraffeAI/index-it.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://graphenelab.it/GiraffeAI/index-es.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://graphenelab.it/GiraffeAI/index-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://graphenelab.it/GiraffeAI/index-ru.html"/>
+  </url>
+  <url>
+    <loc>https://graphenelab.it/GiraffeAI/index-it.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://graphenelab.it/GiraffeAI/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://graphenelab.it/GiraffeAI/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://graphenelab.it/GiraffeAI/index-it.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://graphenelab.it/GiraffeAI/index-es.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://graphenelab.it/GiraffeAI/index-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://graphenelab.it/GiraffeAI/index-ru.html"/>
+  </url>
+  <url>
+    <loc>https://graphenelab.it/GiraffeAI/index-es.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://graphenelab.it/GiraffeAI/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://graphenelab.it/GiraffeAI/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://graphenelab.it/GiraffeAI/index-it.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://graphenelab.it/GiraffeAI/index-es.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://graphenelab.it/GiraffeAI/index-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://graphenelab.it/GiraffeAI/index-ru.html"/>
+  </url>
+  <url>
+    <loc>https://graphenelab.it/GiraffeAI/index-fr.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://graphenelab.it/GiraffeAI/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://graphenelab.it/GiraffeAI/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://graphenelab.it/GiraffeAI/index-it.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://graphenelab.it/GiraffeAI/index-es.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://graphenelab.it/GiraffeAI/index-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://graphenelab.it/GiraffeAI/index-ru.html"/>
+  </url>
+  <url>
+    <loc>https://graphenelab.it/GiraffeAI/index-ru.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://graphenelab.it/GiraffeAI/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://graphenelab.it/GiraffeAI/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://graphenelab.it/GiraffeAI/index-it.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://graphenelab.it/GiraffeAI/index-es.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://graphenelab.it/GiraffeAI/index-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://graphenelab.it/GiraffeAI/index-ru.html"/>
+  </url>
+
+  <!-- Cloud -->
+  <url>
+    <loc>https://graphenelab.it/cloud/</loc>
+    <lastmod>2026-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://graphenelab.it/cloud/privacy.html</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://graphenelab.it/cloud/data-deletion-explorer.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://graphenelab.it/cloud/data-deletion-photo-sync.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://graphenelab.it/cloud/downloads/GExplorer_Web_Client.html</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Messenger -->
+  <url>
+    <loc>https://graphenelab.it/messenger/</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Vision -->
+  <url>
+    <loc>https://graphenelab.it/vision/</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://graphenelab.it/vision/MyVMS/</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>
