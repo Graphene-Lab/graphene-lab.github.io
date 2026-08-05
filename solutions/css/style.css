@@ -535,6 +535,47 @@ footer {
         display: block;
         height: 320px;
     }
+
+    /* Center hero buttons — stack them on mobile */
+    .hero-btns {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .hero-btns .btn {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    /* Center product images that use offset margins on desktop */
+    .messenger-img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hardware-img {
+        display: block;
+        margin-left: -40%;
+    }
+
+    /* Center product-section CTA buttons (Explore Messenger/Cloud/etc.) */
+    .cta-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-group .btn-product {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    .cta-group .link {
+        text-align: center;
+    }
 }
 
 @media (max-width: 640px) {
