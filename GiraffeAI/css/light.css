@@ -86,6 +86,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -1727,11 +1728,7 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
-    .section {
-        padding: 84px 0;
-    }
-
+@media (max-width: 1024px) {
     nav {
         padding: 0 1.1rem;
     }
@@ -1791,6 +1788,12 @@ footer {
         text-align: center;
         padding: 14px;
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 84px 0;
     }
 
     .hero .type-line {
