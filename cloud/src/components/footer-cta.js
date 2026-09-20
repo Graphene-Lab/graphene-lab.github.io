@@ -6,7 +6,7 @@ const EXPLORER_APK_URL =
   'https://github.com/Graphene-Lab/graphene-cloud-explorer-react-native-app/releases/latest'
 const PHOTOS_APK_URL =
   'https://github.com/Graphene-Lab/graphene-photos-android-app/releases/latest'
-const WINDOWS_CLIENT_URL = './downloads/DesktopClient_v2.0.3.zip'
+const WINDOWS_CLIENT_URL = 'https://github.com/Graphene-Lab/CloudClient/releases/latest/download/portable.zip'
 const WEB_CLIENT_URL = './downloads/GExplorer_Web_Client.html'
 
 const footerDownloads = [

@@ -8,7 +8,7 @@ const PHOTOS_APK_URL =
   'https://github.com/Graphene-Lab/graphene-photos-android-app/releases/latest'
 const EXPLORER_PLAY_URL = 'https://play.google.com/store/apps/details?id=com.graphenelab.cloudexplorer'
 const PHOTOS_PLAY_URL = 'https://play.google.com/store/apps/details?id=com.graphenelab.photosync'
-const WINDOWS_CLIENT_URL = './downloads/DesktopClient_v2.0.3.zip'
+const WINDOWS_CLIENT_URL = 'https://github.com/Graphene-Lab/CloudClient/releases/latest/download/portable.zip'
 const WEB_CLIENT_URL = './downloads/GExplorer_Web_Client.html'
 
 const platforms = [
