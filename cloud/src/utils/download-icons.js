@@ -46,6 +46,14 @@ const ICONS = {
       <path d="M12 3a14.5 14.5 0 0 0 0 18"></path>
     </svg>
   `,
+  guide: `
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 3h8l4 4v14H6V3Z"></path>
+      <path d="M14 3v5h4"></path>
+      <path d="M9 12h6"></path>
+      <path d="M9 16h6"></path>
+    </svg>
+  `,
   download: `
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
       <path d="M12 4v10"></path>
@@ -71,6 +79,7 @@ function getDownloadIconKey(label, href) {
   if (source.includes('linux')) return 'linux'
   if (source.includes('google play')) return 'play'
   if (source.includes('android')) return 'android'
+  if (source.includes('installation guide')) return 'guide'
   if (source.includes('web')) return 'web'
 
   return 'download'

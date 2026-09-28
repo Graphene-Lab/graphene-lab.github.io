@@ -1,8 +1,11 @@
 import { renderGrapheneLogo } from './logo.js'
-
-const EXPLORER_PLAY_URL = 'https://play.google.com/store/apps/details?id=com.graphenelab.cloudexplorer'
-const PHOTOS_PLAY_URL = 'https://play.google.com/store/apps/details?id=com.graphenelab.photosync'
-const WINDOWS_CLIENT_URL = 'https://github.com/Graphene-Lab/CloudClient/releases/latest/download/portable.zip'
+import {
+  EXPLORER_GOOGLE_PLAY_URL,
+  LINUX_ARM64_CLIENT_URL,
+  LINUX_X64_CLIENT_URL,
+  PHOTOS_GOOGLE_PLAY_URL,
+  WINDOWS_CLIENT_URL,
+} from '../config/client-downloads.js'
 
 export function renderFreePlan() {
   return `
@@ -18,11 +21,11 @@ export function renderFreePlan() {
               cross-platform clients deliver fast sync.
             </p>
             <div class="free-plan-actions">
-              <a class="button button-outline button-with-os" href="${EXPLORER_PLAY_URL}" target="_blank" rel="noopener noreferrer" aria-label="Get Graphene Explorer on Google Play"><span>Explorer App</span>${renderPlayIcon()}</a>
-              <a class="button button-outline button-with-os" href="${PHOTOS_PLAY_URL}" target="_blank" rel="noopener noreferrer" aria-label="Get Graphene Photos on Google Play"><span>Photos App</span>${renderPlayIcon()}</a>
+              <a class="button button-outline button-with-os" href="${EXPLORER_GOOGLE_PLAY_URL}" target="_blank" rel="noopener noreferrer" aria-label="Get Graphene Explorer on Google Play"><span>Explorer App</span>${renderPlayIcon()}</a>
+              <a class="button button-outline button-with-os" href="${PHOTOS_GOOGLE_PLAY_URL}" target="_blank" rel="noopener noreferrer" aria-label="Get Graphene Photos on Google Play"><span>Photos App</span>${renderPlayIcon()}</a>
               <a class="button button-outline" href="#platforms" data-download-clients-cta>Install Desktop Client</a>
               <span>No credit card required</span>
-              <span class="client-requirement-note">Windows client requires .NET 10.</span>
+              <span class="client-requirement-note">Desktop apps are self-contained; no .NET runtime is required.</span>
             </div>
           </div>
 
@@ -82,18 +85,18 @@ function getDesktopDownloadTarget() {
 
   if (/Mac/i.test(platform) || /Mac OS X/i.test(userAgent)) {
     return {
-      href: '#coming-soon',
+      href: '#platforms',
       osName: 'macOS',
-      comingSoon: 'macOS desktop client',
       icon: renderOsIcon('macos'),
     }
   }
 
   if (/Linux|X11/i.test(platform) || /Linux/i.test(userAgent)) {
+    const isArm64 = /arm64|aarch64/i.test(`${platform} ${userAgent}`)
+
     return {
-      href: '#coming-soon',
+      href: isArm64 ? LINUX_ARM64_CLIENT_URL : LINUX_X64_CLIENT_URL,
       osName: 'Linux',
-      comingSoon: 'Linux desktop client',
       icon: renderOsIcon('linux'),
     }
   }

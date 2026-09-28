@@ -1352,6 +1352,21 @@ a {
   transform: translateY(-1px);
 }
 
+.platform-download-link.is-guide {
+  flex-basis: 100%;
+  justify-content: flex-start;
+  color: var(--accent);
+  background: linear-gradient(90deg, var(--accent-soft), rgba(255, 255, 255, 0.02));
+  border-color: rgba(106, 175, 255, 0.38);
+  border-style: dashed;
+}
+
+.platform-download-link.is-guide:hover {
+  color: var(--text);
+  background: linear-gradient(90deg, rgba(106, 175, 255, 0.2), rgba(255, 255, 255, 0.05));
+  border-color: var(--accent);
+}
+
 .feature-tag {
   display: inline-flex;
   align-items: center;
@@ -2364,6 +2379,19 @@ body.modal-open {
   color: var(--text);
   border-color: rgba(255, 255, 255, 0.32);
   background: var(--accent-soft);
+}
+
+.cta-app-link.is-guide {
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-color: rgba(106, 175, 255, 0.38);
+  border-style: dashed;
+}
+
+.cta-app-link.is-guide:hover {
+  color: var(--text);
+  border-color: var(--accent);
+  background: rgba(106, 175, 255, 0.2);
 }
 
 .cta-actions {
