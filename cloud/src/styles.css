@@ -2821,22 +2821,58 @@ body.modal-open {
   }
 
   .platform-download-list {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 1fr;
+    display: flex;
+    flex-wrap: nowrap;
     gap: 0.55rem;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0 0 0.55rem;
+    scroll-padding-inline: 0.1rem;
+    scroll-snap-type: x proximity;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(106, 175, 255, 0.55) rgba(255, 255, 255, 0.07);
+    overscroll-behavior-inline: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .platform-download-list::-webkit-scrollbar {
+    height: 5px;
+  }
+
+  .platform-download-list::-webkit-scrollbar-track {
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.07);
+  }
+
+  .platform-download-list::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: rgba(106, 175, 255, 0.55);
   }
 
   .platform-download-list.is-single {
     display: flex;
     justify-content: flex-start;
+    overflow: visible;
+    padding-bottom: 0;
+    scroll-snap-type: none;
   }
 
   .platform-download-link {
-    width: 100%;
+    flex: 0 0 116px;
+    width: 116px;
+    min-width: 116px;
     min-height: 4.2rem;
     padding: 0.55rem 0.45rem;
     border-radius: 11px;
+    scroll-snap-align: start;
+  }
+
+  .platform-download-link.is-guide {
+    flex-basis: 184px;
+    width: 184px;
+    min-width: 184px;
+    justify-content: center;
   }
 
   .platform-download-list.is-single .platform-download-link {
