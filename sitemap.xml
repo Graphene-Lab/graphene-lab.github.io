@@ -248,13 +248,6 @@
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
-  <url>
-    <loc>https://graphenelab.it/cloud/downloads/GExplorer_Web_Client.html</loc>
-    <lastmod>2026-06-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
   <!-- Messenger -->
   <url>
     <loc>https://graphenelab.it/messenger/</loc>

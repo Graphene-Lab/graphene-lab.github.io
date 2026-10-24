@@ -8,6 +8,7 @@ import {
   MACOS_ARM64_CLIENT_URL,
   MACOS_X64_CLIENT_URL,
   PHOTOS_ANDROID_RELEASES_URL,
+  WEB_CLIENT_FILENAME,
   WEB_CLIENT_URL,
   WINDOWS_CLIENT_URL,
 } from '../config/client-downloads.js'
@@ -23,7 +24,7 @@ const footerDownloads = [
   { label: 'iOS', href: '#coming-soon', comingSoon: 'iOS apps' },
   { label: 'Explorer Android Releases', href: EXPLORER_ANDROID_RELEASES_URL },
   { label: 'Photos Android Releases', href: PHOTOS_ANDROID_RELEASES_URL },
-  { label: 'Web App', href: WEB_CLIENT_URL },
+  { label: 'Web Client (HTML)', href: WEB_CLIENT_URL },
 ]
 
 export function renderFooterCta() {
@@ -80,6 +81,10 @@ export function renderFooterCta() {
 }
 
 function renderDownloadAttrs(download) {
+  if (download.href === WEB_CLIENT_URL) {
+    return ` download="${escapeAttr(WEB_CLIENT_FILENAME)}" data-web-client-download`
+  }
+
   const externalAttrs = /^https?:\/\//i.test(String(download.href)) ? ' target="_blank" rel="noopener noreferrer"' : ''
   const comingSoonAttrs = download.comingSoon ? renderComingSoonAttrs(download.comingSoon) : ''
 

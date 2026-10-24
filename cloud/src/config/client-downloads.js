@@ -18,4 +18,6 @@ export const EXPLORER_GOOGLE_PLAY_URL =
 export const PHOTOS_GOOGLE_PLAY_URL =
   'https://play.google.com/store/apps/details?id=com.graphenelab.photosync'
 
-export const WEB_CLIENT_URL = './downloads/GExplorer_Web_Client.html'
+export const WEB_CLIENT_URL =
+  'https://raw.githubusercontent.com/Graphene-Lab/ProxyCloud/refs/heads/master/ClientHtml/CryptoCloudClientWeb.html'
+export const WEB_CLIENT_FILENAME = 'GExplorer_Web_Client.html'

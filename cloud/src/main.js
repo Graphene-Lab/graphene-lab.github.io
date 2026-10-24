@@ -9,6 +9,7 @@ import { renderFaq, setupFaq } from './components/faq.js'
 import { renderProducts } from './components/products.js'
 import { renderFooterCta } from './components/footer-cta.js'
 import { renderComingSoonModal, setupComingSoonModal } from './components/coming-soon-modal.js'
+import { setupWebClientDownloads } from './utils/web-client-download.js'
 
 const app = document.getElementById('app')
 
@@ -36,4 +37,5 @@ if (app) {
   setupComparisonTable()
   setupFaq()
   setupComingSoonModal()
+  setupWebClientDownloads()
 }

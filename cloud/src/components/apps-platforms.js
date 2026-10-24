@@ -10,6 +10,7 @@ import {
   MACOS_X64_CLIENT_URL,
   PHOTOS_ANDROID_RELEASES_URL,
   PHOTOS_GOOGLE_PLAY_URL,
+  WEB_CLIENT_FILENAME,
   WEB_CLIENT_URL,
   WINDOWS_CLIENT_URL,
 } from '../config/client-downloads.js'
@@ -76,7 +77,7 @@ const platforms = [
   },
   {
     title: 'Web',
-    description: 'Browser-side cryptography, zero server trust',
+    description: 'Download the HTML client and open it locally in your browser',
     featureSections: [
       {
         title: 'Client',
@@ -84,7 +85,7 @@ const platforms = [
       },
     ],
     downloadLabel: 'Download:',
-    downloads: [{ label: 'Web Client', href: WEB_CLIENT_URL }],
+    downloads: [{ label: 'Web Client (HTML)', href: WEB_CLIENT_URL }],
     icon: webIcon(),
     gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
     color: '#00f2fe',
@@ -274,6 +275,10 @@ export function renderAppsPlatforms() {
 export function setupAppsPlatforms() {}
 
 function renderDownloadAttrs(download) {
+  if (download.href === WEB_CLIENT_URL) {
+    return ` download="${escapeAttr(WEB_CLIENT_FILENAME)}" data-web-client-download`
+  }
+
   const externalAttrs = /^https?:\/\//i.test(String(download.href)) ? ' target="_blank" rel="noopener noreferrer"' : ''
   const comingSoonAttrs = download.comingSoon ? renderComingSoonAttrs(download.comingSoon) : ''
 
