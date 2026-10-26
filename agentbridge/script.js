@@ -70,7 +70,7 @@ document.querySelector('[data-close-help]').addEventListener('click', () => help
 
 document.addEventListener('keydown', event => {
     if (event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey || event.repeat) return;
-    if (event.target instanceof Element && event.target.closest('input, textarea, select, [contenteditable="true"]')) return;
+    if (event.target instanceof Element && event.target.closest('input, textarea, select, video, audio, [contenteditable="true"]')) return;
 
     if (event.key === '?' || event.key === 'F1') {
         event.preventDefault();
