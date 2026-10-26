@@ -248,6 +248,13 @@
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
+  <!-- AgentBridge -->
+  <url>
+    <loc>https://graphenelab.it/agentbridge/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Messenger -->
   <url>
     <loc>https://graphenelab.it/messenger/</loc>
